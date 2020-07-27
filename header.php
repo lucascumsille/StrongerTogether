@@ -1,58 +1,68 @@
-<?php
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
- * @version 1.0
- */
-
-?><!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js no-svg">
+<!DOCTYPE html>
+<html lang="en"> 
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Site Template">
+    <meta name="author" content="https://youtube.com/FollowAndrew">    
+    <link rel="shortcut icon" href="images/logo.png"> 
+     
+    <?php
+    wp_head();
+    ?>
 
-<?php wp_head(); ?>
-</head>
+</head>  
 
-<body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyseventeen' ); ?></a>
+<body>
+    
+    <header class="header text-center">	    
+	    <a class="site-title pt-lg-4 mb-0" href="index.html"> <?php /* Site Name*/ echo get_bloginfo('name')?> </a>
+        
+	    <nav class="navbar navbar-expand-lg navbar-dark" >
+           
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
 
-	<header id="masthead" class="site-header" role="banner">
+			<div id="navigation" class="collapse navbar-collapse flex-column" >
 
-		<?php get_template_part( 'template-parts/header/header', 'image' ); ?>
+				<?php 
+				//Logo
+					if(function_exists('the_custom_logo')) {
 
-		<?php if ( has_nav_menu( 'top' ) ) : ?>
-			<div class="navigation-top">
-				<div class="wrap">
-					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-				</div><!-- .wrap -->
-			</div><!-- .navigation-top -->
-		<?php endif; ?>
+						$custom_logo_id = get_theme_mod('custom_logo');
+						$logo = wp_get_attachment_image_src($custom_logo_id);
+					} 
+				?>
+ 
+				<img class="mb-3 mx-auto logo" src="<?php echo $logo[0] ?>" alt="logo" >
 
-	</header><!-- #masthead -->
+				<?php
+					wp_nav_menu(
+						array(
+							'menu' => 'primary',
+							'container' => '',
+							'theme_location' => 'primary',
+							'items_wrap' => '<ul id="" class="navbar-nav flex-column text-sm-center text-md-left">%3$s</ul>' 
+						)
+					);
+				?>
 
-	<?php
+				<hr>
+				<?php 
+				// tags
+					dynamic_sidebar('sidebar-1');
+				?>
 
-	/*
-	 * If a regular post or page, and not the front page, show the featured image.
-	 * Using get_queried_object_id() here since the $post global may not be set before a call to the_post().
-	 */
-	if ( ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) && has_post_thumbnail( get_queried_object_id() ) ) :
-		echo '<div class="single-featured-image-header">';
-		echo get_the_post_thumbnail( get_queried_object_id(), 'twentyseventeen-featured-image' );
-		echo '</div><!-- .single-featured-image-header -->';
-	endif;
-	?>
+			</div>
 
-	<div class="site-content-contain">
-		<div id="content" class="site-content">
+
+		</nav>
+    </header>
+
+	<div class="main-wrapper">
+	    <header class="page-title theme-bg-light text-center gradient py-5">
+			<h1 class="heading"><?php the_title(); ?></h1>
+		</header>
