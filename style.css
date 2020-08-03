@@ -156,8 +156,8 @@ h6 {
     color: #fff
 }
 .gradient{
-    background: rgb(111,184,221);
-    background: linear-gradient(90deg, rgba(111,184,221,1) 0%, rgba(166,0,80,0.850577731092437) 35%, rgba(0,212,255,1) 100%) !important;
+    background: rgb(129,0,92);
+    background: linear-gradient(90deg, rgba(129,0,92,1) 0%, rgba(166,0,80,0.850577731092437) 37%, rgba(0,148,179,1) 100%) !important;
 }
 .content .post .title {
     font-size: 1.275rem
