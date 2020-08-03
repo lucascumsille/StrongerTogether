@@ -105,72 +105,7 @@ h6 {
     background: var(--dark) !important
 }
 
-.header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: var(--sidebar-width);
-    background: var(--primary);
-    color: #fff
-}
-.header .site-title {
-    color:var(--white);
-    font-size:1.2em;
-    display:block;
-}
 
-.header .btn-primary {
-    background: rgba(0, 0, 0, 0.3);
-    border-color: transparent;
-    font-size: 1rem;
-    padding-top: 0.5rem
-}
-
-.header .btn-primary:hover {
-    background: rgba(0, 0, 0, 0.4);
-    border-color: transparent
-}
-
-.header .navbar {
-    padding: 2rem 1rem
-}
-
-.header .navbar-dark .navbar-toggler {
-    border: none;
-    padding: .25rem .6rem
-}
-
-.header .navbar-dark .navbar-toggler:hover {
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-    opacity: 1
-}
-
-.header .navbar-dark .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(256,256,256, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-.header .nav-item {
-    font-weight: bold
-}
-
-.header .nav-item.active a {
-    color: rgba(0, 0, 0, 0.5)
-}
-
-.header .nav-item.active a:hover {
-    text-decoration: none
-}
-
-.header .nav-item a {
-    color: rgba(255, 255, 255, 0.8)
-}
-
-.header .nav-item a:hover {
-    text-decoration: underline;
-    color: rgba(0, 0, 0, 0.6)
-}
 .logo{
     width:78px;
 }
@@ -191,7 +126,7 @@ h6 {
 }
 
 .main-wrapper {
-    margin-left: var(--sidebar-width);
+
     background: #fff;
 }
 

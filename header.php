@@ -18,48 +18,38 @@
 <body>
     
     <header class="header text-center">	    
-	    <a class="site-title pt-lg-4 mb-0" href="index.html"> <?php /* Site Name*/ echo get_bloginfo('name')?> </a>
-        
-	    <nav class="navbar navbar-expand-lg navbar-dark" >
-           
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="<?php esc_html_e( 'Toggle Navigation', 'theme-textdomain' ); ?>">
+				<span class="navbar-toggler-icon"></span>
 			</button>
 
-			<div id="navigation" class="collapse navbar-collapse flex-column" >
-
+			<div class="collapse navbar-collapse" id="navbar-content">
 				<?php 
-				//Logo
-					if(function_exists('the_custom_logo')) {
+					//Logo
+						if(function_exists('the_custom_logo')) {
 
-						$custom_logo_id = get_theme_mod('custom_logo');
-						$logo = wp_get_attachment_image_src($custom_logo_id);
-					} 
+							$custom_logo_id = get_theme_mod('custom_logo');
+							$logo = wp_get_attachment_image_src($custom_logo_id);
+						} 
 				?>
- 
-				<img class="mb-3 mx-auto logo" src="<?php echo $logo[0] ?>" alt="logo" >
+				<a class="navbar-brand" href="#"><img class="mb-3 mx-auto logo" src="<?php echo $logo[0] ?>" alt="logo" ></a>
 
 				<?php
-					wp_nav_menu(
-						array(
-							'menu' => 'primary',
-							'container' => '',
-							'theme_location' => 'primary',
-							'items_wrap' => '<ul id="" class="navbar-nav flex-column text-sm-center text-md-left">%3$s</ul>' 
-						)
-					);
+				wp_nav_menu( array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+					'container'      => false,
+					'depth'          => 2,
+					'menu_class'     => 'navbar-nav ml-auto',
+					'walker'         => new Bootstrap_NavWalker(),
+					'fallback_cb'    => 'Bootstrap_NavWalker::fallback',
+				) );
 				?>
-
-				<hr>
-				<?php 
-				// tags
-					dynamic_sidebar('sidebar-1');
-				?>
-
 			</div>
-
-
 		</nav>
+        
+	    
     </header>
 
 	<div class="main-wrapper">

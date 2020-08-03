@@ -47,6 +47,13 @@ add_action('wp_enqueue_scripts', 'followandrew_register_scripts' );
 //
 
 
+// * Bootstrap
+
+require get_template_directory() . '/bootstrap-navwalker.php';
+register_nav_menus( array(
+    'menu-1' => esc_html__( 'Primary', 'theme-textdomain' ),
+) );
+
 //* WIDGETS
 
 function followandrew_widget_areas() {
