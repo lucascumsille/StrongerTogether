@@ -8,6 +8,23 @@ Author: LucasCmDev
 Auhtor URI: https://lucascm.dev
  */
 
+ .dropdown-item {
+     background-repeat: no-repeat;
+     background-position-x: left;
+     background-position-y: center;
+     background-size: 25px 25px;
+
+     padding-top: 15px;
+     padding-bottom: 15px;
+     padding-left: 55px;
+     margin-left: 20px;
+ }
+
+
+ #menu-item-25 {
+     background-image: url("assets/images/heart.svg");
+ }
+
 
  :root {
     --blue: #007bff;
@@ -136,7 +153,7 @@ h6 {
 .page-title {
     position:sticky;
     top:0;
-    z-index:9999;
+    z-index:1;
     transition:all .2s;
 }
 .sticky{
