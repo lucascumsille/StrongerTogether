@@ -46,7 +46,9 @@
 					'fallback_cb'    => 'Bootstrap_NavWalker::fallback',
 				) );
 				?>
+
 			</div>
+
 		</nav>
 
     </header>

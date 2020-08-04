@@ -48,7 +48,7 @@ add_action('wp_enqueue_scripts', 'strongertogether_register_scripts' );
 //
 
 
-// * Bootstrap
+// * Bootstrap  NavBar
 
 require get_template_directory() . '/bootstrap-navwalker.php';
 register_nav_menus( array(
@@ -59,6 +59,7 @@ register_nav_menus( array(
 
 function strongertogether_widget_areas() {
 
+
     register_sidebar(
         array(
             'before_title' => '',
@@ -66,8 +67,8 @@ function strongertogether_widget_areas() {
             'before_widget' => '<ul class="social-list list-inline py-3 mx-auto">',
             'after_widget' => '</ul>',
             'name' => 'Sidebar Area', 
-            'id' => 'sidebar-1',
-            'description' => 'Sidebar Widget Area' 
+            'id' => 'ForFamilies',
+            'description' => 'menu for Families in the Icon page' 
         )
     );
 
@@ -87,5 +88,6 @@ function strongertogether_widget_areas() {
 add_action ('widgets_init', 'strongertogether_widget_areas');
 
 //
+
 
 ?>  
