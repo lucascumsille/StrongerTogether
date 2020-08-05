@@ -8,6 +8,109 @@ Author: LucasCmDev
 Auhtor URI: https://lucascm.dev
  */
 
+//* Fonts
+
+$rubik: 'Rubik', sans-serif;
+
+
+
+//* Colours 
+$dark-yellow: #9F641F;
+$yellow: #FFE1BE;
+$black: black;
+
+.text-dark-yellow {
+  color: $dark-yellow;
+}
+
+.text-yellow {
+  color: $yellow;
+}
+
+.text-black {
+  color: black;
+}
+
+.bg-yellow {
+  background-color: $yellow;
+}
+
+// * Responsiveness
+
+$xs: 575px;
+$sm: 767px;
+$md: 991px;
+$lg: 1199px;
+
+
+//* Spacing
+
+$padding-xl:150px;
+
+.p-xl {
+
+  padding-top: $padding-xl;
+  padding-bottom: $padding-xl;
+
+}
+
+//* General Components
+
+.title-container {
+  margin-bottom: 25px;
+}
+
+
+//* HomePage Menu
+
+$card-border-radius: 15px;
+
+
+.anchor-card-wrapper {
+  flex-basis: 100%;
+  min-width: 165px;
+  max-width: 200px;
+  margin: 20px 10px;
+  text-align: center;
+  @media (min-width: $xs) {
+    flex-basis: 25%;
+  }
+}
+
+
+
+.upper-menu-card {
+
+  border: 2px solid $yellow;
+  border-radius: $card-border-radius $card-border-radius 0 0;
+  padding-top: 13px;
+  padding-bottom: 13px;
+
+
+  
+
+  .menu-icon-homepage {
+    height: 45px;
+    width: auto;
+  }
+
+}
+
+.lower-menu-card {
+  padding-top: 13px;
+  background-color: white;
+  border: 2px solid $yellow;
+  border-radius: 0 0 $card-border-radius $card-border-radius;
+
+  p{
+    margin-bottom: 13px;
+  }
+  
+}
+
+
+//* Nav Bar
+
  .dropdown-item {
    background-repeat: no-repeat;
    background-position-x: left;
@@ -75,10 +178,12 @@ html {
 }
 body {
   color: var(--secondary);
-  overflow-x: hidden
+  overflow-x: hidden;
+  font-family: $rubik;
+  color: $black;
 }
 a{
-  color: var(--pink);
+  color: $black;
 }
 h1,
 h2,
