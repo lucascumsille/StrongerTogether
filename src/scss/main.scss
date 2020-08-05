@@ -15,12 +15,19 @@ $rubik: 'Rubik', sans-serif;
 
 
 //* Colours 
+
+$dark-green: #297316;
+$green: #D7FACE;
 $dark-yellow: #9F641F;
 $yellow: #FFE1BE;
 $black: black;
 
 .text-dark-yellow {
   color: $dark-yellow;
+}
+
+.text-dark-green {
+  color: $dark-green;
 }
 
 .text-yellow {
@@ -35,6 +42,10 @@ $black: black;
   background-color: $yellow;
 }
 
+.bg-green {
+  background-color: $green;
+}
+
 // * Responsiveness
 
 $xs: 575px;
@@ -45,7 +56,14 @@ $lg: 1199px;
 
 //* Spacing
 
+$padding-s: 30px;
 $padding-xl:150px;
+
+.p-s-xl {
+  padding-top: $padding-xl;
+  padding-bottom: $padding-xl;
+}
+
 
 .p-xl {
 
@@ -72,12 +90,20 @@ $card-border-radius: 15px;
   max-width: 200px;
   margin: 20px 10px;
   text-align: center;
+
   @media (min-width: $xs) {
+    flex-basis: 50%;
+  }
+
+  @media (min-width: $md) {
     flex-basis: 25%;
   }
 }
 
-
+.is--for-parents {
+  .upper-menu-card {border: 2px solid $green;}
+  .lower-menu-card {border: 2px solid $green;}
+}
 
 .upper-menu-card {
 
