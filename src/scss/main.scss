@@ -12,6 +12,8 @@ Auhtor URI: https://lucascm.dev
 
 $rubik: 'Rubik', sans-serif;
 
+$open: 'Open Sans', sans-serif;
+
 
 
 //* Colours 
@@ -20,6 +22,7 @@ $dark-green: #297316;
 $green: #D7FACE;
 $dark-yellow: #9F641F;
 $yellow: #FFE1BE;
+$light-yellow: #FFF6E3;
 $black: black;
 
 .text-dark-yellow {
@@ -42,6 +45,10 @@ $black: black;
   background-color: $yellow;
 }
 
+.bg-light-yellow {
+  background-color: $light-yellow;
+}
+
 .bg-green {
   background-color: $green;
 }
@@ -58,6 +65,13 @@ $lg: 1199px;
 
 $padding-s: 30px;
 $padding-xl:150px;
+
+
+.owl-dot {
+  width:25px;
+  height: 25px;
+  color: blue;
+}
 
 .p-s-xl {
   padding-top: $padding-xl;
@@ -76,6 +90,7 @@ $padding-xl:150px;
 
 .title-container {
   margin-bottom: 25px;
+  text-align: center;
 }
 
 .box-shadow {
@@ -153,7 +168,9 @@ $card-border-radius: 15px;
 .post-item-carousel {
 
   max-width: 300px;
+  height: 326px;
   border-radius: $card-border-radius;
+  background-color: white;
   
   .post-carousel-image {
     height: 190px;
@@ -167,6 +184,7 @@ $card-border-radius: 15px;
 
     border-radius: 0px 0px $card-border-radius $card-border-radius;
     padding: 20px 15px 10px 15px;
+  
   }
 
   h5 {
@@ -192,6 +210,9 @@ $card-border-radius: 15px;
 }
 
 
+.owl-nav {
+  display: none;
+}
 
 //* Nav Bar
 
@@ -263,7 +284,7 @@ html {
 body {
   color: var(--secondary);
   overflow-x: hidden;
-  font-family: $rubik;
+  font-family: $open;
   color: $black;
 }
 a{
@@ -276,7 +297,9 @@ h4,
 h5,
 h6 {
   color: var(--gray-dark);
-  font-weight: bold
+  font-weight: bold;
+  margin-bottom: 25px;
+  font-family: $rubik;
 }
 
 .btn {
