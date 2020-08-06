@@ -63,6 +63,39 @@ register_nav_menus( array(
     'menu-1' => esc_html__( 'Primary', 'theme-textdomain' ),
 ) );
 
+
+// * Post Type
+
+function strongertogether_thingsAtHome_post() {
+    $labels = array(
+      'name'               => _x( 'Things to do at home', 'post type general name' ),
+      'singular_name'      => _x( 'Activity', 'post type singular name' ),
+      'add_new'            => _x( 'Add New', 'Activity' ),
+      'add_new_item'       => __( 'Add New Activity' ),
+      'edit_item'          => __( 'Edit Activity' ),
+      'new_item'           => __( 'New Activity' ),
+      'all_items'          => __( 'All Activity' ),
+      'view_item'          => __( 'View Activity' ),
+      'search_items'       => __( 'Search Activity' ),
+      'not_found'          => __( 'No activites found' ),
+      'not_found_in_trash' => __( 'No activities found in the Trash' ), 
+      'parent_item_colon'  => '',
+      'menu_name'          => 'Thing to do at Home'
+    );
+    $args = array(
+      'labels'        => $labels,
+      'description'   => 'Holds activities and specific data',
+      'public'        => true,
+      'menu_position' => 5,
+      'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+      'has_archive'   => true,
+    );
+    register_post_type( 'Thing to do at Home', $args ); 
+  }
+  add_action( 'init', 'strongertogether_thingsAtHome_post' );
+
+
+
 //* WIDGETS
 
 function strongertogether_widget_areas() {
