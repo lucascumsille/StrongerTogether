@@ -380,5 +380,13 @@ add_action ('widgets_init', 'strongertogether_widget_areas');
 @ini_set( 'max_execution_time', '300' );
 
 
+// * Option Page for the Advanced custom Fields Plugin
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+}
+
 
 ?>  
