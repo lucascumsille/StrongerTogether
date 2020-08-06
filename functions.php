@@ -64,7 +64,7 @@ register_nav_menus( array(
 ) );
 
 
-// * Post Type
+// * Post Type: Things to do at Home
 
 // Activity Custom Post 
 //! Type DONT USE CAPS
@@ -94,7 +94,7 @@ function thingsathome_init() {
         'show_ui' => true,
         'capability_type' => 'post',
         'hierarchical' => false,
-        'rewrite' => array('slug' => 'Activity'),
+        'rewrite' => array('slug' => 'things-to-do-at-home'),
         'query_var' => true,
         'menu_icon' => 'dashicons-admin-multisite',
         'menu_position' => 5,
@@ -117,6 +117,224 @@ function thingsathome_init() {
     register_taxonomy('thingsathome_category', 'thingsathome', array('hierarchical' => true, 'label' => 'Category', 'query_var' => true, 'rewrite' => array( 'slug' => 'Activity-category' )));
 }
 add_action( 'init', 'thingsathome_init' );
+
+
+
+// * Post Type: Places to Visit
+
+// Activity Custom Post 
+//! Type DONT USE CAPS
+function placestovisit_init() {
+    // set up Activity labels
+    $labels = array(
+        'name' => 'Places to Visit',
+        'singular_name' => 'Place',
+        'add_new' => 'Add New Place',
+        'add_new_item' => 'Add New Place',
+        'edit_item' => 'Edit Place',
+        'new_item' => 'New Place',
+        'all_items' => 'All Places',
+        'view_item' => 'View Place',
+        'search_items' => 'Search in Places',
+        'not_found' =>  'No "Places" Found',
+        'not_found_in_trash' => 'Place found in Trash', 
+        'parent_item_colon' => '',
+        'menu_name' => 'Places to Visit',
+    );
+    
+    // register post type
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'places-to-visit'),
+        'query_var' => true,
+        'menu_icon' => 'dashicons-location-alt',
+        'menu_position' => 6,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'trackbacks',
+            'custom-fields',
+            'comments',
+            'revisions',
+            'thumbnail',
+            'author',
+            'page-attributes'
+        )
+    );
+    register_post_type( 'placestovisit', $args );
+    
+    // register taxonomy
+    register_taxonomy('placestovisit_category', 'placestovisit', array('hierarchical' => true, 'label' => 'Category', 'query_var' => true, 'rewrite' => array( 'slug' => 'Activity-category' )));
+}
+add_action( 'init', 'placestovisit_init' );
+
+
+
+// * Post Type: Looking after Yourself
+
+function lookingafteryourself_init() {
+
+    $labels = array(
+        'name' => 'Looking after Yourself',
+        'singular_name' => 'Looking after Yourself',
+        'add_new' => 'Add New Item',
+        'add_new_item' => 'Add New Items',
+        'edit_item' => 'Edit Items',
+        'new_item' => 'New Items',
+        'all_items' => 'All Items',
+        'view_item' => 'View Items',
+        'search_items' => 'Search Items',
+        'not_found' =>  'No Items Found',
+        'not_found_in_trash' => 'No Items found in Trash', 
+        'parent_item_colon' => '',
+        'menu_name' => 'Looking after Yourself',
+    );
+    
+    // register post type
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'looking-after-yourself'),
+        'menu_position' => 7,
+        'query_var' => true,
+        'menu_icon' => 'dashicons-universal-access-alt',
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'trackbacks',
+            'custom-fields',
+            'comments',
+            'revisions',
+            'thumbnail',
+            'author',
+            'page-attributes'
+        )
+    );
+    register_post_type( 'lookingafteryourself', $args );
+    
+    // register taxonomy
+    register_taxonomy('lookingafteryourself_category', 'lookingafteryourself', array('hierarchical' => true, 'label' => 'Category', 'query_var' => true, 'rewrite' => array( 'slug' => 'lookingafteryourself-category' )));
+}
+add_action( 'init', 'lookingafteryourself_init' );
+
+
+// * Post Type: Supporting your kids
+
+// Item Custom Post Type
+function supportingyourkid_init() {
+    // set up product labels
+    $labels = array(
+        'name' => 'Supporting your Kids',
+        'singular_name' => 'Item',
+        'add_new' => 'Add New Item',
+        'add_new_item' => 'Add New Item',
+        'edit_item' => 'Edit Item',
+        'new_item' => 'New Item',
+        'all_items' => 'All Items',
+        'view_item' => 'View Item',
+        'search_items' => 'Search Items',
+        'not_found' =>  'No Items Found',
+        'not_found_in_trash' => 'No Items found in Trash', 
+        'parent_item_colon' => '',
+        'menu_name' => 'Supporting your Kids',
+    );
+    
+    // register post type
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'supporting-your-kids'),
+        'query_var' => true,
+        'menu_icon' => 'dashicons-smiley',
+        'menu_position' => 8,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'trackbacks',
+            'custom-fields',
+            'comments',
+            'revisions',
+            'thumbnail',
+            'author',
+            'page-attributes'
+        )
+    );
+    register_post_type( 'supportingyourkid', $args );
+    
+    // register taxonomy
+    register_taxonomy('supportingyourkid_category', 'supportingyourkid', array('hierarchical' => true, 'label' => 'Category', 'query_var' => true, 'rewrite' => array( 'slug' => 'supportingyourkid-category' )));
+}
+add_action( 'init', 'supportingyourkid_init' );
+
+
+
+// * Post Type: Local News
+
+function localnews_init() {
+    // set up product labels
+    $labels = array(
+        'name' => 'Local News',
+        'singular_name' => 'Item',
+        'add_new' => 'Add New Item',
+        'add_new_item' => 'Add New Item',
+        'edit_item' => 'Edit Item',
+        'new_item' => 'New Item',
+        'all_items' => 'All Items',
+        'view_item' => 'View Item',
+        'search_items' => 'Search Items',
+        'not_found' =>  'No Items Found',
+        'not_found_in_trash' => 'No Items found in Trash', 
+        'parent_item_colon' => '',
+        'menu_name' => 'Local News',
+    );
+    
+    // register post type
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'local-news'),
+        'query_var' => true,
+        'menu_position' => 7,
+        'menu_icon' => 'dashicons-welcome-widgets-menus',
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'trackbacks',
+            'custom-fields',
+            'comments',
+            'revisions',
+            'thumbnail',
+            'author',
+            'page-attributes'
+        )
+    );
+    register_post_type( 'localnews', $args );
+    
+    // register taxonomy
+    register_taxonomy('localnews_category', 'localnews', array('hierarchical' => true, 'label' => 'Category', 'query_var' => true, 'rewrite' => array( 'slug' => 'localnews-category' )));
+}
+add_action( 'init', 'localnews_init' );
 
 //* WIDGETS
 
