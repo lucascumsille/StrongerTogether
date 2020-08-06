@@ -66,35 +66,57 @@ register_nav_menus( array(
 
 // * Post Type
 
-function strongertogether_thingsAtHome_post() {
+// Activity Custom Post 
+//! Type DONT USE CAPS
+function thingsathome_init() {
+    // set up Activity labels
     $labels = array(
-      'name'               => _x( 'Things to do at home', 'post type general name' ),
-      'singular_name'      => _x( 'Activity', 'post type singular name' ),
-      'add_new'            => _x( 'Add New', 'Activity' ),
-      'add_new_item'       => __( 'Add New Activity' ),
-      'edit_item'          => __( 'Edit Activity' ),
-      'new_item'           => __( 'New Activity' ),
-      'all_items'          => __( 'All Activity' ),
-      'view_item'          => __( 'View Activity' ),
-      'search_items'       => __( 'Search Activity' ),
-      'not_found'          => __( 'No activites found' ),
-      'not_found_in_trash' => __( 'No activities found in the Trash' ), 
-      'parent_item_colon'  => '',
-      'menu_name'          => 'Thing to do at Home'
+        'name' => 'Things to do at Home',
+        'singular_name' => 'Activity',
+        'add_new' => 'Add New Activity',
+        'add_new_item' => 'Add New Activity',
+        'edit_item' => 'Edit Activity',
+        'new_item' => 'New Activity',
+        'all_items' => 'All Things to do at Home',
+        'view_item' => 'View Activity',
+        'search_items' => 'Search Things to do at Home',
+        'not_found' =>  'No "Things to do at Home" Found',
+        'not_found_in_trash' => 'No Things to do at Home found in Trash', 
+        'parent_item_colon' => '',
+        'menu_name' => 'Things to do at Home',
     );
+    
+    // register post type
     $args = array(
-      'labels'        => $labels,
-      'description'   => 'Holds activities and specific data',
-      'public'        => true,
-      'menu_position' => 5,
-      'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
-      'has_archive'   => true,
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'Activity'),
+        'query_var' => true,
+        'menu_icon' => 'dashicons-admin-multisite',
+        'menu_position' => 5,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'trackbacks',
+            'custom-fields',
+            'comments',
+            'revisions',
+            'thumbnail',
+            'author',
+            'page-attributes'
+        )
     );
-    register_post_type( 'Thing to do at Home', $args ); 
-  }
-  add_action( 'init', 'strongertogether_thingsAtHome_post' );
-
-
+    register_post_type( 'thingsathome', $args );
+    
+    // register taxonomy
+    register_taxonomy('thingsathome_category', 'thingsathome', array('hierarchical' => true, 'label' => 'Category', 'query_var' => true, 'rewrite' => array( 'slug' => 'Activity-category' )));
+}
+add_action( 'init', 'thingsathome_init' );
 
 //* WIDGETS
 
