@@ -9,7 +9,7 @@
             // set the “paged” parameter (use ‘page’ if the query is on a static front page)
             $paged = ( get_query_var( "paged" ) ) ? get_query_var( "paged" ) : 1;
             $args = array(
-                "post_type" => "post",
+                "post_type" => "thingsathome",
                 "posts_per_page" => 5,
             );
             // the query
