@@ -15,6 +15,49 @@ $rubik: 'Rubik', sans-serif;
 $open: 'Open Sans', sans-serif;
 
 
+.event-home-page {
+  .tribe-events .tribe-events-header, .tribe-events .tribe-events-calendar-list__event-date-tag, .tribe-events .tribe-events-calendar-list__month-separator {
+    display: none;
+  }
+
+  .tribe-events .tribe-events-calendar-list__event-wrapper {
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-list__event {
+    flex-direction: column;
+    
+  }
+
+  // variable for the event flex container
+  $event-flex-container: ".tribe-events-calendar-list";
+
+  #{$event-flex-container} {
+    display: flex;
+    flex-direction: row;
+  }
+
+
+  .tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-list__event-details {
+    width: 100%;
+  }
+
+  // variable for the event item
+  $event-item: ".tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-list__event-row
+  ";
+
+  #{$event-item} {
+    margin: 0px;
+    margin: 0 15px;
+    flex-basis: 50%;
+    border: 2px solid black;
+ 
+
+  }
+
+}
 
 //* Colours 
 
