@@ -7,6 +7,8 @@
 	get_template_part('template-parts/hero');
 	get_template_part('template-parts/homepage-menu');
 	get_template_part('template-parts/owl-carousel-post');
+	do_shortcode('[ecs-list-events limit="3"]');
+	
 	
 ?>
 
