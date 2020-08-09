@@ -10,8 +10,12 @@
 	
 ?>
 
-<div class="container event-home-page">
-	<?php echo do_shortcode('[tribe_events view="list"]'); ?>
+<div class="container p-xl event-home-page">
+
+	<div class="title-container">
+        <h3 class="section-title text-center text-dark-yellow"><?php the_field('event_component_title'); ?></h3>
+    </div>
+	<?php echo do_shortcode('[tribe_events view="photo"]'); ?>
 </div>
 
 		<article class="content px-3 py-5 p-md-5">

@@ -15,64 +15,6 @@ $rubik: 'Rubik', sans-serif;
 $open: 'Open Sans', sans-serif;
 
 
-.event-home-page {
-  .tribe-events .tribe-events-header, .tribe-events .tribe-events-calendar-list__event-date-tag, .tribe-events .tribe-events-calendar-list__month-separator {
-    display: none;
-  }
-
-  .tribe-events .tribe-events-calendar-list__event-wrapper {
-    display: flex;
-    flex-direction: row;
-
-  }
-
-  .tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-list__event {
-    flex-direction: column;
-    
-  }
-
-  // variable for the event flex container
-  $event-flex-container: ".tribe-events-calendar-list";
-
-  #{$event-flex-container} {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-
-  .tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-list__event-details {
-    width: 100%;
-  }
-
-  // variable for the event item
-  $event-item: ".tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-list__event-row";
-
-  #{$event-item} {
-    margin: 0px;
-    margin: 0 15px;
-    flex-basis: 25%;
-    border: 2px solid black;
-
-  }
-
-  // variable for the image container
-  $event-image-wrapper: ".tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-list__event-featured-image-wrapper";
-
-
-  #{$event-image-wrapper} {
-    width:100%;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .tribe-common--breakpoint-medium.tribe-common .tribe-common-g-row--gutters>.tribe-common-g-col {
-
-
-  }
-
-
-}
 
 //* Colours 
 
@@ -291,6 +233,14 @@ $card-border-radius: 15px;
    background-image: url("../images/heart.svg");
 }
 
+
+// * Homepage Event List [View="photo"]
+
+.event-home-page {
+   .tribe-events .tribe-events-header, .tribe-events .tribe-events-calendar-list__event-date-tag, .tribe-events .tribe-events-calendar-list__month-separator, .tribe-events .tribe-events-c-nav, .tribe-events .tribe-events-c-ical  {
+    display: none;
+  }
+}
 
 :root {
   --blue: #007bff;
