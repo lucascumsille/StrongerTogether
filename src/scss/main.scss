@@ -37,6 +37,7 @@ $open: 'Open Sans', sans-serif;
   #{$event-flex-container} {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
 
@@ -50,11 +51,26 @@ $open: 'Open Sans', sans-serif;
   #{$event-item} {
     margin: 0px;
     margin: 0 15px;
-    flex-basis: 50%;
+    flex-basis: 25%;
     border: 2px solid black;
- 
 
   }
+
+  // variable for the image container
+  $event-image-wrapper: ".tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-list__event-featured-image-wrapper";
+
+
+  #{$event-image-wrapper} {
+    width:100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .tribe-common--breakpoint-medium.tribe-common .tribe-common-g-row--gutters>.tribe-common-g-col {
+
+
+  }
+
 
 }
 
