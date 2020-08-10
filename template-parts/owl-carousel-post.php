@@ -22,10 +22,10 @@
         // the loop
         while ( $the_query->have_posts() ) : $the_query->the_post();
         ?>
-            <div class="drop-shadow-wrapper">
-                <a class="carousel-anchor" href="<?php the_permalink(); ?>">
+            <div class="drop-shadow-wrapper mx-auto">
+                <a class="carousel-anchor mx-auto" href="<?php the_permalink(); ?>">
                     <div class="post-item-carousel box-shadow">
-                        <div class="post-carousel-image" style="background-image:url('<?php echo get_the_post_thumbnail_url(); ?>');"></div>
+                        <div class="post-carousel-image mx-auto" style="background-image:url('<?php echo get_the_post_thumbnail_url(); ?>');"></div>
                         <div class="post-carousel-content">
                             <h5 class="text-black"><?php the_title(); ?></h5>
                             <div class="post-meta-carousel-info justify-content-between">
@@ -38,19 +38,27 @@
             </div>
         <?php endwhile; ?>
 
+        <?php
+        // clean up after the query and pagination and comes back to the original page
+        // ! if you try to retrieve info from other fields and they are not working most likely is because you forgot to put this line of code
+        wp_reset_postdata();
+        ?>
+
         </div>
+
+        <a class="button mx-auto" href="">
+            <span class="button-text"><?php the_field ('post_slider_button_text'); ?></span>
+            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/arrow-yellow.svg" alt="">
+        </a>
+
     </div>
     
 
-    <?php
-    // clean up after the query and pagination
-    wp_reset_postdata();
-    ?>
+
     <?php else: ?>
     <p>
     <?php _e( "Sorry, no posts matched your criteria." ); ?>
     </p>
     <?php endif; ?>
 </div>
-
 
