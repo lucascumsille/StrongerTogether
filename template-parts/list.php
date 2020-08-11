@@ -5,7 +5,7 @@
 
             <div class="checklist-item-wrapper">
 
-                <img class="check-icon" src="<?php echo get_field('check_for_location', 'option')['url']; ?>" >
+                <img class="check-icon" src="<?php echo get_field('places_check', 'option')['url']; ?>" >
 
                 <span><?php the_sub_field('name_of_the_facility'); ?></span>
 
