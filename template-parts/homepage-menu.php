@@ -1,18 +1,7 @@
 
 
-<?php
-    // Get the ID of a given category
-    $category_id_localNews = 5;
- 
-    // Get the URL of this category
-    $category_link_localNews = get_category_link( $category_id_localNews );
-    $category_name_localNews = get_cat_name( $category_id_localNews );
 
-
-?>
-
-
-    <div class="container pt-5">
+    <div class="container p-xl">
         <div class="menu-grid">
             <div class="right-column-menu">
                     <div class="title-container">
@@ -73,31 +62,61 @@
 
                 <div class="d-flex flex-columnn flex-wrap flex-lg-row justify-content-center align-items-center">
 
-                    <a class="anchor-card-wrapper is--for-parents"  href="<?php echo esc_url( $category_link_localNews ); ?>">
+                    <a class="anchor-card-wrapper is--for-parents"  href="<?php echo get_post_type_archive_link( 'lookingafteryourself' ); ?>">
                         <div class="menu-card">
-                            <div class="upper-menu-card bg-green"><img class="menu-icon-homepage mx-auto" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/events 1.svg"></div>
-                            <div class="lower-menu-card"><p> <?php echo $category_name_localNews ?> </p></div>
+                            <div class="upper-menu-card bg-green">
+                                <?php 
+                                // Image
+                                    $image = get_field('icon_page', 'lookingafteryourself');
+                                    if( !empty( $image ) ): ?>
+                                        <img class="menu-icon-homepage mx-auto" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                <?php endif; ?>
+                            </div>
+                            <div class="lower-menu-card"><p> <?php the_field( 'page_title', 'lookingafteryourself' ); ?> </p></div>
                         </div>
                     </a>
 
-                    <a class="anchor-card-wrapper is--for-parents" href="">
+                    <a class="anchor-card-wrapper is--for-parents"  href="<?php echo get_post_type_archive_link( 'supportingyourkid' ); ?>">
                         <div class="menu-card">
-                            <div class="upper-menu-card bg-green"><img class="menu-icon-homepage mx-auto" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/events 1.svg"></div>
-                            <div class="lower-menu-card"><p>Events</p></div>
+                            <div class="upper-menu-card bg-green">
+                                <?php 
+                                // Image
+                                    $image = get_field('icon_page', 'supportingyourkid');
+                                    if( !empty( $image ) ): ?>
+                                        <img class="menu-icon-homepage mx-auto" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                <?php endif; ?>
+                            </div>
+                            <div class="lower-menu-card"><p> <?php the_field( 'page_title', 'supportingyourkid' ); ?> </p></div>
                         </div>
                     </a>
 
-                    <a href="" class="anchor-card-wrapper is--for-parents" >
+                    <!-- Getting info from an Archive(custom Type) page -->
+                    <a class="anchor-card-wrapper is--for-parents"  href="<?php echo get_post_type_archive_link( 'localnews' ); ?>">
                         <div class="menu-card">
-                            <div class="upper-menu-card bg-green"><img class="menu-icon-homepage mx-auto" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/events 1.svg"></div>
-                            <div class="lower-menu-card"><p>Places to Visit</p></div>
+                            <div class="upper-menu-card bg-green">
+                                <?php 
+                                // Image
+                                    $image = get_field('icon_page', 'localnews');
+                                    if( !empty( $image ) ): ?>
+                                        <img class="menu-icon-homepage mx-auto" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                <?php endif; ?>
+                            </div>
+                            <div class="lower-menu-card"><p> <?php the_field( 'page_title', 'localnews' ); ?> </p></div>
                         </div>
                     </a>
 
-                    <a href="" class="anchor-card-wrapper is--for-parents" >
+                    <!-- Getting info from page -->
+                    <a class="anchor-card-wrapper is--for-parents"  href="<?php echo get_page_link( 30 ); ?>">
                         <div class="menu-card">
-                            <div class="upper-menu-card bg-green"><img class="menu-icon-homepage mx-auto" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/events 1.svg"></div>
-                            <div class="lower-menu-card"><p>Places to Visit</p></div>
+                            <div class="upper-menu-card bg-green">
+                                <?php 
+                                // Image
+                                    $image = get_field('icon_page', 30);
+                                    if( !empty( $image ) ): ?>
+                                        <img class="menu-icon-homepage mx-auto" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                <?php endif; ?>
+                            </div>
+                            <div class="lower-menu-card"><p> <?php the_field( 'page_title', 30 ); ?> </p></div>
                         </div>
                     </a>
 
@@ -106,4 +125,7 @@
             </div>
         </div>
     </div>
+
+    <?php
+
 
