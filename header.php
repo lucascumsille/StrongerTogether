@@ -33,8 +33,8 @@
 							$logo = wp_get_attachment_image_src($custom_logo_id);
 						} 
 				?>
-				<a class="navbar-brand" href="#"><img class="mb-3 mx-auto logo" src="<?php echo $logo[0] ?>" alt="logo" ></a>
-
+				<a class="navbar-brand" href="#"><img class="mb-3 mx-auto logo" src="<?php echo get_field('stl_icon', 'option')['url']; ?>" ></a>
+				
 				<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',

@@ -605,7 +605,13 @@ h6 {
 
 
 .logo{
-  width:78px;
+  width:100%;
+
+}
+
+.navbar-brand {
+  width:250px;
+  max-height: 50px;
 }
 .social-list a {
   width: 32px;
