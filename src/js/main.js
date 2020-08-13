@@ -7,7 +7,13 @@ $(document).ready(function() {
 		else{
 			$('.page-title').removeClass("sticky");
 		}
-	});
+    });
+    
+    $(function() {
+        $(".dropdown-menu").addClass("dropdown-menu-right");
+      });
+    
+      
 
 });
 

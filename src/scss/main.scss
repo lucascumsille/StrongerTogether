@@ -27,6 +27,9 @@ $dark-yellow: #9F641F;
 $yellow: #FFE1BE;
 $light-yellow: #FFF6E3;
 
+$lightest-blue: #E5E5FE;
+$navy-blue: #3D3C76;
+
 $black: #161004;
 
 .text-dark-yellow {
@@ -99,13 +102,15 @@ $padding-m: 45px;
 
 }
 
+
+
 .medium-container {
   max-width: 850px;
 }
 
 // * Transition
 
-$transition: all 300ms ease-out 300ms;
+$transition: all 300ms cubic-bezier(0.22, 1, 0.36, 1);
 
 /* 
     -webkit-transition: $transition;
@@ -120,11 +125,15 @@ $transition: all 300ms ease-out 300ms;
   text-align: center;
 }
 
+
+$box-shadow: 0px 6px 8px 1px rgba(0, 0, 255, .2);
+
 .box-shadow {
   /* offset-x | offset-y | blur-radius | spread-radius | color */
-  box-shadow: 0px 6px 8px 1px rgba(0, 0, 255, .2); ;
+  box-shadow: $box-shadow;
 }
 
+$border-radius: 15px;
 
 a {
   -webkit-transition: $transition;
@@ -222,7 +231,7 @@ $button-line: 20px;
 
 }
 
-$card-border-radius: 15px;
+$card-border-radius: $border-radius;
 
 
 .anchor-card-wrapper {
@@ -338,6 +347,69 @@ $card-border-radius: 15px;
 
 //* Nav Bar
 
+.dropdown:hover {
+
+  > .dropdown-menu {
+    display: block;
+  }
+
+  .nav-link {
+    background-color: $lightest-blue;
+  }
+
+
+}
+
+.navbar-light .navbar-nav .nav-link  {
+  color: $navy-blue;
+  padding: 20px 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+
+  border-radius: $border-radius;
+
+  font-family: $rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+  
+
+
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  border: none;
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+  } 
+}
+
+
+// Dropdown menu is active
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  background-color: $yellow;
+}
+
+// Dropwdown menu is focused 
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color:$navy-blue;
+}
+
  .dropdown-item {
    background-repeat: no-repeat;
    background-position-x: left;
@@ -346,8 +418,30 @@ $card-border-radius: 15px;
 
    padding-top: 15px;
    padding-bottom: 15px;
-   padding-left: 55px;
-   margin-left: 20px;
+   
+
+   font-family: $rubik;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 15px;
+   line-height: 18px;
+   color: $navy-blue;
+
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+  overflow: hidden;
+
+   &:hover {
+     background-color: $lightest-blue;
+     color: $navy-blue;
+     
+   }
+}
+
+.dropdown-toggle::after {
+  color: $navy-blue
 }
 
 
@@ -389,7 +483,7 @@ $card-border-radius: 15px;
 
 .places-item {
   text-align: center;
-  border-radius: 15px;
+  border-radius: $border-radius;
   border: 1.5px solid rgba(255, 255, 255, 0.7);
   margin: 16px;
 
