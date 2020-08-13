@@ -20,7 +20,8 @@ function strongertogether_menus() {
 } 
   
 add_action('init', 'strongertogether_menus');
- 
+
+
 
  // * add CSS
 function strongertogether_register_styles() {

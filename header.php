@@ -19,11 +19,18 @@
     
     <header class="header text-center">	    
 
-		<nav class="navbar navbar-expand-lg navbar-light container">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="<?php esc_html_e( 'Toggle Navigation', 'theme-textdomain' ); ?>">
-				<span class="navbar-toggler-icon"></span>
+		<nav class="navbar navbar-expand-lg navbar-light container-lg">
+	
+			<button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="<?php esc_html_e( 'Toggle Navigation', 'theme-textdomain' ); ?>">
+				<div class="menu-span"><span>Menu</span></div>
+				<div>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</div>
 			</button>
 
+		
 			<div class="collapse navbar-collapse" id="navbar-content">
 				<?php 
 					//Logo

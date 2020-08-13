@@ -12,7 +12,7 @@ $(document).ready(function() {
     $(function() {
         $(".dropdown-menu").addClass("dropdown-menu-right");
       });
-    
+
       
 
 });
@@ -40,3 +40,4 @@ $('.owl-post').owlCarousel({
         }
     }
 })
+
