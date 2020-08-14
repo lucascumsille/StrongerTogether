@@ -21,6 +21,16 @@
         <?php
         // the loop
         while ( $the_query->have_posts() ) : $the_query->the_post();
+
+        $category = get_the_terms( $id, 'thingsathome_category' );
+        //get First Category
+        $firstCategory = $category[0];
+        //get category link
+          $category_link = get_category_link($firstCategory->term_id);
+          //echo category name
+          // echo $firstCategory->name;
+          
+
         ?>
             <div class="drop-shadow-wrapper mx-auto">
                 <a class="carousel-anchor mx-auto" href="<?php the_permalink(); ?>">
@@ -29,7 +39,9 @@
                         <div class="post-carousel-content">
                             <h5 class="text-black"><?php the_title(); ?></h5>
                             <div class="post-meta-carousel-info justify-content-between">
-                                <div class="tag-wrapper"> <img class="tag-icon" src="/assets/images/icons/events 1.svg" > <span>Educational</span> </div>
+                                <div class="tag-wrapper"> 
+                                    <img class="tag-icon" src="<?php echo esc_url(get_field('category_icon', $category[0])['url']); ?>" > 
+                                    <span style="color:<?php the_field('color_for_category', $category[0]); ?>"><?php  echo $firstCategory->name;  ?></span> </div>
                                 <span class="">Age Range</span>
                             </div>
                         </div>
