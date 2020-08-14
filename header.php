@@ -37,7 +37,7 @@
 			<div class="collapse navbar-collapse" id="navbar-content">
 
 				<div class="navbar-menu-wrapper">
-					<h5 class="menu-mobile-title text-dark-yellow">For Families</h5>
+					<h5 class="menu-mobile-title text-middle-yellow">For Families</h5>
 					<div class="navbar-menu-flex">
 
 						<a href="<?php echo get_post_type_archive_link( 'placestovisit' ); ?>" class="navbar-menu-flex-item">
@@ -124,7 +124,7 @@
 								<span class="mobile-navlink"><?php the_field( 'page_title', 30 ); ?></span>
 							</a>
 					</div>
-
+				</div>									
 				<a class="navbar-brand" href="#"><img class="mb-3 mx-auto logo" src="<?php echo get_field('stl_icon', 'option')['url']; ?>" ></a>
 				
 				<?php

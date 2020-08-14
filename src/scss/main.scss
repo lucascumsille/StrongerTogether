@@ -24,6 +24,7 @@ $lime-green: #AEF09F;
 $green: #D7FACE;
 
 $dark-yellow: #9F641F;
+$middle-yellow: #9D6511;
 $yellow: #FFE1BE;
 $light-yellow: #FFF6E3;
 
@@ -48,6 +49,10 @@ $black: #161004;
 
 .text-black {
   color: black;
+}
+
+.text-middle-yellow {
+  color: $middle-yellow;
 }
 
 .bg-yellow {
@@ -598,6 +603,15 @@ $card-border-radius: $border-radius;
 .navbar-menu-wrapper {
   padding: 30px 15px 10px 15px;
 
+
+
+}
+
+@media(min-width: 992px) {
+  .navbar-menu-wrapper, .nav-mobile-social {
+    display: none;
+  }
+  
 }
 
 .navbar-menu-flex {
@@ -683,9 +697,11 @@ $card-border-radius: $border-radius;
   display: flex;
   flex-direction: row;
   margin-top: 27px;
+  padding-left: 15px;
 
   a {
     margin-right: 15px;
+    margin-bottom: 20px;
   }
 }
 
