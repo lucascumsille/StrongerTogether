@@ -42,7 +42,7 @@
                                 <div class="tag-wrapper"> 
                                     <img class="tag-icon" src="<?php echo esc_url(get_field('category_icon', $category[0])['url']); ?>" > 
                                     <span style="color:<?php the_field('color_for_category', $category[0]); ?>"><?php  echo $firstCategory->name;  ?></span> </div>
-                                <span class="">Age Range</span>
+                                <span class=""> <?php the_field('suitable_for') ?>  </span>
                             </div>
                         </div>
                     </div>
