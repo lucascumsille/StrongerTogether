@@ -20,6 +20,7 @@ $(document).ready(function() {
 
 $('.owl-post').owlCarousel({
     loop:true,
+    
 	margin:10,
 	dots:true,
 	navigation: false,
@@ -30,7 +31,7 @@ $('.owl-post').owlCarousel({
             nav:true
         },
         600:{
-            items:3,
+            items:2,
             nav:false
         },
         1000:{

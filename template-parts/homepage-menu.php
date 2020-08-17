@@ -5,7 +5,7 @@
         <div class="menu-grid">
             <div class="right-column-menu">
                     <div class="title-container">
-                        <h3 class="section-title text-center text-dark-yellow"> <?php the_field('h3_for_families_title'); ?> </h3>
+                        <h5 class="section-title text-center text-dark-yellow"> <?php the_field('h3_for_families_title'); ?> </h5>
                     </div>
 
                     <div class="d-flex flex-columnn flex-wrap flex-lg-row justify-content-center align-items-center">
@@ -57,7 +57,7 @@
 
             <div class="left-column-menu">
                 <div class="title-container">
-                    <h3 class="section-title text-center text-dark-green"> <?php the_field('h3_for_Parents'); ?> </h3>
+                    <h5 class="section-title text-center text-dark-green"> <?php the_field('h3_for_Parents'); ?> </h5>
                   </div>
 
                 <div class="d-flex flex-columnn flex-wrap flex-lg-row justify-content-center align-items-center">
