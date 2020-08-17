@@ -22,6 +22,8 @@
     </a>
 </div>
 
+<?php get_template_part('template-parts/home-places-to-visit'); ?>
+
 		<article class="content px-3 py-5 p-md-5">
 
 		<?php

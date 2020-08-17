@@ -20,7 +20,7 @@ $open: 'Open Sans', sans-serif;
 
 $darkest-green: #0E3512;
 $dark-green: #297316;
-$lime-green: #D7FACE;
+$lime-green: #AEF09F;
 $green: #D7FACE;
 
 $dark-yellow: #9F641F;
@@ -961,6 +961,8 @@ $card-border-radius: $border-radius;
   border-radius: $border-radius;
   border: 1.5px solid rgba(255, 255, 255, 0.7);
   margin: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   background: rgba(255, 255, 255, 0.2);
   max-width: 175px;
@@ -972,6 +974,18 @@ $card-border-radius: $border-radius;
 
   p {
     margin-bottom: 0;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+
+    @media (min-width: $min-md) {
+      font-size: 16px;
+      line-height: 22px;
+
+    }
   }
 
 }
