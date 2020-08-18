@@ -21,7 +21,7 @@
 
 		<nav class="navbar navbar-expand-lg navbar-light container-lg">
 
-			<a class="navbar-brand-mobile" href="#"><img class="mx-auto logo" src="<?php echo get_field('stl_icon', 'option')['url']; ?>" >
+			<a class="navbar-brand-mobile" href="<?php echo get_permalink( get_page_by_path( 'home-page' ) ); ?>"><img class="mx-auto logo" src="<?php echo get_field('stl_icon', 'option')['url']; ?>" >
 			</a>
 	
 			<button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="<?php esc_html_e( 'Toggle Navigation', 'theme-textdomain' ); ?>">
@@ -125,7 +125,7 @@
 							</a>
 					</div>
 				</div>									
-				<a class="navbar-brand" href="#"><img class="mb-3 mx-auto logo" src="<?php echo get_field('stl_icon', 'option')['url']; ?>" ></a>
+				<a class="navbar-brand" href="<?php echo get_permalink( get_page_by_path( 'home-page' ) ); ?>"><img class="mb-3 mx-auto logo" src="<?php echo get_field('stl_icon', 'option')['url']; ?>" ></a>
 				
 				<?php
 				wp_nav_menu( array(

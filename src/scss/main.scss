@@ -22,6 +22,7 @@ $darkest-green: #0E3512;
 $dark-green: #297316;
 $lime-green: #AEF09F;
 $green: #D7FACE;
+$lightest-green: #F1FFEC;
 
 $dark-yellow: #9F641F;
 $middle-yellow: #9D6511;
@@ -32,6 +33,7 @@ $light-yellow: #FFF6E3;
 $neutral-lightest: #F0F0FA;
 
 $lightest-blue: #E5E5FE;
+$footer-blue: #F0F0FA;
 $navy-blue: #3D3C76;
 
 $black: #161004;
@@ -79,6 +81,14 @@ $green-gradient: linear-gradient(152.26deg, #D9F8B1 14.96%, rgba(255, 255, 255, 
   background-color: $neutral-lightest;
 }
 
+.bg-lightest-green {
+  background-color: $lightest-green;
+}
+
+.bg-navy-blue {
+  background-color: $navy-blue;
+}
+
 
 // * Responsiveness
 
@@ -113,6 +123,12 @@ $padding-m: 45px;
 
 .medium-container {
   max-width: 850px;
+}
+
+@media (min-width: 1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1170px;
+  }
 }
 
 // * Transition
@@ -219,6 +235,25 @@ $button-line: 20px;
 
 }
 
+.button-cta-green {
+  background-color: $lightest-green;
+  padding: 0;
+
+  span {
+    color: #208610;
+  }
+
+  &:hover {
+
+    border: 2px solid transparent;
+
+    img {
+      transform: translate(15px);
+      
+    }
+  }
+
+}
 
 
 .button-green {
@@ -354,7 +389,7 @@ $card-border-radius: $border-radius;
 
 .drop-shadow-wrapper {
 
- padding: 15px;
+ padding: 10px;
 }
 
 .carousel-anchor {
@@ -363,7 +398,7 @@ $card-border-radius: $border-radius;
 
 .post-item-carousel {
 
-  max-width: 300px;
+  width: 360px;
   
   border-radius: $card-border-radius;
   background-color: white;
@@ -374,6 +409,18 @@ $card-border-radius: $border-radius;
     border-radius: $card-border-radius $card-border-radius 0px 0px;
 
     border-bottom: 0px;
+  }
+
+  .owl-item .active {
+    width: 370px;
+  }
+
+  .is--news-image {
+    max-height: 130px;
+  }
+
+  .is--news-content {
+    height: 290px;
   }
 
   .post-carousel-content {
@@ -452,6 +499,9 @@ $card-border-radius: $border-radius;
   display: none;
 }
 
+.owl-news {
+  height: 450px;
+}
 //* Nav Bar
 
 // Display rules
@@ -953,7 +1003,7 @@ $card-border-radius: $border-radius;
 .places-to-visit-wrapper {
   background: $green-gradient; 
   border-radius: 20px;
-  margin-bottom: 45px;
+  //margin-bottom: 45px;
 }
 
 .places-item {
@@ -990,6 +1040,143 @@ $card-border-radius: $border-radius;
 
 }
 
+
+// * FOOTER 
+
+// First Row 
+.footer-first-row {
+  padding-top: 40px;
+  padding-bottom: 60px;
+
+
+
+  .footer-logo {
+    height: 45px;
+  }
+}
+
+.share-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 20px;
+  align-items: top;
+  max-width: 345px;
+
+  .share-icon {
+    width: 48px;
+    height: 41px;
+    margin-right: 20px; 
+  }
+ 
+}
+
+.flex {
+  display: flex;
+}
+
+.share-content-wrapper {
+
+  .share-title {
+     font-family: Rubik;
+     font-style: normal;
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 19px;
+  }
+ 
+ }
+
+// Second Row 
+
+.footer-second-row {
+ padding-bottom: 50px;
+ .col-12 {
+   margin-bottom: 25px;
+ }
+
+
+
+}
+
+.row {
+  .media-footer-column {
+   @media (min-width: 992px) {
+     .nav-mobile-social {
+         display: flex !important;
+         margin-top: 0;
+     }
+    }
+  }
+}
+
+.footer-title {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  margin-bottom: 25px;
+
+}
+
+.footer-page-wrapper {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.footer-page-link {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+  /* identical to box height, or 147% */
+
+  text-decoration-line: underline;
+
+  color: $navy-blue;
+
+  margin-bottom: 20px;
+}
+
+
+//Third Row
+
+.footer-third-row {
+  background-color: $footer-blue;
+  padding-top:16px;
+  padding-bottom: 16px;
+
+  .footer-page-link {
+    margin-right: 35px;
+  }
+}
+
+.footer-logan-logo {
+  height: 37px;
+}
+
+.copyright {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  /* identical to box height, or 157% */
+
+  text-align: right;
+
+  color: #3D3C76;
+
+  opacity: 0.5;
+}
 // *
 
 :root {
@@ -1045,6 +1232,7 @@ body {
   font-family: $open;
   font-size: 16px;
   color: $black;
+  background-color: #FFFBF5;
 
 
 }
@@ -1189,4 +1377,9 @@ h5 {
   width:250px;
   max-height: 50px;
 }
+
+
+
+
+
 

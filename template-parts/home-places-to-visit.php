@@ -6,7 +6,7 @@
             <p><?php the_field('places_to_visit_subtitle') ?></p>
         </div>
     
-        <div class="row mb-5">
+        <div class="row mb-5 justify-content-center">
             <?php
 
                 $args = array(

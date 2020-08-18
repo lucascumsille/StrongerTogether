@@ -24,7 +24,7 @@ $('.owl-post').owlCarousel({
 	margin:10,
 	dots:true,
 	navigation: false,
-	responsiveClass:true,
+    responsiveClass:true,
     responsive:{
         0:{
             items:1,
@@ -35,6 +35,11 @@ $('.owl-post').owlCarousel({
             nav:false
         },
         1000:{
+            items:2,
+            nav:true,
+            loop:false
+        },
+        1200:{
             items:3,
             nav:true,
             loop:false
