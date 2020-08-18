@@ -102,7 +102,7 @@ $lg: 1199px;
 //* Spacing
 
 $padding-s: 30px;
-$padding-xl:150px;
+$padding-xl:60px;
 $padding-m: 45px;
 
 
@@ -114,8 +114,13 @@ $padding-m: 45px;
 
 .p-xl {
 
-  padding-top: $padding-xl;
-  padding-bottom: $padding-xl;
+  padding-top: 44px;
+  padding-bottom: 44px;
+
+  @media (min-width: $min-md) {
+    padding-top: $padding-xl;
+    padding-bottom: $padding-xl;
+  }
 
 }
 
@@ -149,7 +154,8 @@ $transition: all 300ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 
-$box-shadow: 0px 6px 8px 1px rgba(0, 0, 255, .2);
+$box-shadow: 0px 4px 8px rgba(83, 56, 26, 0.15);
+$box-shadow-green: 0px 4px 8px rgba(37, 83, 26, 0.14);
 
 .box-shadow {
   /* offset-x | offset-y | blur-radius | spread-radius | color */
@@ -166,7 +172,7 @@ a {
 
   &:hover {
     text-decoration: none;
-    color: $dark-yellow;
+    color: inherit;
 
   }
 }
@@ -187,7 +193,7 @@ $button-line: 20px;
 
 .button {
   display: flex;
-  border: 2px solid transparent;
+  border: 1.5px solid transparent;
   border-radius: 50px;
   padding: 15px 20px;
   padding-right: 25px;
@@ -225,10 +231,10 @@ $button-line: 20px;
 
   &:hover {
 
-    border: 2px solid #EDA046;
+    border: 1.5px solid #FFBC6C;
 
     img {
-      transform: translate(15px);
+      transform: translate(5px);
       
     }
   }
@@ -261,6 +267,10 @@ $button-line: 20px;
 
   span {
     color: $darkest-green;
+  }
+
+  &:hover {
+    border: 1.5px solid #90ED68;
   }
 }
 
@@ -329,6 +339,8 @@ $card-border-radius: $border-radius;
   max-width: 200px;
   margin: 20px 10px;
   text-align: center;
+  overflow: hidden;
+  border-radius: 15px;
 
   @media (min-width: $xs) {
     flex-basis: 50%;
@@ -337,11 +349,38 @@ $card-border-radius: $border-radius;
   @media (min-width: $md) {
     flex-basis: 50%;
   }
+
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+
+  &:hover{
+    box-shadow: $box-shadow;
+
+    p {
+      color:$black;
+    }
+  }
+}
+
+.menu-card {
+  overflow: hidden;
+
 }
 
 .is--for-parents {
   .upper-menu-card {border: 2px solid $green;}
   .lower-menu-card {border: 2px solid $green;}
+
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+
+  &:hover {
+    box-shadow: $box-shadow-green;
+  }
 }
 
 .upper-menu-card {
@@ -366,6 +405,7 @@ $card-border-radius: $border-radius;
   background-color: white;
   border: 2px solid $yellow;
   border-radius: 0 0 $card-border-radius $card-border-radius;
+  overflow: hidden;
 
   p{
     margin-bottom: 13px;
@@ -842,16 +882,29 @@ $card-border-radius: $border-radius;
    display: none;
  }
 
+ .tribe-common--breakpoint-xsmall.tribe-events-pro .tribe-events-pro-photo__event  {
+  width: 100% !important;
 }
+
+.tribe-common--breakpoint-medium.tribe-events-pro .tribe-events-pro-photo__event  {
+  width: 33% !important;
+}
+
+.tribe-common--breakpoint-large.tribe-events-pro .tribe-events-pro-photo__event  {
+  width: 33% !important;
+}
+
+}
+
 
 
 // To display the first three items
 
-.tribe-common--breakpoint-medium.tribe-common .tribe-common-g-row--gutters>.tribe-common-g-col {
+.tribe-common--breakpoint-xsmall.tribe-common .tribe-common-g-row--gutters>.tribe-common-g-col {
   display: none;
 }
 
-.tribe-common--breakpoint-medium.tribe-common .tribe-common-g-row--gutters>.tribe-common-g-col:nth-child(-n+3) {
+.tribe-common--breakpoint-xsmall.tribe-common .tribe-common-g-row--gutters>.tribe-common-g-col:nth-child(-n+3) {
   display: block;
 }
 
@@ -1066,6 +1119,7 @@ $card-border-radius: $border-radius;
   padding: 20px;
   align-items: top;
   max-width: 345px;
+  border-radius: 15px;
 
   .share-icon {
     width: 48px;
@@ -1141,13 +1195,19 @@ $card-border-radius: $border-radius;
   font-weight: 600;
   font-size: 15px;
   line-height: 22px;
-  /* identical to box height, or 147% */
-
   text-decoration-line: underline;
-
   color: $navy-blue;
 
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+
   margin-bottom: 20px;
+  &:hover {
+    color: #222258;
+    text-decoration-line: underline;
+  }
 }
 
 // Traditional Wrapper
@@ -1190,6 +1250,15 @@ $card-border-radius: $border-radius;
   line-height: 21px;
 }
 
+.icon-round-wrapper.bg-navy-blue {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+  &:hover {
+    background: #222258;
+  }
+}
 
 //Third Row
 

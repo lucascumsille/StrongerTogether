@@ -121,7 +121,7 @@
 											<img class="menu-icon-homepage mx-auto" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 									<?php endif; ?>
 								</div>
-								<span class="mobile-navlink"><?php the_field( 'page_title', 30 ); ?></span>
+								<span class="mobile-navlink"><?php echo get_the_title( 30 ); ?></span>
 							</a>
 					</div>
 				</div>									

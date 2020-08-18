@@ -28,27 +28,32 @@
             <div class="col-12 col-sm-6 col-lg-3 text-center text-sm-left">
                 <p class="footer-title">For Families</p>
                 <div class="footer-page-wrapper">
-                    <a class="footer-page-link" href="">Places to Visit</a>
-                    <a class="footer-page-link" href="">Events</a>
-                    <a class="footer-page-link" href="">Things at home</a>
+                    <a class="footer-page-link" href="<?php echo get_post_type_archive_link( 'placestovisit' ); ?>"><?php the_field( 'page_title', 'placestovisit' ); ?></a>
+
+                    <a class="footer-page-link" href="<?php echo get_post_type_archive_link( 'tribe_events' ); ?>"><?php the_field( 'page_title', 'tribe_events' ); ?></a>
+
+                    <a class="footer-page-link" href="<?php echo get_post_type_archive_link( 'thingsathome' ); ?>"><?php the_field( 'page_title', 'thingsathome' ); ?></a>
                 </div>
             </div>
 
             <div class="col-12 col-sm-6 col-lg-3 text-center text-sm-left">
-                <p class="footer-title">For Families</p>
+                <p class="footer-title">For Parents</p>
                 <div class="footer-page-wrapper">
-                    <a class="footer-page-link" href="">Places to Visit</a>
-                    <a class="footer-page-link" href="">Events</a>
-                    <a class="footer-page-link" href="">Things at home</a>
+                    <a class="footer-page-link" href="<?php echo get_post_type_archive_link( 'lookingafteryourself' ); ?>"><?php the_field( 'page_title', 'lookingafteryourself' ); ?></a>
+
+                    <a class="footer-page-link" href="<?php echo get_post_type_archive_link( 'localnews' ); ?>"><?php the_field( 'page_title', 'localnews' ); ?></a>
+
+                    <a class="footer-page-link" href="<?php echo get_post_type_archive_link( 'supportingyourkid' ); ?>"><?php the_field( 'page_title', 'supportingyourkid' ); ?></a>
+
+                    <a class="footer-page-link" href="<?php echo get_page_link( 30 ); ?>"><?php echo get_the_title( 30 ); ?></a>
                 </div>
             </div>
 
             <div class="col-12 col-sm-6 col-lg-3 text-center text-sm-left">
-                <p class="footer-title">For Families</p>
+                <p class="footer-title">Stronger Together Logan</p>
                 <div class="footer-page-wrapper">
-                    <a class="footer-page-link" href="">Places to Visit</a>
-                    <a class="footer-page-link" href="">Events</a>
-                    <a class="footer-page-link" href="">Things at home</a>
+                    <a class="footer-page-link" href="<?php echo get_page_link( 371 ); ?>"><?php echo get_the_title( 371 ); ?></a>
+                    <a class="footer-page-link" href="<?php echo get_page_link( 374 ); ?>"><?php echo get_the_title( 374 ); ?></a>
                 </div>
             </div>
 
