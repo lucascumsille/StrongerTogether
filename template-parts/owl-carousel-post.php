@@ -34,7 +34,7 @@
         ?>
             <div class="drop-shadow-wrapper mx-auto">
                 <a class="carousel-anchor mx-auto" href="<?php the_permalink(); ?>">
-                    <div class="post-item-carousel box-shadow mx-auto">
+                    <div class="post-item-carousel box-shadow-carousel mx-auto">
                         <div class="post-carousel-image mx-auto" style="background-image:url('<?php echo get_the_post_thumbnail_url(); ?>');"></div>
                         <div class="post-carousel-content">
                             <h4 class="text-black"><?php the_title(); ?></h4>
