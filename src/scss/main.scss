@@ -1150,6 +1150,46 @@ $card-border-radius: $border-radius;
   margin-bottom: 20px;
 }
 
+// Traditional Wrapper
+
+.traditional-wrapper {
+  border-top: 2px solid #E8E8E8;
+}
+
+.traditionals-title-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 20px;
+
+  .traditionals-title {
+    margin-right: 20px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  img {
+    margin-right: 10px;
+  }
+
+}
+
+.traditional-info {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 21px;
+}
+
 
 //Third Row
 

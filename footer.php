@@ -67,6 +67,17 @@
 
     </div>
 
+    <div class="container-fluid traditional-wrapper mb-5">
+        <div class="container mt-5">
+            <div class="traditionals-title-wrapper">
+                <span class="traditionals-title"><?php echo the_field('traditional_custodians_footer_title', 'option'); ?> </span>
+                <img class="traditional-flag" src="<?php echo get_field('traditional_custodians_flag', 'option')['url']; ?>" alt="">
+                <img class="traditional-flag" src="<?php echo get_field('traditional_custodians_flag_second', 'option')['url']; ?>" alt="">
+            </div>
+            <p class="traditional-info text-center text-lg-left"><?php echo the_field('traditional_custodians_footer_text', 'option'); ?></p>
+        </div>
+    </div>
+
     <div class="container-fluid footer-third-row">
         <div class="container">
             <div class="row justify-content-between">
