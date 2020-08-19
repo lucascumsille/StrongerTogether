@@ -1,9 +1,33 @@
 
+<style>
+	.facetwp-radio {
+		background-image:url('<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/Rectangle radio.svg') !important;
+	}
+
+	.facetwp-radio.checked {
+		background-image:url('<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/unchecked.svg') !important;
+	}
+</style>
+
+
 <div class="container">
 
+<div class="row">
+	<div class="col-12 col-lg-7">
+		<div class="custom-tab">
+			<button class="tablinks" onclick="openCity(event, 'London')">London</button>
+			<button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+		</div>
+	</div>
+	<div class="col-12 col-lg-5">
+		<?php echo facetwp_display( 'facet', 'thingsathome_suitable_for' ); ?>
+		<button class="filter-button" type='button' id='hideshow' value='hide/show'><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/filter.svg"> <span>Show all filters</span> </button>
+	</div>
+</div>
 
-<button class="filter-button" type='button' id='hideshow' value='hide/show'><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/filter.svg"> <span>Show all filters</span> </button>
-<div id="hidden-filters" class="hidden">
+
+
+<div id="hidden-filters" class="hidden-height">
 	<?php
 		echo facetwp_display( 'facet', 'play' );
 	?>

@@ -21,9 +21,13 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $('#hideshow').click(function() {
-        $(".hidden").toggleClass('open');
+        $(".hidden-height").toggleClass('open');
     });
 });
+
+
+
+// Owl Carousel
 
 $('.owl-post').owlCarousel({
     loop:true,
