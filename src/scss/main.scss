@@ -1232,6 +1232,7 @@ $card-border-radius: $border-radius;
   background-size: 24px 24px !important;
   background-repeat: no-repeat !important;
   margin-bottom: 4px;
+  margin-right: 10px;
   
   padding: 11px !important;
   cursor: pointer;  
@@ -1249,6 +1250,7 @@ $card-border-radius: $border-radius;
   text-align: center;
   align-items: flex-end;
   justify-items: center;
+  justify-content: center;
   flex: 1 1 0px;
 
   color: #222258;
@@ -1258,7 +1260,51 @@ $card-border-radius: $border-radius;
 
   //width: fit-content;
   height: 73px;
+
+  span {
+    display: none;
+  }
 }
+
+
+// * TABS FOR FILTER
+
+/* Style the tab */
+.custom-tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the custom-tab content */
+.custom-tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.custom-tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.custom-tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
 
 // * FOOTER 
 
