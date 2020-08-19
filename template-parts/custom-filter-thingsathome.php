@@ -29,7 +29,6 @@
 
 	<div id="hidden-filters" class="hidden-height">
 
-		<div id="London" class="tabcontent">
 			<div class="row">
 				<div class="col-12 col-lg-7"></div>
 				<div class="col-12 col-lg-5">
@@ -38,32 +37,50 @@
 				</div>
 			</div>
 
-		</div>
-
-		<div id="Paris" class="tabcontent">
-			<h3>Paris</h3>
-			<?php echo facetwp_display( 'facet', 'sports_and_exercise' ); ?>
-		</div>
-		
 	</div>
-
 
 </div>
 
+<?php
+$term = get_term( 24);
+echo $term->taxonomy;
+echo get_term_link(20);
+echo $term_name = get_term( 20 )->name;
+?>
 
 
 
 <div class="facetwp-template">
-	<?php
-		if ( have_posts() ) : while( have_posts() ){
-	?>
-		<?php
-			the_post();
-			// this function will look for a file called 'content-article' in the template-parts forlder
-			get_template_part('template-parts/content', 'archive' );
-		?>
+<!-- get_template_part('template-parts/content', 'archive' ); -->
 
-	<?php
-		} endif;
-	?>
+<?php
+$args = array(
+	'post_type' => 'thingsathome',
+	'tax_query' => array(
+		array(
+		'taxonomy' => 'thingsathome_category',
+		'field' => 'term_id',
+		'terms' => 20
+		 )
+	  )
+	);
+	$query = new WP_Query( $args );
+	
+
+	$arr_posts = new WP_Query( $args );
+	
+	if ( $arr_posts->have_posts() ) :
+	
+		while ( $arr_posts->have_posts() ) :
+			$arr_posts->the_post();
+			?>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<?php get_template_part('template-parts/content', 'archive' ); ?>
+			</article>
+			<?php
+		endwhile;
+	endif;
+
+?>
+
 </div>
