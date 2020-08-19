@@ -13,10 +13,17 @@ $(document).ready(function() {
         $(".dropdown-menu").addClass("dropdown-menu-right");
       });
 
-      
 
 });
 
+
+// Filter button
+
+$(document).ready(function() {
+    $('#hideshow').click(function() {
+        $(".hidden").toggleClass('open');
+    });
+});
 
 $('.owl-post').owlCarousel({
     loop:true,

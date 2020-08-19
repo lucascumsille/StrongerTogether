@@ -217,6 +217,8 @@ a {
   }
 }
 
+
+
 .hero-subtitle {
   font-family: Open Sans;
   font-style: normal;
@@ -238,6 +240,29 @@ a {
   margin-bottom: 10px;
   width: 65px;
 }
+
+// Opening Div
+
+#hiddenfilters {
+  height:auto;
+  background:#000;
+  color:#fff;
+  cursor:pointer;
+}
+.hidden {
+  height:0px;
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+  .hidden.open {
+      height:200px;
+      -webkit-transition: $transition;
+      -moz-transition: $transition;
+      -o-transition: $transition;
+      transition: $transition;
+  }
 
 // * Buttons 
 
@@ -332,6 +357,39 @@ $button-line: 20px;
   margin-right: 8px;
   line-height: $button-line;
   
+}
+
+
+// Filter Button 
+
+.filter-button {
+  padding: 15px 20px;
+  border: 2px solid #A4A4FF;
+  border-radius: 30px;
+
+  img {
+    margin-right: 10px;
+  }
+
+  span {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+
+    text-align: right;
+    color: #3D3C76;
+  }
+
+  &:focus {
+    outline: none !important;
+  }
+
+  &:active {
+    outline: none !important;
+  }
 }
 
 //* HomePage Menu

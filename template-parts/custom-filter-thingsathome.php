@@ -1,6 +1,18 @@
-<?php
-echo facetwp_display( 'facet', 'new_facet' )
-?>
+
+<div class="container">
+
+
+<button class="filter-button" type='button' id='hideshow' value='hide/show'><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/filter.svg"> <span>Show all filters</span> </button>
+<div id="hidden-filters" class="hidden">
+	<?php
+		echo facetwp_display( 'facet', 'play' );
+	?>
+</div>
+
+
+</div>
+
+
 
 
 <div class="facetwp-template">

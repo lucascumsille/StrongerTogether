@@ -115,7 +115,7 @@ function thingsathome_init() {
     register_post_type( 'thingsathome', $args );
     
     // register taxonomy
-    register_taxonomy('thingsathome_category', 'thingsathome', array('hierarchical' => true, 'label' => 'Category', 'query_var' => true, 'rewrite' => array( 'slug' => 'Activity-category' )));
+    register_taxonomy('thingsathome_category', 'thingsathome', array('hierarchical' => true, 'label' => 'Categories of Things to do at Home', 'query_var' => true, 'rewrite' => array( 'slug' => 'Activity-category' )));
 }
 add_action( 'init', 'thingsathome_init' );
 
