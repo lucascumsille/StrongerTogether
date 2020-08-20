@@ -115,6 +115,8 @@ function thingsathome_init() {
     register_post_type( 'thingsathome', $args );
     
     // register taxonomy
+
+    /*
     register_taxonomy('thingsathome_category', 'thingsathome', array('hierarchical' => true,
     'public' =>  true,
     'hierarchical' =>  true,
@@ -123,7 +125,7 @@ function thingsathome_init() {
     'query_var' => true, 
     'rewrite' => array('slug' => 'things-to-do-at-home', 'with_front' => false) 
     ));
-
+*/
 /*
 
     register_taxonomy('thingsathome_category', 'thingsathome', array('hierarchical' => true,
@@ -138,10 +140,10 @@ function thingsathome_init() {
 
 */
 
-/* THIS IS THE ORIGINAL
+
     register_taxonomy('thingsathome_category', 'thingsathome', array('hierarchical' => true, 'label' => 'Categories of Things to do at Home', 'query_var' => true, 'rewrite' => array( 'slug' => 'things-to-do-at-home' )));
 
-    */
+
 }
 add_action( 'init', 'thingsathome_init' );
 
