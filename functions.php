@@ -141,7 +141,14 @@ function thingsathome_init() {
 */
 
 
-    register_taxonomy('thingsathome_category', 'thingsathome', array('hierarchical' => true, 'label' => 'Categories of Things to do at Home', 'query_var' => true, 'rewrite' => array( 'slug' => 'things-to-do-at-home' )));
+    register_taxonomy('thingsathome_category', 'thingsathome',         
+        array(
+        'hierarchical' => true, 
+        'labels' => array(
+            'name' => 'Categories',
+            'singular_name' => 'Category'),
+        'query_var' => true, 
+        'rewrite' => array( 'slug' => 'Activity-category' )));
 
 
 }
@@ -199,7 +206,16 @@ function placestovisit_init() {
     register_post_type( 'placestovisit', $args );
     
     // register taxonomy
-    register_taxonomy('placestovisit_category', 'placestovisit', array('hierarchical' => true, 'label' => 'Category', 'query_var' => true, 'rewrite' => array( 'slug' => 'Activity-category' )));
+    register_taxonomy('placestovisit_category', 'placestovisit', 
+        array(
+            'hierarchical' => true, 
+            'labels' => array(
+                'name' => 'Categories',
+                'singular_name' => 'Category'),
+            'query_var' => true, 
+            'rewrite' => array( 'slug' => 'place-category' )
+        )
+    );
 }
 add_action( 'init', 'placestovisit_init' );
 
@@ -253,7 +269,13 @@ function lookingafteryourself_init() {
     register_post_type( 'lookingafteryourself', $args );
     
     // register taxonomy
-    register_taxonomy('lookingafteryourself_category', 'lookingafteryourself', array('hierarchical' => true, 'label' => 'Category', 'query_var' => true, 'rewrite' => array( 'slug' => 'lookingafteryourself-category' )));
+    register_taxonomy('lookingafteryourself_category', 'lookingafteryourself',         
+    array(
+        'hierarchical' => true, 
+        'labels' => array(
+            'name' => 'Categories',
+            'singular_name' => 'Category'),
+        'query_var' => true, 'rewrite' => array( 'slug' => 'lookingafteryourself-category' )));
 }
 add_action( 'init', 'lookingafteryourself_init' );
 
@@ -307,7 +329,13 @@ function supportingyourkid_init() {
     register_post_type( 'supportingyourkid', $args );
     
     // register taxonomy
-    register_taxonomy('supportingyourkid_category', 'supportingyourkid', array('hierarchical' => true, 'label' => 'Category', 'query_var' => true, 'rewrite' => array( 'slug' => 'supportingyourkid-category' )));
+    register_taxonomy('supportingyourkid_category', 'supportingyourkid',
+     array(
+        'hierarchical' => true, 
+        'labels' => array(
+            'name' => 'Categories',
+            'singular_name' => 'Category'),
+        'rewrite' => array( 'slug' => 'supportingyourkid-category' )));
 }
 add_action( 'init', 'supportingyourkid_init' );
 
@@ -361,7 +389,12 @@ function localnews_init() {
     register_post_type( 'localnews', $args );
     
     // register taxonomy
-    register_taxonomy('localnews_category', 'localnews', array('hierarchical' => true, 'label' => 'Category', 'query_var' => true, 'rewrite' => array( 'slug' => 'localnews-category' )));
+    register_taxonomy('localnews_category', 'localnews',      array(
+        'hierarchical' => true, 
+        'labels' => array(
+            'name' => 'Categories',
+            'singular_name' => 'Category'),
+        'rewrite' => array( 'slug' => 'localnews-category' )));
 }
 add_action( 'init', 'localnews_init' );
 

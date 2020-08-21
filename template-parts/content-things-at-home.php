@@ -1,4 +1,5 @@
 
+
 <?php 
  $category = get_the_terms( $id, 'thingsathome_category' );
  //get First Category

@@ -1,6 +1,7 @@
 <?php 
    get_header();
-$object = get_queried_object();
-echo $object->name;
+
+    echo do_shortcode( '[gmw search_form="1"]' );
+    echo do_shortcode( '[gmw search_results="1"]' );
     get_footer(); 
 ?>

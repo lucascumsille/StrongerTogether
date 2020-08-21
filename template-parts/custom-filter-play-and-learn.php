@@ -90,6 +90,7 @@ echo $term_name = get_term( 20 )->name;
 
 	<?php wp_reset_postdata(); ?>
 
+
 	<?php 
 		// Pagination 
 		$big = 999999999; 
@@ -100,5 +101,7 @@ echo $term_name = get_term( 20 )->name;
 			'total' => $loop->max_num_pages
 		) );
 	?>
+
+
 
 </div>
