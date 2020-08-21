@@ -14,7 +14,16 @@
 <div class="drop-shadow-wrapper mx-auto">
                 <a class="carousel-anchor mx-auto" href="<?php the_permalink(); ?>">
                     <div class="post-item-carousel box-shadow-carousel mx-auto">
-                        <div class="post-carousel-image mx-auto" style="background-image:url('<?php echo get_the_post_thumbnail_url(); ?>');"></div>
+
+                        <div class="post-carousel-image mx-auto" style="background-image:url('<?php echo get_the_post_thumbnail_url(); ?>');">
+
+                        <!-- VideoPlay Conditional -->
+                        <?php if ( get_field('does_it_have_a_video') == true) { ?> 
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/video-play.svg" alt="">
+                        <?php } ?> 
+                        <!-- -->
+                        </div>
+                        
                         <div class="post-carousel-content">
                             <h4 class="text-black"><?php the_title(); ?></h4>
                             <div class="post-meta-carousel-info">

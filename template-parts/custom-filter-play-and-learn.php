@@ -15,15 +15,16 @@
 	<div class="row">
 		<div class="col-12 col-lg-7">
 			<div class="custom-tab">
-				<a href="" class="things-at-home-tab">
+				<a href="<?php echo get_post_type_archive_link( 'thingsathome' ); ?>" class="things-at-home-tab">
 					<img src="" alt="">
+					<span>Play And Learn Dont hard code me FIXXXX MEEEEE</span>
 				</a>
 
 			</div>
 		</div>
 		<div class="col-12 col-lg-5">
-			<?php // echo facetwp_display( 'facet', 'thingsathome_suitable_for' ); ?>
-			<button class="filter-button" type='button' id='hideshow' value='hide/show'><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/filter.svg"> <span>Show all filters</span> </button>
+
+			<button class="filter-button" type='button' id='hideshow' value='hide/show'><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/filter.svg"> <span>Show all filters FIX MEE ADD "HIDE FILTERS"</span> </button>
 		</div>
 	</div>
 
@@ -35,6 +36,7 @@
 				<div class="col-12 col-lg-5">
 					<h3>London</h3>
 					<?php // echo facetwp_display( 'facet', 'play' ); ?>
+					<?php echo do_shortcode('[searchandfilter id="445"]'); ?>
 				</div>
 			</div>
 
@@ -49,28 +51,54 @@ echo get_term_link(20);
 echo $term_name = get_term( 20 )->name;
 ?>
 
-<?php echo do_shortcode('[searchandfilter id="445"]'); ?>
 
-<div id='things-at-home-results' class="facetwp-template">
+//* Remmber that in order to work we need the follwing contianer with the specif class or ID
+<div id='things-at-home-results' class="">
 <!-- get_template_part('template-parts/content', 'archive' ); -->
 
-<?php
 
-	if ( have_posts() ) :
+	<?php 
+		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
+        $args = array(  
+			'post_type' => 'thingsathome',
+			'paged' => $paged,
+            //'post_status' => 'publish', 
+            //'orderby' => 'date', 
+            //'order' => 'ASC', 
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'thingsathome_category',
+                    'field' => 'term_id',
+                    'terms' => 20,
+                )
+            )
+        );
+        $args['search_filter_id'] = 445;
+
+        $loop = new WP_Query( $args ); 
+    ?>
+
 	
-		while ( have_posts() ) :
-			the_post();
-			?>
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<?php get_template_part('template-parts/content', 'things-at-home' ); ?>
-			</article>
-			<?php
-		endwhile;
-	endif;
 
-?>
+		<?php while ( $loop->have_posts() ) : $loop->the_post();  ?>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<?php get_template_part('template-parts/content', 'things-at-home' ); ?>
+				</article>
 
-<div class="nav-previous alignlef pagination"><?php previous_posts_link( 'Older posts' ); ?></div>
-<div class="nav-next alignright pagination"><?php next_posts_link( 'Newer posts' ); ?></div>
+		<?php endwhile; ?>
+
+	<?php wp_reset_postdata(); ?>
+
+	<?php 
+		// Pagination 
+		$big = 999999999; 
+		echo paginate_links( array(
+			'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+			'format' => '?paged=%#%',
+			'current' => max( 1, get_query_var('paged') ),
+			'total' => $loop->max_num_pages
+		) );
+	?>
 
 </div>
