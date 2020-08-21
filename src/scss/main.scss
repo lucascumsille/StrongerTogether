@@ -29,7 +29,7 @@ $middle-yellow: #9D6511;
 $yellow: #FFE1BE;
 $button-orange: #FFD19B;
 $light-yellow: #FFF6E3;
-
+$body-yellow: #fffbf5;
 $neutral-lightest: #F0F0FA;
 
 $lightest-blue: #E5E5FE;
@@ -266,6 +266,17 @@ a {
       -o-transition: $transition;
       transition: $transition;
   }
+
+.flex-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+  .flex-item {
+    flex-basis: 33%;
+  }
+
+}
 
 // * Buttons 
 
@@ -696,6 +707,22 @@ $card-border-radius: $border-radius;
 
 }
 
+// Active and hover
+
+.navbar-light .navbar-nav .active:hover>.nav-link {
+  background: #e5e5fe;
+}
+//
+
+
+// Dropdown Items active
+.dropdown-item.active, .dropdown-item:active {
+  color: $navy-blue;
+  background-color:white;
+}
+//
+
+
 .navbar-light .navbar-nav .nav-link  {
   color: $navy-blue;
   padding: 20px 10px;
@@ -835,13 +862,14 @@ $card-border-radius: $border-radius;
 // Dropdown menu is active
 
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
-  background-color: $yellow;
+  background-color: $body-yellow;
 }
 
 // Dropwdown menu is focused 
 
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
   color:$navy-blue;
+  background: $lightest-blue;
 }
 
  .dropdown-item {
@@ -1520,7 +1548,7 @@ body {
   font-family: $open;
   font-size: 16px;
   color: $black;
-  background-color: #FFFBF5;
+  background-color: $body-yellow;
 
 
 }
