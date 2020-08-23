@@ -74,6 +74,7 @@
 								
 								<div class="post-carousel-content">
 									<h4 class="text-black"><?php the_title(); ?></h4>
+									<?php gmw_search_results_distance( $post, $gmw ); ?>
 									<div class="post-meta-carousel-info">
 										<div class="tag-wrapper"> 
 											<img class="tag-icon" src="<?php echo esc_url(get_field('category_icon', $category[0])['url']); ?>" > 

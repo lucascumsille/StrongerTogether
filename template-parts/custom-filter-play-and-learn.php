@@ -16,8 +16,14 @@
 		<div class="col-12 col-lg-7">
 			<div class="custom-tab">
 				<a href="<?php echo get_post_type_archive_link( 'thingsathome' ); ?>" class="things-at-home-tab">
-					<img src="" alt="">
-					<span>Play And Learn Dont hard code me FIXXXX MEEEEE</span>
+
+					<?php 
+						// Image
+						$image = get_field('category_icon', $taxonomy . 'category_20');
+						if( !empty( $image ) ): ?>
+							<img class="menu-icon-homepage mx-auto" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+					<?php endif; ?>
+					<span>Play And Learn</span>
 				</a>
 
 			</div>
@@ -53,7 +59,7 @@ echo $term_name = get_term( 20 )->name;
 
 
 //* Remmber that in order to work we need the follwing contianer with the specif class or ID
-<div id='things-at-home-results' class="">
+<div id='things-at-home-results' class="container flex-wrapper">
 <!-- get_template_part('template-parts/content', 'archive' ); -->
 
 
@@ -82,7 +88,7 @@ echo $term_name = get_term( 20 )->name;
 	
 
 		<?php while ( $loop->have_posts() ) : $loop->the_post();  ?>
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<article class="flex-item" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<?php get_template_part('template-parts/content', 'things-at-home' ); ?>
 				</article>
 

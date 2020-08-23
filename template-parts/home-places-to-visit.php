@@ -17,6 +17,7 @@
 
                 $cats = get_terms($args);
                 foreach($cats as $cat) {
+    
                 ?>
                 <a href="<?php echo get_category_link( $cat->term_id ) ?>" class="places-item col-6 col-lg-3">
                     <img src="<?php echo esc_url(get_field('category_icon', $cat)['url']); ?>" alt="">
