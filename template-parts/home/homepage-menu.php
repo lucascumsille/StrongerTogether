@@ -1,6 +1,5 @@
 
-
-
+?>
     <div class="container p-xl">
         <div class="menu-grid">
             <div class="right-column-menu">
@@ -125,7 +124,7 @@
             </div>
         </div>
     </div>
-
+                                    
     <?php
 
 

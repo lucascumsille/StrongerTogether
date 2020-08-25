@@ -1,50 +1,57 @@
 
 <style>
-	.facetwp-radio {
+	.searchandfilter ul>li>ul:not(.children) label {
 		background-image:url('<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/Rectangle radio.svg') !important;
 	}
 
-	.facetwp-radio.checked {
+	.searchandfilter ul>li>ul:not(.children) label::after {
 		background-image:url('<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/unchecked.svg') !important;
 	}
 </style>
 
 
-<div class="container">
+<div class="container p-xl">
 
-	<div class="row">
-		<div class="col-12 col-lg-7">
-			<div class="custom-tab">
-				<a href="<?php echo get_post_type_archive_link( 'thingsathome' ); ?>" class="things-at-home-tab">
+	<div class="filter-grid">
+		<div class="top-left-column">
+		<a href="<?php echo get_post_type_archive_link( 'thingsathome' ); ?>" class="things-at-home-tab">
 
-					<?php 
-						// Image
-						$image = get_field('category_icon', $taxonomy . 'category_20');
-						if( !empty( $image ) ): ?>
-							<img class="menu-icon-homepage mx-auto" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-					<?php endif; ?>
-					<span><?php $term = get_term( 20 , 'thingsathome_category' );
-						echo $term->name; ?></span>
-				</a>
+			<?php  $image = get_field('category_icon', $taxonomy . 'category_20');
+				if( !empty( $image ) ): ?>
+					<img class="menu-icon-homepage mx-auto" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+				<?php endif; ?>
+			<span><?php $term = get_term( 20 , 'thingsathome_category' );
+				echo $term->name; ?></span>
+		</a>
 
-			</div>
 		</div>
-		<div class="col-12 col-lg-5">
 
+		<div class="top-right-column">
+
+		</div>
+
+		<div class="bottom-left-column">
+
+		</div>
+
+		<div class="bottom-right-column">
 			<button class="filter-button" type='button' id='hideshow' value='hide/show'><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/filter.svg"> <span>Show all filters FIX MEE ADD "HIDE FILTERS"</span> </button>
 		</div>
+
+
 	</div>
+
 
 
 	<div id="hidden-filters" class="hidden-height">
 
 			<div class="row">
 				<div class="col-12 col-lg-7"></div>
-				<div class="col-12 col-lg-5">
+				<div class="col-12 col-lg-5 position-static">
 					<h3>Categories</h3>
 
 					<?php echo do_shortcode('[searchandfilter id="445"]'); ?>
-					<?php echo do_shortcode('[searchandfilter id="445" show="results"]'); ?>
+				
 				</div>
 			</div>
 
@@ -54,9 +61,8 @@
 
 
 
-<div id='things-at-home-results' class="container flex-wrapper">
+<div id='thingsathome' class="container flex-wrapper">
 <!-- get_template_part('template-parts/content', 'archive' ); -->
-
 
 	<?php 
 		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;

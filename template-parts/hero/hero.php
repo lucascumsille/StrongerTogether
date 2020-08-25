@@ -8,4 +8,3 @@ $image = get_field('background_image_homepage');
 		</div>
 	</div
 	
-<?php

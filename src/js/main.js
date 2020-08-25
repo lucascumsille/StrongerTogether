@@ -58,3 +58,11 @@ $('.owl-post').owlCarousel({
     }
 })
 
+
+
+$('document').ready(function() {
+    var filterTopPosition= $('.hero-wrapper').outerHeight() + $('header').outerHeight()+60;
+
+    $('.sf-field-post-meta-suitable_for').css({'top': filterTopPosition});
+    console.log(filterTopPosition);
+});
