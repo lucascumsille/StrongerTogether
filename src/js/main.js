@@ -61,8 +61,10 @@ $('.owl-post').owlCarousel({
 
 
 $('document').ready(function() {
-    var filterTopPosition= $('.hero-wrapper').outerHeight() + $('header').outerHeight()+60;
+    var filterTopPosition= $('.hero-wrapper').outerHeight() + $('header').outerHeight()+ 60 + $('#wpadminbar').outerHeight();
 
+    var wpAdminBar = ('#wpadminbar').outerHeight();
     $('.sf-field-post-meta-suitable_for').css({'top': filterTopPosition});
     console.log(filterTopPosition);
+    console.log(wpAdminBar);
 });

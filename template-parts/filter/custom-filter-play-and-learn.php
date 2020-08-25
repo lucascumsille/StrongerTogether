@@ -10,7 +10,7 @@
 </style>
 
 
-<div class="container p-xl">
+<div id="filter-top-container" class="container p-xl">
 
 	<div class="filter-grid">
 		<div class="top-left-column">
