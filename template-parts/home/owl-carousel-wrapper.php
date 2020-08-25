@@ -23,7 +23,7 @@
             <?php if ( $the_query->have_posts() ) : ?>
             
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                    <?php get_template_part('template-parts/content', 'things-at-home' ); ?>
+                    <?php get_template_part('template-parts/common/card-things-at-home' ); ?>
                 <?php endwhile; ?>
 
                 <?php else: ?>

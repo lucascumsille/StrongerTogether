@@ -4,9 +4,9 @@
 
 <?php
 	get_header();
-	get_template_part('template-parts/hero');
-	get_template_part('template-parts/homepage-menu');
-	get_template_part('template-parts/owl-carousel-post');
+	get_template_part('template-parts/hero/hero');
+	get_template_part('template-parts/home/homepage-menu');
+	get_template_part('template-parts/home/owl-carousel-wrapper');
 	
 ?>
 
@@ -22,8 +22,8 @@
     </a>
 </div>
 
-<?php get_template_part('template-parts/home-places-to-visit'); ?>
-<?php get_template_part('template-parts/home-news'); ?>
+<?php get_template_part('template-parts/home/home-places-to-visit'); ?>
+<?php get_template_part('template-parts/home/home-news'); ?>
 
 
  <?php get_footer(); ?>

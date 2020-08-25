@@ -1040,6 +1040,10 @@ $card-border-radius: $border-radius;
 
 
 
+.is--event-page .tribe-events-view {
+  display: inline-block; // Prevent the footer collapsing with events on the events page
+}
+
 // To display the first three items
 
 .tribe-common--breakpoint-xsmall.tribe-common .tribe-common-g-row--gutters>.tribe-common-g-col {

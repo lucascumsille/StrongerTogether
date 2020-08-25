@@ -66,7 +66,7 @@
             <div id="sports-and-exercise-results">
                 <?php while ( $loop->have_posts() ) : $loop->the_post();  ?>
                         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                            <?php get_template_part('template-parts/content', 'things-at-home' ); ?>
+                         <?php get_template_part('template-parts/common/card-things-at-home' ); ?>
                         </article>
             
                 <?php endwhile; ?>

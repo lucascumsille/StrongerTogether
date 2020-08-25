@@ -23,7 +23,8 @@
 						if( !empty( $image ) ): ?>
 							<img class="menu-icon-homepage mx-auto" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 					<?php endif; ?>
-					<span>Play And Learn</span>
+					<span><?php $term = get_term( 20 , 'thingsathome_category' );
+						echo $term->name; ?></span>
 				</a>
 
 			</div>
@@ -40,9 +41,10 @@
 			<div class="row">
 				<div class="col-12 col-lg-7"></div>
 				<div class="col-12 col-lg-5">
-					<h3>London</h3>
-					<?php // echo facetwp_display( 'facet', 'play' ); ?>
+					<h3>Categories</h3>
+
 					<?php echo do_shortcode('[searchandfilter id="445"]'); ?>
+					<?php echo do_shortcode('[searchandfilter id="445" show="results"]'); ?>
 				</div>
 			</div>
 
@@ -50,15 +52,8 @@
 
 </div>
 
-<?php
-$term = get_term(24);
-echo $term->taxonomy;
-echo get_term_link(20);
-echo $term_name = get_term( 20 )->name;
-?>
 
 
-//* Remmber that in order to work we need the follwing contianer with the specif class or ID
 <div id='things-at-home-results' class="container flex-wrapper">
 <!-- get_template_part('template-parts/content', 'archive' ); -->
 
@@ -89,7 +84,7 @@ echo $term_name = get_term( 20 )->name;
 
 		<?php while ( $loop->have_posts() ) : $loop->the_post();  ?>
 				<article class="flex-item" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<?php get_template_part('template-parts/content', 'things-at-home' ); ?>
+					<?php get_template_part('template-parts/common/card-things-at-home' ); ?>
 				</article>
 
 		<?php endwhile; ?>

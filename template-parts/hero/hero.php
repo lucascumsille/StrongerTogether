@@ -6,6 +6,6 @@ $image = get_field('background_image_homepage');
 			<h2 class="text-light mt-5"> <?php the_field('h2_title'); ?> </h2>
 			<h1 class="heading"><?php the_field('h1_title'); ?></h1>
 		</div>
-	</div>
-		<?php 
-
+	</div
+	
+<?php

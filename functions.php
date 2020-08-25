@@ -73,7 +73,7 @@ function thingsathome_init() {
     // set up Activity labels
     $labels = array(
         'name' => 'Things to do at Home',
-        'singular_name' => 'Activity',
+        'singular_name' => 'Things to do at Home: Activity',
         'add_new' => 'Add New Activity',
         'add_new_item' => 'Add New Activity',
         'edit_item' => 'Edit Activity',
@@ -164,7 +164,7 @@ function placestovisit_init() {
     // set up Activity labels
     $labels = array(
         'name' => 'Places to Visit',
-        'singular_name' => 'Place',
+        'singular_name' => 'Place to visit',
         'add_new' => 'Add New Place',
         'add_new_item' => 'Add New Place',
         'edit_item' => 'Edit Place',
@@ -287,7 +287,7 @@ function supportingyourkid_init() {
     // set up product labels
     $labels = array(
         'name' => 'Supporting your Kids',
-        'singular_name' => 'Item',
+        'singular_name' => 'Supporting you Kid',
         'add_new' => 'Add New Item',
         'add_new_item' => 'Add New Item',
         'edit_item' => 'Edit Item',
@@ -347,7 +347,7 @@ function localnews_init() {
     // set up product labels
     $labels = array(
         'name' => 'Local News',
-        'singular_name' => 'Item',
+        'singular_name' => 'Local News',
         'add_new' => 'Add New Item',
         'add_new_item' => 'Add New Item',
         'edit_item' => 'Edit Item',
