@@ -1316,6 +1316,8 @@ $card-border-radius: $border-radius;
   
   padding: 15px 30px;
 
+  text-align: center;
+
   &:active {
     background: #E5E5FE;
   }
@@ -1340,8 +1342,12 @@ $card-border-radius: $border-radius;
 }
 
 .filter-tab-icon {
-  height: 45px;
+  height: 33px;
   margin-bottom: 10px;
+
+  @media (min-width: $min-md) {
+    height: 45px;
+  }
 }
 
 // * Filter Grid
@@ -1349,10 +1355,10 @@ $card-border-radius: $border-radius;
 .filter-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto auto auto;
 
   column-gap: 10px;
-  row-gap: 15px;
+  row-gap: 30px;
   align-items: start;
   // justify-items: start | end | center | stretch;
   // align-items: start | end | center | stretch;
@@ -1360,27 +1366,59 @@ $card-border-radius: $border-radius;
   .top-left-column {
 
     grid-column-start: 1;
-    grid-column-end: 1;
+    grid-column-end: span 2;
     grid-row-start: 1;
     grid-row-end: 1;
     //justify-self: start | end | center | stretch;
     // align-self: start | end | center | stretch;
-
+    justify-self: center;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+
+    @media (min-width: $min-md) {
+      grid-column-start: 1;
+      grid-column-end: 1;
+      grid-row-start: 1;
+      grid-row-end: 1;
+    }
 
     
   }
 
   .top-right-column {
 
-    grid-column-start: 2;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+
+    @media (min-width: $min-md) {
+      grid-column-start: 2;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 1;
+    }
 
   }
+
+  .bottom-right-column {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    justify-self: center;
+
+    @media (min-width: $min-md) {
+      grid-column-start: 2;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 2;
+      justify-self: start;
+    }
+  }
+
+
 
 }
 
@@ -1398,6 +1436,7 @@ $filter-things-athome-padding: 5px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     padding-inline-start: 0;
     align-items: center;
     margin-right: -$filter-things-athome-padding;
