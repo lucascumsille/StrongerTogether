@@ -20,12 +20,28 @@ $(document).ready(function() {
 // Filter button
 
 $(document).ready(function() {
+    var openString = 'Show all Filters';
+    var closeString = 'Hide filters'
+
+    $(".filter-button-text").text(openString);
+
     $('#hideshow').click(function() {
-        $(".hidden-height").toggleClass('open');
+        $(".hidden-height").toggleClass('open-filter');
+        $(".filter-button-text").fadeOut( 150,function () {
+            $(".filter-button-text").text(($(".filter-button-text").text() == openString) ? closeString : openString).fadeIn(150);
+        })
     });
+
 });
 
-
+/*
+$(document).ready(function() {
+    $('#hideshow').click(function() {
+        $(".hidden-height").toggleClass('open-filter');
+    });
+    
+});
+*/
 
 // Owl Carousel
 
@@ -58,13 +74,36 @@ $('.owl-post').owlCarousel({
     }
 })
 
+/*
+
+$('document').ready(function() {
+
+
+    if( $('#wpadminbar').length )         // Check if the WP navbar exist
+    {
+        wpAdminHeight= $('#wpadminbar').outerHeight();// it exists
+    } else {
+        wpAdminHeight= 0;
+    }
+
+
+    var filterTopPosition= $('.hero-wrapper').outerHeight() + $('header').outerHeight()+ wpAdminHeight + ($('#filter-top-container').outerHeight() - $('#filter-top-container').height())/2 ;
+
+
+    $('.sf-field-post-meta-suitable_for').css({'top': filterTopPosition});
+
+    console.log(filterTopPosition);
+
+});
+
+*/
 
 
 $('document').ready(function() {
-    var filterTopPosition= $('.hero-wrapper').outerHeight() + $('header').outerHeight()+ 60 + $('#wpadminbar').outerHeight();
 
-    var wpAdminBar = ('#wpadminbar').outerHeight();
-    $('.sf-field-post-meta-suitable_for').css({'top': filterTopPosition});
-    console.log(filterTopPosition);
-    console.log(wpAdminBar);
+   var visibleFilterHeight = $('.sf-field-post-meta-suitable_for').outerHeight()
+   $('.hidden-height').css({'max-height': visibleFilterHeight});
+
+
+
 });

@@ -252,15 +252,16 @@ a {
   
 }
 .hidden-height {
-  max-height:0px;
+  max-height:200px;
   overflow: hidden;
   -webkit-transition: $height-transition;
   -moz-transition: $height-transition;
   -o-transition: $height-transition;
   transition: $height-transition;
 }
-  .hidden-height.open {
-      max-height:500px;
+
+.open-filter {
+      max-height:500px !important;
       -webkit-transition: $height-transition;
       -moz-transition: $height-transition;
       -o-transition: $height-transition;
@@ -380,6 +381,12 @@ $button-line: 20px;
   padding: 15px 20px;
   border: 2px solid #A4A4FF;
   border-radius: 30px;
+
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+  max-width: auto;
 
   img {
     margin-right: 10px;
@@ -1301,8 +1308,8 @@ $card-border-radius: $border-radius;
 
 .filter-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
 
   column-gap: 10px;
   row-gap: 15px;
@@ -1337,58 +1344,76 @@ $card-border-radius: $border-radius;
 //* Search and Filter
 
 $color-green: #34C37A; 
+
+$filter-things-athome-padding: 5px;
+
+// ul
 .searchandfilter ul>li>ul:not(.children) {
-    width: 100%;
-    margin: 0px auto;
+    //margin: 0px auto;
     position: relative;
     display: flex;
     flex-direction: row;
     padding-inline-start: 0;
     align-items: center;
+    margin-right: -$filter-things-athome-padding;
+    margin-left: -$filter-things-athome-padding;
+}
 
-    
+
+// Checkbox
+.sf-level-0 {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 25%;
+
+
+  padding-right: $filter-things-athome-padding !important;
+  padding-left: $filter-things-athome-padding !important;
+  margin-right: 0 !important; 
+
+
     label {
         position: relative;
         min-height: 34px;
-        //display: block;
+
         display: flex;
+        align-items: center;
         flex-direction: column;
         flex-wrap: wrap;
-        padding-top: 40px;
+
         margin-bottom: 0;
+
         font-weight: normal;
         cursor: pointer;
-        text-align: center;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
 
-        background-repeat: no-repeat;
-        width: 100px;
         background-position: center top;
+        background-repeat: no-repeat;
+        background: #F0F0FA;
+        border-radius: 4px;
+        padding-top: 11px !important;
+        padding-bottom: 12px !important;
+
+        
 
         &:before {
             content: '';
-            
-            position: absolute;
-            left: 0;
-            top: 0;
+            //position: absolute;
+            //left: 0;
+            //top: 0;
             margin: 4px;
-            width: 22px;
-            height: 22px;
+            width: 25px;
+            height: 25px;
             transition: transform 0.28s ease;
+            background-image: url('../images/icons/Rectangle radio.svg');
+            background-repeat: no-repeat;
+
             //border-radius: 3px;
             //border: 2px solid $color-green;
-        }
-        &:after {
-            content: '';
-            display: block;
-            width: 10px;
-            height: 5px;
-            //border-bottom: 2px solid $color-green;
-            //border-left: 2px solid $color-green;
-            //transform: rotate(-45deg) scale(0);
-            //transition: transform ease 0.25s;
-            position: absolute;
-            top: 12px;
-            left: 10px;
         }
     }
     input[type="checkbox"] {
@@ -1399,7 +1424,8 @@ $color-green: #34C37A;
         margin-left: -20px;
         &:checked ~ label{
             &:before {
-               // border: 2px solid $color-green;
+              background-image: url('../images/icons/checked.svg');
+              background-repeat: no-repeat;
             }
             &:after {
                // transform: rotate(-45deg) scale(1);
@@ -1410,7 +1436,6 @@ $color-green: #34C37A;
         }
     }
 }
-
 
 .searchandfilter ul li li, .sf-level-0 {
 
@@ -1425,16 +1450,43 @@ $color-green: #34C37A;
   padding-inline-start: 0 !important;
 }
 
-.searchandfilter ul .sf-field-post-meta-suitable_for {
-  position: absolute;
-  //top: 500px;
-  z-index: 9999;
-  padding-top:0 !important;
+// Search bar
 
-  h4 {
-    padding-top: 0;
+.sf-field-search label{
+  width: 100%;
+
+  @media (min-width:$min-md) {
+    width: 70%;
+  }
+
+}
+
+.sf-input-text {
+  background: #FFFFFF;
+  border: 2px solid #E2E2FF;
+  box-sizing: border-box;
+  border-radius: 29px;
+  min-height: 45px;
+  width: 100%;
+  
+  background-image: url('../images/icons/search.svg');
+  background-repeat: no-repeat;
+  background-position: top 50% left 10px;
+  padding-left: 40px;
+
+}
+
+// Title H4 for filter categories
+
+.searchandfilter h4 {
+ color: #161004;
+ text-align: center;
+
+ @media (min-width:$min-md) {
+  text-align: left;
   }
 }
+
 
 // * FOOTER 
 

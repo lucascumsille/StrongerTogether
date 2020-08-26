@@ -1,13 +1,4 @@
 
-<style>
-	.searchandfilter ul>li>ul:not(.children) label {
-		background-image:url('<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/Rectangle radio.svg') !important;
-	}
-
-	.searchandfilter ul>li>ul:not(.children) label::after {
-		background-image:url('<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/unchecked.svg') !important;
-	}
-</style>
 
 
 <div id="filter-top-container" class="container p-xl">
@@ -26,7 +17,9 @@
 
 		</div>
 
-		<div class="top-right-column">
+		<div id="hidden-filters" class="top-right-column hidden-height">
+
+			<?php echo do_shortcode('[searchandfilter id="445"]'); ?>
 
 		</div>
 
@@ -35,25 +28,9 @@
 		</div>
 
 		<div class="bottom-right-column">
-			<button class="filter-button" type='button' id='hideshow' value='hide/show'><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/filter.svg"> <span>Show all filters FIX MEE ADD "HIDE FILTERS"</span> </button>
+			<button class="filter-button" type='button' id='hideshow' value='hide/show'><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/filter.svg"> <span class="filter-button-text">Show all filters FIX MEE ADD "HIDE FILTERS"</span> </button>
 		</div>
 
-
-	</div>
-
-
-
-	<div id="hidden-filters" class="hidden-height">
-
-			<div class="row">
-				<div class="col-12 col-lg-7"></div>
-				<div class="col-12 col-lg-5 position-static">
-					<h3>Categories</h3>
-
-					<?php echo do_shortcode('[searchandfilter id="445"]'); ?>
-				
-				</div>
-			</div>
 
 	</div>
 
