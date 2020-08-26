@@ -261,7 +261,7 @@ a {
 }
 
 .open-filter {
-      max-height:500px !important;
+      //max-height:max-content !important;
       -webkit-transition: $height-transition;
       -moz-transition: $height-transition;
       -o-transition: $height-transition;
@@ -1304,6 +1304,46 @@ $card-border-radius: $border-radius;
   }
 }
 
+// * Filter Tab Pages
+
+.filter-page-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: #FFFBF5;
+  border: 1.5px solid #CDCDFA;
+  
+  padding: 15px 30px;
+
+  &:active {
+    background: #E5E5FE;
+  }
+
+  &:hover, .active {
+    background: #E5E5FE;
+  }
+
+}
+
+.filter-page-tab.left-tab {
+  border-radius: 15px 0px 0px 15px;
+  border-right:0;
+}
+
+.filter-page-tab.right-tab {
+  border-radius: 0px 15px 15px 0px;
+}
+
+.filter-page-tab.active {
+  background: #E5E5FE;
+}
+
+.filter-tab-icon {
+  height: 45px;
+  margin-bottom: 10px;
+}
+
 // * Filter Grid
 
 .filter-grid {
@@ -1313,7 +1353,7 @@ $card-border-radius: $border-radius;
 
   column-gap: 10px;
   row-gap: 15px;
-
+  align-items: start;
   // justify-items: start | end | center | stretch;
   // align-items: start | end | center | stretch;
 
@@ -1325,6 +1365,10 @@ $card-border-radius: $border-radius;
     grid-row-end: 1;
     //justify-self: start | end | center | stretch;
     // align-self: start | end | center | stretch;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 
     
   }
@@ -1442,12 +1486,17 @@ $filter-things-athome-padding: 5px;
   margin-right: 20px;
 }
 
+
 .searchandfilter li[data-sf-field-input-type=checkbox] label {
   padding-left:0;
 }
 
 .searchandfilter ul {
   padding-inline-start: 0 !important;
+}
+
+.sf-field-post-meta-suitable_for {
+ padding-top:0 !important;
 }
 
 // Search bar
@@ -1481,6 +1530,7 @@ $filter-things-athome-padding: 5px;
 .searchandfilter h4 {
  color: #161004;
  text-align: center;
+ padding-top:0 !important;
 
  @media (min-width:$min-md) {
   text-align: left;

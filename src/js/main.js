@@ -21,12 +21,26 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     var openString = 'Show all Filters';
-    var closeString = 'Hide filters'
+    var closeString = 'Hide filters';
+    var visibleFilterHeight = $('.sf-field-post-meta-suitable_for').outerHeight();
+    var totalHiddenHeight = $('.searchandfilter').outerHeight();
 
+    // Calculate the height of the first and visible filter
+    $('.hidden-height').css({'max-height': visibleFilterHeight});
+
+    // Change the text on the filter button
     $(".filter-button-text").text(openString);
 
     $('#hideshow').click(function() {
+        //This Checks the total height 
         $(".hidden-height").toggleClass('open-filter');
+
+        if($('.hidden-height').hasClass('open-filter')){ 
+            $('.hidden-height').css({'max-height': totalHiddenHeight});
+        } else {
+            $('.hidden-height').css({'max-height': visibleFilterHeight});
+        } // End if
+
         $(".filter-button-text").fadeOut( 150,function () {
             $(".filter-button-text").text(($(".filter-button-text").text() == openString) ? closeString : openString).fadeIn(150);
         })
@@ -34,14 +48,7 @@ $(document).ready(function() {
 
 });
 
-/*
-$(document).ready(function() {
-    $('#hideshow').click(function() {
-        $(".hidden-height").toggleClass('open-filter');
-    });
-    
-});
-*/
+
 
 // Owl Carousel
 
@@ -98,12 +105,3 @@ $('document').ready(function() {
 
 */
 
-
-$('document').ready(function() {
-
-   var visibleFilterHeight = $('.sf-field-post-meta-suitable_for').outerHeight()
-   $('.hidden-height').css({'max-height': visibleFilterHeight});
-
-
-
-});
