@@ -1397,6 +1397,7 @@ $filter-things-athome-padding: 5px;
     position: relative;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     padding-inline-start: 0;
     align-items: center;
     margin-right: -$filter-things-athome-padding;
