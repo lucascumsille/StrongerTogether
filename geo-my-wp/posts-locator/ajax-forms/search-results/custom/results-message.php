@@ -11,14 +11,17 @@
  * @param $gmw  ( array ) the form being used
  */
 ?>
+
+<!--
 <div class="gmw-results-message">
 
-	<?php if ( $gmw['results_message'] ) { ?>
+	<?php // if ( $gmw['results_message'] ) { ?>
 
-		<span><?php echo $gmw['results_message']; ?></span>
+		<span><?php // echo $gmw['results_message']; ?></span>
 
-	<?php } ?>
+	<?php // } ?>
 
-	<?php do_action( 'gmw_search_results_after_results_message', $gmw ); ?>
+	<?php //do_action( 'gmw_search_results_after_results_message', $gmw ); ?>
 
 </div>
+-->

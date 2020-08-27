@@ -30,7 +30,7 @@
 	<?php gmw_search_form_post_types( $gmw ); ?>
 
 	<!-- Categories-->
-	<div class="inline-flex">
+	<div class="inline-flex mb-5">
 
 		<?php gmw_search_form_address_field( $gmw ); ?>
 

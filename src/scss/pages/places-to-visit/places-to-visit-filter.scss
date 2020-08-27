@@ -1,0 +1,90 @@
+@import '../../abstracts/variables';
+
+// * Address Field
+#gmw-address-field-2 {
+  
+  border: 2px solid #E2E2FF;
+  height: 54px;
+  padding: 15px;
+  padding-left: 45px;
+  outline:0 !important;
+
+  border-radius: 30px 0px 0px 30px;
+  border-right:0;
+  flex: 1 1 auto;
+
+  //Font
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #222258;
+
+  background-image: url('../images/icons/navigation.svg');
+  background-repeat: no-repeat;
+  background-position: center left 15px;
+  background-color: #FFFFFF;
+  
+
+
+  @media (min-width: $min-md) {
+    min-width: 300px;
+  }
+
+}
+
+// This is the current location default icon
+div.gmw-form-wrapper div.gmw-address-field-wrapper i.gmw-locator-button{
+  display: none;
+}
+
+// * Catergories Field
+
+div.gmw-ajax-form-wrapper {
+  background: inherit;
+}
+
+div.gmw-ajax-form-wrapper select {
+  background: #FFFFFF;
+  border: 2px solid #E2E2FF;
+  height: 54px; 
+  padding: 15px;
+
+  padding-right: 35px;
+  outline:0 !important;
+  
+
+  border-radius: 0px 30px 30px 0px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #222258;
+
+  background-image: url('../images/icons/dropdown-blue.svg');
+  background-repeat: no-repeat;
+  background-position: center right 15px;
+  background-color: #FFFFFF;
+
+  //Get rid of the arrow
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
+  appearance:none;
+
+}
+
+
+div.gmw-ajax-form-wrapper {
+  padding:0 !important;
+}
+
+// All catesgories not cutting words
+
+.gmw-search-form-taxonomies.gmw-search-form-multiple-fields-wrapper {
+  flex: 0 0 150px;
+}
+
+div.gmw-ajax-results-wrapper .gmw-ajax-filters { border-top:none;}

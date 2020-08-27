@@ -19,9 +19,7 @@ get_template_part('template-parts/hero/hero', 'custom-post-type' );
 ?>
 
 <div class="container is--event-page">
-<?php  echo tribe( Template_Bootstrap::class )->get_view_html(); ?>
+    <?php  echo tribe( Template_Bootstrap::class )->get_view_html(); ?>
 </div>
 
-<?php
-get_footer();
-?>
+<?php get_footer(); ?>

@@ -105,3 +105,9 @@ $('document').ready(function() {
 
 */
 
+// * Adding bootstrap to select items
+
+$(function() {
+    //$('#placestovisit_category-taxonomy-2').addClass('selectpicker');
+   //$('select').selectpicker();
+  });
