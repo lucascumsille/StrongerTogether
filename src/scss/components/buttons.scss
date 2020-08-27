@@ -133,3 +133,24 @@ $button-line: 20px;
     outline: none !important;
   }
 }
+
+// Media Sharing
+
+
+.button.right-icon {
+
+  min-width: 160px;
+  font-family: $rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+
+
+  img {
+    transform: translate(0px);
+    margin-right: 15px;
+    
+  }
+
+}

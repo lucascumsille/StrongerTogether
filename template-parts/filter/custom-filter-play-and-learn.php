@@ -49,54 +49,53 @@
 
 
 
-<div id='thingsathome' class="container flex-wrapper">
-<!-- get_template_part('template-parts/content', 'archive' ); -->
+<div id='thingsathome' class="container pb-6">
 
-	<?php 
-		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+	<div class="flex-wrapper">
+		<?php 
+			$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
-        $args = array(  
-			'post_type' => 'thingsathome',
-			'paged' => $paged,
-            //'post_status' => 'publish', 
-            //'orderby' => 'date', 
-            //'order' => 'ASC', 
-            'tax_query' => array(
-                array(
-                    'taxonomy' => 'thingsathome_category',
-                    'field' => 'term_id',
-                    'terms' => 20,
-                )
-            )
-        );
-        $args['search_filter_id'] = 445;
+			$args = array(  
+				'post_type' => 'thingsathome',
+				'paged' => $paged,
+				//'post_status' => 'publish', 
+				//'orderby' => 'date', 
+				//'order' => 'ASC', 
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'thingsathome_category',
+						'field' => 'term_id',
+						'terms' => 20,
+					)
+				)
+			);
+			$args['search_filter_id'] = 445;
 
-        $loop = new WP_Query( $args ); 
-    ?>
+			$loop = new WP_Query( $args ); 
+		?>
 
-	
+		
 
-		<?php while ( $loop->have_posts() ) : $loop->the_post();  ?>
-				<article class="flex-item" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<?php get_template_part('template-parts/common/card-things-at-home' ); ?>
-				</article>
+			<?php while ( $loop->have_posts() ) : $loop->the_post();  ?>
+					<article class="flex-item" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<?php get_template_part('template-parts/common/card-things-at-home' ); ?>
+					</article>
 
-		<?php endwhile; ?>
+			<?php endwhile; ?>
 
-	<?php wp_reset_postdata(); ?>
-
-
-	<?php 
-		// Pagination 
-		$big = 999999999; 
-		echo paginate_links( array(
-			'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
-			'format' => '?paged=%#%',
-			'current' => max( 1, get_query_var('paged') ),
-			'total' => $loop->max_num_pages
-		) );
-	?>
+		<?php wp_reset_postdata(); ?>
 
 
+		<?php 
+			// Pagination 
+			$big = 999999999; 
+			echo paginate_links( array(
+				'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+				'format' => '?paged=%#%',
+				'current' => max( 1, get_query_var('paged') ),
+				'total' => $loop->max_num_pages
+			) );
+		?>
 
+	</div>
 </div>

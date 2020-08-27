@@ -1,4 +1,6 @@
 
+
+
 //* Fonts
 
 $rubik: 'Rubik', sans-serif;
@@ -28,6 +30,8 @@ $black: #161004;
 
 $green-gradient: linear-gradient(152.26deg, #D9F8B1 14.96%, rgba(255, 255, 255, 0) 90.95%), #CBFFC2;
 
+$yellow-gradient: linear-gradient(180deg, #FFFBF5 29.69%, #FEEFD9 100%);
+
 //* Colours Classes
 
 
@@ -44,6 +48,7 @@ $green-gradient: linear-gradient(152.26deg, #D9F8B1 14.96%, rgba(255, 255, 255, 
 .bg-neutral-lightest {background-color: $neutral-lightest;}
 .bg-lightest-green {background-color: $lightest-green;}
 .bg-navy-blue {background-color: $navy-blue;}
+.bg-yellow-gradient {background:$yellow-gradient}
 
 // * Responsiveness
 
@@ -59,6 +64,7 @@ $lg: 1199px;
 $padding-s: 30px;
 $padding-xl:60px;
 $padding-m: 45px;
+
 
 
 // * Transition

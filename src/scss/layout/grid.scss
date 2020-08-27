@@ -8,19 +8,25 @@
   }
   
   
-  .p-xl {
+.p-xl {
   
-    padding-top: 44px;
-    padding-bottom: 44px;
-  
-    @media (min-width: $min-md) {
-      padding-top: $padding-xl;
-      padding-bottom: $padding-xl;
-    }
-  
+  padding-top: 44px;
+  padding-bottom: 44px;
+
+  @media (min-width: $min-md) {
+    padding-top: $padding-xl;
+    padding-bottom: $padding-xl;
   }
+
+}
+
+.p-m {
+  padding-top: $padding-m;
+  padding-bottom: $padding-m;
+}
+
   
-  
+// * Containers  
   .medium-container {
     max-width: 850px;
   }
@@ -36,6 +42,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     
+    margin-right: -10px;
+    margin-left:-10px;
+    
     .flex-item {
       flex-basis: 100%;
   
@@ -44,4 +53,9 @@
       }
     }
   
+  }
+
+
+  .inline-flex {
+    display: inline-flex;
   }
