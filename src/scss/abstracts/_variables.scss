@@ -28,6 +28,22 @@ $black: #161004;
 
 $green-gradient: linear-gradient(152.26deg, #D9F8B1 14.96%, rgba(255, 255, 255, 0) 90.95%), #CBFFC2;
 
+//* Colours Classes
+
+
+.text-dark-yellow {color: $dark-yellow;}
+.text-dark-green {color: $dark-green;}
+.text-yellow {color: $yellow;}
+.text-black {color: black;}
+.text-middle-yellow {color: $middle-yellow;}
+
+.bg-yellow {background-color: $yellow;}
+.bg-light-yellow {background-color: $light-yellow;}
+.bg-green {background-color: $green;}
+.bg-green-gradient {background: $green-gradient;}
+.bg-neutral-lightest {background-color: $neutral-lightest;}
+.bg-lightest-green {background-color: $lightest-green;}
+.bg-navy-blue {background-color: $navy-blue;}
 
 // * Responsiveness
 
@@ -63,6 +79,9 @@ $box-shadow: 0px 4px 8px rgba(83, 56, 26, 0.15);
 $box-shadow-green: 0px 4px 8px rgba(37, 83, 26, 0.14);
 $box-shadow-carousel: 0px 6px 8px 1px rgba(0, 0, 0, 0.06);
 $box-shadow-carousel-hover: 0px 6px 10px 1px rgba(0, 0, 0, 0.12);
+
+/*box-Shadow:  offset-x | offset-y | blur-radius | spread-radius | color */
+.box-shadow {box-shadow: $box-shadow;}
 
 // * Border Radius
 

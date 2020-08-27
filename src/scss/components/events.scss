@@ -138,3 +138,30 @@
     margin-bottom: 17px !important;
   }
   
+  // Location
+
+.photo-view-location {
+  display: flex;
+  flex-direction: row;
+  margin-left: -2px !important;
+  margin-bottom: 18px !important;
+}
+
+.location-pin-icon {
+  width: 21px;
+  height: 21px;
+  margin-right: 10px !important;
+}
+
+.location-name {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+
+  @media (min-width: $min-md) {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}

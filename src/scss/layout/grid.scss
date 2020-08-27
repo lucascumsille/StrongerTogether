@@ -1,0 +1,47 @@
+@import '../abstracts/variables';
+
+// * Spacing
+
+.p-s-xl {
+    padding-top: $padding-xl;
+    padding-bottom: $padding-xl;
+  }
+  
+  
+  .p-xl {
+  
+    padding-top: 44px;
+    padding-bottom: 44px;
+  
+    @media (min-width: $min-md) {
+      padding-top: $padding-xl;
+      padding-bottom: $padding-xl;
+    }
+  
+  }
+  
+  
+  .medium-container {
+    max-width: 850px;
+  }
+  
+  @media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+      max-width: 1170px;
+    }
+  }
+
+  .flex-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    .flex-item {
+      flex-basis: 100%;
+  
+      @media (min-width: $min-md) {
+        flex-basis: 33%;
+      }
+    }
+  
+  }

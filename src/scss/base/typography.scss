@@ -18,9 +18,23 @@ html {
     
   
   }
-  a{
-    color: $black;
+
+  a {color:$black;}
+  
+  a {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+  
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+  
+    }
   }
+
+
   h1,
   h2,
   h3,

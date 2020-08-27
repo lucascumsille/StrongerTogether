@@ -1,0 +1,51 @@
+
+
+// * FACETWP
+
+.facetwp-facet {
+    display: flex;
+    flex-direction: row;
+    
+  }
+
+  
+.facetwp-radio {
+
+    background-position: 50% 11px!important;
+    background-size: 24px 24px !important;
+    background-repeat: no-repeat !important;
+    margin-bottom: 4px;
+    margin-right: 10px;
+    
+    padding: 11px !important;
+    cursor: pointer;  
+  
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    
+  
+  
+    display: flex;
+    //align-items: end;
+    text-align: center;
+    align-items: flex-end;
+    justify-items: center;
+    justify-content: center;
+    flex: 1 1 0px;
+  
+    color: #222258;
+    //background: #F0F0FA !important;
+    border: 1.5px solid #CDCDFA;
+    border-radius: 4px !important;
+  
+    //width: fit-content;
+    height: 73px;
+  
+    span {
+      display: none;
+    }
+  }
+  
