@@ -1,0 +1,25 @@
+// Opening Div
+
+#hiddenfilters {
+    height:auto;
+    background:#000;
+    color:#fff;
+    cursor:pointer;
+    
+  }
+  .hidden-height {
+    max-height:200px;
+    overflow: hidden;
+    -webkit-transition: $height-transition;
+    -moz-transition: $height-transition;
+    -o-transition: $height-transition;
+    transition: $height-transition;
+  }
+  
+  .open-filter {
+        //max-height:max-content !important;
+        -webkit-transition: $height-transition;
+        -moz-transition: $height-transition;
+        -o-transition: $height-transition;
+        transition: $height-transition;
+    }

@@ -28,7 +28,7 @@ function strongertogether_register_styles() {
 
     $version = wp_get_theme() ->get('Version');
     wp_enqueue_style('strongertogether-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" , array(), '1.0', 'all');
-    wp_enqueue_style('strongertogether-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' , array(), '1.0', 'all');
+    //wp_enqueue_style('strongertogether-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' , array(), '1.0', 'all');
     wp_enqueue_style('strongertogether-font1', "https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" , array(), '1.0', 'all');
     wp_enqueue_style('strongertogether-font2', "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" , array(), '1.0', 'all');
     wp_enqueue_style('strongertogether-owl-carousel1', get_template_directory_uri() . "/assets/css/owl.carousel.css", array(), $version , 'all');

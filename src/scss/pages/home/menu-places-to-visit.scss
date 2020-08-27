@@ -1,0 +1,52 @@
+@import '../../abstracts/variables';
+
+// * Places to Visti Menu Component
+
+.places-to-visit-wrapper {
+    background: $green-gradient; 
+    border-radius: 20px;
+    //margin-bottom: 45px;
+  }
+  
+  .places-item {
+    text-align: center;
+    border-radius: $border-radius;
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    margin: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  
+    background: rgba(255, 255, 255, 0.2);
+    max-width: 175px;
+  
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+  
+    img{
+      width:60px;
+      margin-bottom: 16px;
+    }
+  
+    p {
+      margin-bottom: 0;
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 20px;
+      text-align: center;
+  
+      @media (min-width: $min-md) {
+        font-size: 16px;
+        line-height: 22px;
+  
+      }
+    }
+  
+    &:hover {
+      background: rgba(255, 255, 255, 0.45);
+    }
+  
+  }

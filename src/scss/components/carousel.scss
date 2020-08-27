@@ -1,0 +1,130 @@
+//* Carousel Post
+
+
+.drop-shadow-wrapper {
+
+    padding: 10px;
+   }
+   
+   .carousel-anchor {
+     display: block;
+   }
+   
+   .post-item-carousel {
+   
+     width: 100%;
+     
+     border-radius: $card-border-radius;
+     background-color: white;
+     
+     .post-carousel-image {
+       height: 190px;
+       width: 100%;
+       border-radius: $card-border-radius $card-border-radius 0px 0px;
+   
+       border-bottom: 0px;
+     }
+   
+     .owl-item .active {
+       width: 370px;
+     }
+   
+     .is--news-image {
+       max-height: 130px;
+     }
+   
+     .is--news-content {
+       height: 290px;
+     }
+   
+     .post-carousel-content {
+   
+       border-radius: 0px 0px $card-border-radius $card-border-radius;
+       padding: 20px 15px 10px 15px;
+     
+     }
+   
+     h5 {
+       margin-bottom: 20px;
+     }
+   
+   
+     .post-meta-carousel-info {
+       display: flex;
+       align-items: center;
+       margin-bottom: 16px;
+     }
+   
+     .tag-wrapper {
+       display: inline-flex;
+       flex-wrap: nowrap;
+       align-items: center;
+   
+       .tag-icon {
+         width:31px;
+         margin-right: 8px;
+         
+       }
+   
+       .category-tag {
+         font-size: 13px;
+         font-weight: 600;
+         letter-spacing: 0.03em;
+         text-transform: uppercase;
+   
+         @media (min-width: $min-md) {
+           font-size: 15px;
+         }
+       }
+   
+       .suitable-for-tag {
+         font-size: 14px;
+       
+         @media (min-width: $min-md) {
+           font-size: 16px;
+         }
+       }
+   
+   
+     }
+   }
+   
+   .owl-dot {
+     width:25px;
+     height: 25px;
+     background-color: blue;
+   }
+   
+   .owl-dots {
+     margin-bottom: 30px;
+   }
+   
+   .owl-theme .owl-dots .owl-dot span {
+     background: transparent;
+     border: 1px solid #F0BE8F;
+   }
+   
+   .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+     background: #F0BE8F;
+     border: 1px solid transparent;
+   }
+   
+   .owl-nav {
+     display: none;
+   }
+   
+   .owl-news {
+     height: 450px;
+   }
+   
+   .box-shadow-carousel {
+    box-shadow:$box-shadow-carousel;
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+  
+    &:hover {
+      box-shadow:$box-shadow-carousel-hover;
+    }
+  }

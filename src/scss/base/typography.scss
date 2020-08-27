@@ -1,0 +1,116 @@
+
+ @import '../abstracts/variables';
+
+
+html {
+    line-height: 1.15;
+  }
+  body {
+    color: var(--secondary);
+    overflow-x: hidden;
+    font-family: $open;
+    font-size: 16px;
+    color: $black;
+    background-color: $body-yellow;
+  
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+  
+  }
+  a{
+    color: $black;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--gray-dark);
+    margin-bottom: 20px;
+    font-family: $rubik;
+  }
+  
+  
+  h1 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    
+    color: white;
+  
+    @media (min-width: $min-md) {
+      font-weight: bold;
+      font-size: 54px;
+      line-height: 64px;
+      
+    }
+  }
+  
+  h2 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    
+    color: white;
+  
+    @media (min-width: $min-md) {
+      font-size: 22px;
+      line-height: 26px;
+      
+    }
+  }
+  
+  h3 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+  
+  
+    @media (min-width: $min-md) {
+      font-size: 32px;
+      line-height: 38px;
+      
+    }
+  
+  }
+  
+  h4 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 135%;
+  
+    @media (min-width: $min-md) {
+      font-size: 20px;
+      line-height: 135%;
+      
+    }
+  }
+  
+  h5 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  
+    @media (min-width: $min-md) {
+      font-size: 18px;
+      
+    }
+  }

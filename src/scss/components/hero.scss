@@ -1,0 +1,42 @@
+@import '../abstracts/variables';
+
+.hero-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .hero-wrapper {
+    padding-top: 37px;
+    padding-bottom: 37px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    @media (min-width: $min-md)  {
+      padding-top: 90px;
+      padding-bottom: 70px;
+  
+    }
+  }
+
+  .hero-subtitle {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 24px;
+    text-transform: none;
+  
+    margin-bottom: 0px;
+  
+    @media (min-width: $min-md)  {
+      font-size: 20px;
+      line-height: 24px;
+  
+    }
+  }
+  
+  .hero-icon {
+    margin-bottom: 10px;
+    width: 65px;
+  }
+  

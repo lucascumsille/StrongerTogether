@@ -1,0 +1,145 @@
+@import '../../abstracts/variables';
+
+
+//* HomePage Main Menu
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  column-gap: 10px;
+  row-gap: 15px;
+  justify-items: center;
+  // justify-items: start | end | center | stretch;
+  // align-items: start | end | center | stretch;
+
+  .right-column-menu {
+
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    //justify-self: start | end | center | stretch;
+    // align-self: start | end | center | stretch;
+
+    @media(min-width: 991px) {
+      grid-column-start: 1;
+      grid-column-end: 1;
+      grid-row-start: 1;
+      grid-row-end: 1;
+    }
+    
+  }
+
+  .left-column-menu {
+
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+
+    @media(min-width: 991px) {
+      grid-column-start: 2;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 1;
+    }
+  }
+
+
+}
+
+$card-border-radius: $border-radius;
+
+
+.anchor-card-wrapper {
+  flex-basis: 100%;
+  min-width: 165px;
+  max-width: 200px;
+  margin: 20px 10px;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 15px;
+
+  @media (min-width: $xs) {
+    flex-basis: 50%;
+  }
+
+  @media (min-width: $md) {
+    flex-basis: 50%;
+  }
+
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+
+  &:hover{
+    box-shadow: $box-shadow;
+
+    p {
+      color:$black;
+    }
+  }
+}
+
+.menu-card {
+  overflow: hidden;
+
+}
+
+.is--for-parents {
+  .upper-menu-card {border: 2px solid $green;}
+  .lower-menu-card {border: 2px solid $green;}
+
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+
+  &:hover {
+    box-shadow: $box-shadow-green;
+  }
+}
+
+.upper-menu-card {
+
+  border: 2px solid $yellow;
+  border-radius: $card-border-radius $card-border-radius 0 0;
+  padding-top: 13px;
+  padding-bottom: 13px;
+
+
+  
+
+  .menu-icon-homepage {
+    height: 45px;
+    width: auto;
+  }
+
+}
+
+.lower-menu-card {
+  padding-top: 13px;
+  background-color: white;
+  border: 2px solid $yellow;
+  border-radius: 0 0 $card-border-radius $card-border-radius;
+  overflow: hidden;
+
+  p{
+    margin-bottom: 13px;
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+
+    @media (min-width: $min-md) {
+      font-size: 15px;
+    }
+
+  }
+  
+}
