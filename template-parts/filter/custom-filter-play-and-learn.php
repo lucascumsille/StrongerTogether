@@ -5,27 +5,27 @@
 
 	<div class="filter-grid">
 		<div class="top-left-column">
+			<div class="flex-wrapper-tab">
+				<a href="<?php echo get_post_type_archive_link( 'thingsathome' ); ?>" class="filter-page-tab left-tab active">
 
-		<a href="<?php echo get_post_type_archive_link( 'thingsathome' ); ?>" class="filter-page-tab left-tab active">
+				<?php  $image = get_field('category_icon', $taxonomy . 'category_20');
+					if( !empty( $image ) ): ?>
+						<img class="filter-tab-icon mx-auto" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+					<?php endif; ?>
+				<span><?php $term = get_term( 20 , 'thingsathome_category' );
+					echo $term->name; ?></span>
+				</a>
 
-			<?php  $image = get_field('category_icon', $taxonomy . 'category_20');
-				if( !empty( $image ) ): ?>
-					<img class="filter-tab-icon mx-auto" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-				<?php endif; ?>
-			<span><?php $term = get_term( 20 , 'thingsathome_category' );
-				echo $term->name; ?></span>
-		</a>
+				<a href="<?php echo get_page_link( 435 ); ?>" class="filter-page-tab right-tab">
 
-		<a href="<?php echo get_page_link( 435 ); ?>" class="filter-page-tab right-tab">
-
-			<?php  $image = get_field('category_icon', $taxonomy . 'category_21');
-				if( !empty( $image ) ): ?>
-					<img class="filter-tab-icon mx-auto" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-				<?php endif; ?>
-			<span><?php $term = get_term( 21 , 'thingsathome_category' );
-				echo $term->name; ?></span>
-		</a>
-
+				<?php  $image = get_field('category_icon', $taxonomy . 'category_21');
+					if( !empty( $image ) ): ?>
+						<img class="filter-tab-icon mx-auto" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+					<?php endif; ?>
+				<span><?php $term = get_term( 21 , 'thingsathome_category' );
+					echo $term->name; ?></span>
+				</a>
+			</div>
 		</div>
 
 		<div id="hidden-filters" class="top-right-column hidden-height">

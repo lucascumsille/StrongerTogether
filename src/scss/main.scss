@@ -8,6 +8,36 @@ Author: LucasCmDev
 Auhtor URI: https://lucascm.dev
  */
 
+ @import 'abstracts/variables';
+ //@import 'abstracts/mixins';
+ 
+ //@import 'vendors/bootstrap';
+ 
+ //@import 'base/reset';
+ @import 'base/typography';
+ 
+ @import 'layout/navigation';
+ @import 'layout/grid';
+ @import 'layout/header';
+ @import 'layout/footer';
+ @import 'layout/sidebar';
+ @import 'layout/forms';
+ 
+ @import 'components/buttons';
+ @import 'components/carousel';
+ @import 'components/cover';
+ @import 'components/dropdown';
+ 
+ @import 'pages/home';
+ @import 'pages/contact';
+ 
+ @import 'themes/theme';
+ @import 'themes/admin'; 
+
+
+
+
+
 //* Fonts
 
 $rubik: 'Rubik', sans-serif;
@@ -18,25 +48,6 @@ $open: 'Open Sans', sans-serif;
 
 //* Colours 
 
-$darkest-green: #0E3512;
-$dark-green: #297316;
-$lime-green: #AEF09F;
-$green: #D7FACE;
-$lightest-green: #F1FFEC;
-
-$dark-yellow: #9F641F;
-$middle-yellow: #9D6511;
-$yellow: #FFE1BE;
-$button-orange: #FFD19B;
-$light-yellow: #FFF6E3;
-$body-yellow: #fffbf5;
-$neutral-lightest: #F0F0FA;
-
-$lightest-blue: #E5E5FE;
-$footer-blue: #F0F0FA;
-$navy-blue: #3D3C76;
-
-$black: #161004;
 
 .text-dark-yellow {
   color: $dark-yellow;
@@ -274,7 +285,11 @@ a {
   flex-wrap: wrap;
   
   .flex-item {
-    flex-basis: 33%;
+    flex-basis: 100%;
+
+    @media (min-width: $min-md) {
+      flex-basis: 33%;
+    }
   }
 
 }
@@ -570,7 +585,7 @@ $card-border-radius: $border-radius;
 
 .post-item-carousel {
 
-  width: 360px;
+  width: 100%;
   
   border-radius: $card-border-radius;
   background-color: white;
@@ -1306,15 +1321,31 @@ $card-border-radius: $border-radius;
 
 // * Filter Tab Pages
 
+.flex-wrapper-tab {
+  display: flex;
+  flex-direction: row;
+  width:100%;
+
+  @media (min-width: $min-md) {
+    width:auto;
+  }
+
+ 
+}
+
 .filter-page-tab {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-basis: 50%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  min-width: 170px;
 
   background: #FFFBF5;
+
   border: 1.5px solid #CDCDFA;
-  
-  padding: 15px 30px;
+  padding: 15px;
 
   text-align: center;
 
@@ -1324,6 +1355,18 @@ $card-border-radius: $border-radius;
 
   &:hover, .active {
     background: #E5E5FE;
+  }
+
+  span {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    color: #222258;
+    white-space: nowrap;
+
   }
 
 }
@@ -1375,6 +1418,7 @@ $card-border-radius: $border-radius;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    width: 100%;
 
     @media (min-width: $min-md) {
       grid-column-start: 1;
@@ -1464,6 +1508,7 @@ $filter-things-athome-padding: 5px;
         align-items: center;
         flex-direction: column;
         flex-wrap: wrap;
+       
 
         margin-bottom: 0;
 
@@ -1474,6 +1519,8 @@ $filter-things-athome-padding: 5px;
         font-weight: 600;
         font-size: 14px;
         line-height: 19px;
+        color: #222258;
+
 
         background-position: center top;
         background-repeat: no-repeat;
@@ -1831,6 +1878,9 @@ body {
   color: $black;
   background-color: $body-yellow;
 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
 
 }
 a{
