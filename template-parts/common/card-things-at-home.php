@@ -30,8 +30,9 @@
                             <div class="post-meta-carousel-info">
                                 <div class="tag-wrapper"> 
                                     <img class="tag-icon" src="<?php echo esc_url(get_field('category_icon', $category[0])['url']); ?>" > 
-                                    <span class="category-tag" style="color:<?php the_field('color_for_category', $category[0]); ?>"><?php  echo $firstCategory->name;  ?></span> </div>
-                                <span class="suitable-for-tag ml-auto"> <?php $suitable = get_field('suitable_for');
+                                    <span class="category-tag" style="color:<?php the_field('color_for_category', $category[0]); ?>"><?php  echo $firstCategory->name;  ?></span> 
+
+                                    <span class="suitable-for-tag ml-auto"> <?php $suitable = get_field('suitable_for');
 
                                     // Option Baby, 2-3 and 4-5 are selected
                                     if( $suitable && in_array('Baby', $suitable) and $suitable && in_array('2-3 years old', $suitable) and $suitable && in_array('4-5 years old', $suitable) ) {
@@ -60,6 +61,9 @@
                                         echo 'Everyone';
                                     }
                                     ?>  </span>
+                                
+                                </div>
+                                
 
                             </div>
                         </div>

@@ -1,0 +1,56 @@
+.filter-tab-format {
+    // 
+    .searchandfilter ul>li>ul:not(.children) {
+        justify-content: start;
+    }
+
+    .searchandfilter h4 {
+        padding-bottom: 15px;
+        text-align: left;
+    }
+
+    //Label wrapper(tab)
+    .sf-level-0 {
+        background: #FFFFFF;
+        border: 2px solid #CDCDFA;
+        box-sizing: border-box;
+        border-radius: 30px;
+        overflow: hidden;
+        padding: 10px 20px !important;
+
+        flex-basis: auto;
+        margin-right: 15px !important;
+        margin-bottom: 10px !important;
+    }
+
+    //label
+    .sf-level-0 label {
+
+        position: relative;
+        margin-bottom: 0;
+        font-weight: 400;
+        cursor: pointer;
+        background: none;
+        min-height: 0;
+
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        
+        color: #222258;
+
+        border-radius: 4px;
+        padding-top: 0!important;
+        padding-bottom: 0!important;
+
+        &:before {
+            background-image: none;
+            margin: 0px;
+            width: 0px;
+            height: 0px;
+        }
+    }
+}
+
