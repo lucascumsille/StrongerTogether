@@ -30,6 +30,8 @@ $black: #161004;
 
 $green-gradient: linear-gradient(152.26deg, #D9F8B1 14.96%, rgba(255, 255, 255, 0) 90.95%), #CBFFC2;
 
+$green-gradient-local-support: linear-gradient(180deg, #FCFFF7 29.69%, #F0FED9 100%);
+
 $yellow-gradient: linear-gradient(180deg, #FFFBF5 29.69%, #FEEFD9 100%);
 
 //* Colours Classes
@@ -45,6 +47,9 @@ $yellow-gradient: linear-gradient(180deg, #FFFBF5 29.69%, #FEEFD9 100%);
 .bg-light-yellow {background-color: $light-yellow;}
 .bg-green {background-color: $green;}
 .bg-green-gradient {background: $green-gradient;}
+.bg-green-gradient-local-support {
+    background:$green-gradient-local-support;
+    border: 1px solid #DBF7C6;}
 .bg-neutral-lightest {background-color: $neutral-lightest;}
 .bg-lightest-green {background-color: $lightest-green;}
 .bg-navy-blue {background-color: $navy-blue;}

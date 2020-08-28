@@ -2,7 +2,7 @@
     <div class="cta-wrapper mx-auto text-center">
 
         <img src="<?php echo get_field('cta_icon', 'option')['url']; ?>" alt="" class="mb-3">
-        <h4><?php echo the_field('cta_supporting_text', 'option')['url']; ?></h4>
+        <h4><?php echo the_field('cta_supporting_text', 'option')?></h4>
         
         <div class="inline-flex mx-auto">
             <a href="" class="button right-icon mr-3"> 
