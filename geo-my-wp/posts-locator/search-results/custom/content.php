@@ -27,6 +27,9 @@
  */
 
 ?>
+
+											<!-- Category -->
+
 <!--  Main results wrapper - wraps the paginations, map and results -->
 <div class="gmw-results-wrapper custom <?php echo esc_attr( $gmw['prefix'] ); ?>" data-id="<?php echo absint( $gmw['ID'] ); ?>" data-prefix="<?php echo esc_attr( $gmw['prefix'] ); ?>">
 
@@ -37,18 +40,18 @@
 			<?php do_action( 'gmw_search_results_start', $gmw ); ?>
 
 			<div class="gmw-results-count">
-				<span><?php gmw_results_message( $gmw ); ?></span>
+				<span><//?php gmw_results_message( $gmw ); ?></span>
 				<?php do_action( 'gmw_search_results_after_results_message', $gmw ); ?>
 			</div>
 
 			<?php do_action( 'gmw_before_top_pagination', $gmw ); ?>
 
 			<div class="pagination-per-page-wrapper top gmw-pt-pagination-wrapper gmw-pt-top-pagination-wrapper">
-				<?php gmw_per_page( $gmw ); ?>
+				<?php //gmw_per_page( $gmw ); ?>
 				<?php gmw_pagination( $gmw ); ?>
 			</div> 
 
-			<?php gmw_results_map( $gmw ); ?>
+			<?php //gmw_results_map( $gmw ); ?>
 
 			<div class="clear"></div>
 
@@ -60,7 +63,11 @@
 				while ( $gmw_query->have_posts() ) :
 					$gmw_query->the_post();
 					?>
-
+					<?php 
+						$category = get_the_terms( $id, 'placestovisit_category' ); /* get First Category */
+						$firstCategory = $category[0]; /* get category link */
+						$category_link = get_category_link($firstCategory->term_id); /* echo category name */
+					?>
 					<?php global $post; ?>
 
 					<div id="single-post-<?php echo absint( $post->ID ); ?>" class="flex-item drop-shadow-wrapper mx-auto <?php echo esc_attr( $post->location_class ); ?>">
@@ -74,17 +81,15 @@
 								
 								<div class="post-carousel-content">
 									<h4 class="text-black"><?php the_title(); ?></h4>
-									<?php gmw_search_results_distance( $post, $gmw ); ?>
+									<?php echo gmw_search_results_distance( $post, $gmw ); ?>
+									<?php  var_dump(gmw_search_results_distance( $post, $gmw )); ?>
+									<?php  gmw_search_results_distance( $post, $gmw ); ?>
+									<?php echo do_shortcode( '[gmw_single_location object="post" elements="title,distance,map,address,directions_link"]' ) ?>
 									<div class="post-meta-carousel-info">
 										<div class="tag-wrapper"> 
 											<img class="tag-icon" src="<?php echo esc_url(get_field('category_icon', $category[0])['url']); ?>" > 
 
-											<!-- Category -->
-											<?php 
-												$category = get_the_terms( $id, 'placestovisit_category' ); /* get First Category */
-												$firstCategory = $category[0]; /* get category link */
-												$category_link = get_category_link($firstCategory->term_id); /* echo category name */
-											?>
+
 											<span class="category-tag" style="color:<?php the_field('color_for_category', $category[0]); ?>"><?php  echo $firstCategory->name;  ?></span>
 
 										</div> <!-- tag-wrapper -->

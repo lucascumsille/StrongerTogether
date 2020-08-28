@@ -53,7 +53,10 @@ $yellow-gradient: linear-gradient(180deg, #FFFBF5 29.69%, #FEEFD9 100%);
 .bg-neutral-lightest {background-color: $neutral-lightest;}
 .bg-lightest-green {background-color: $lightest-green;}
 .bg-navy-blue {background-color: $navy-blue;}
-.bg-yellow-gradient {background:$yellow-gradient}
+.bg-yellow-gradient {
+    background:$yellow-gradient;
+    border: 1px solid #F7E1C6;
+}
 
 // * Responsiveness
 
