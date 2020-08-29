@@ -1,8 +1,11 @@
-.filter-tab-format {
+.filter-tab-format, .sf-field-taxonomy-supportingyourkid_category {
+    
+
     // 
     .searchandfilter ul>li>ul:not(.children) {
-        justify-content: start;
+        justify-content: start !important;
     }
+
 
     .searchandfilter h4 {
         padding-bottom: 15px;
@@ -54,3 +57,11 @@
     }
 }
 
+.sf-field-post-meta-suitable_for {
+    //max-width: 370px;
+
+}
+
+.sf-field-taxonomy-supportingyourkid_category>ul:not(.children) {
+  //  justify-content: start;
+}

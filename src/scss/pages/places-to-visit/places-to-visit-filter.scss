@@ -1,7 +1,7 @@
 @import '../../abstracts/variables';
 
 // * Address Field
-#gmw-address-field-2 {
+#gmw-address-field-2, #gmw-address-field-1 {
   
   border: 2px solid #E2E2FF;
   height: 54px;
@@ -45,7 +45,7 @@ div.gmw-ajax-form-wrapper {
   background: inherit;
 }
 
-div.gmw-ajax-form-wrapper select {
+div.gmw-ajax-form-wrapper select, .gmw-form-field-wrapper select {
   background: #FFFFFF;
   border: 2px solid #E2E2FF;
   height: 54px; 
@@ -88,3 +88,7 @@ div.gmw-ajax-form-wrapper {
 }
 
 div.gmw-ajax-results-wrapper .gmw-ajax-filters { border-top:none;}
+
+.gmw-icon-target-light:before {
+  display: none;
+}

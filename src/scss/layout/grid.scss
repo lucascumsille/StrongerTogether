@@ -30,6 +30,12 @@
   .medium-container {
     max-width: 850px;
   }
+
+  .small-container {
+    max-width: 100%;
+
+    @media (min-width: $min-md) {max-width: 540px;}
+  }
   
   @media (min-width: 1200px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl {

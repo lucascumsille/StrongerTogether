@@ -453,6 +453,6 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 
-
+add_filter( 'gmw_search_within_boundaries', '__return_false' );
 
 

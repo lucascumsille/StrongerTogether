@@ -16,7 +16,7 @@
                 <a class="carousel-anchor mx-auto" href="<?php the_permalink(); ?>">
                     <div class="post-item-carousel box-shadow-carousel mx-auto">
 
-                        <div class="post-carousel-image mx-auto" style="background-image:url('<?php echo get_the_post_thumbnail_url(); ?>');">
+                        <div class="post-carousel-image is--big mx-auto" style="background-image:url('<?php echo get_the_post_thumbnail_url(); ?>');">
 
                         <!-- VideoPlay Conditional -->
                         <?php if ( get_field('does_it_have_a_video') == true) { ?> 

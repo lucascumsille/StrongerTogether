@@ -31,7 +31,7 @@
 
 		<!-- gmw-results-items class is required. You can add additional classes -->
 		<!-- <ul class="gmw-results-items gmw-results-list flex-wrapper"> -->
-		<ul class="flex-wrapper">
+		<ul class="flex-wrapper gmw-results-items">
 			<?php gmw_ajaxfms_search_results_list( $gmw ); ?>
 		</ul>
 
