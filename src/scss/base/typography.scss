@@ -128,3 +128,30 @@ html {
       
     }
   }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 15px;
+    
+    @media (min-width:$min-md) {
+      font-size: 16px;
+    }
+}
+
+.hours-text {
+  font-family: Open Sans;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  /* identical to box height, or 138% */
+
+
+  color: #30240B;
+
+  @media (min-width:$min-md) {
+    font-size: 14px;
+  }
+
+}

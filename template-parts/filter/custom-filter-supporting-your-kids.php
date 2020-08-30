@@ -33,7 +33,7 @@
 
 			<?php while ( $loop->have_posts() ) : $loop->the_post();  ?>
 					<article class="flex-item" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<?php get_template_part('template-parts/common/card-local-news' ); ?>
+						<?php get_template_part('template-parts/common/card-supporting-your-kids' ); ?>
 					</article>
 
 			<?php endwhile; ?>

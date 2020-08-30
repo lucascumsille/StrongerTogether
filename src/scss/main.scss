@@ -77,11 +77,62 @@ Auhtor URI: https://lucascm.dev
 .check-icon {
   margin-right: 8px;
 }
+// Checklist Get Help and Single Post
+
+.checklist-wrapper {
+  max-width: 700px;
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  //align-content: center;
+  //align-items: center;
+  //justify-content: ;
+  margin-left: -10px;
+  
+
+  @media (min-width: $min-md) {
+    flex-direction: row; 
+    justify-content: center;
+   
+    
+  }
+
+}
+
+.checklist {
+  padding-left: 25px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  margin-bottom: 25px;
+  margin-left: 10px;
+  width: fit-content;
+  flex-basis: 160px;
+  align-self: center;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+
+  @media (min-width: $min-md) {
+    font-size: 16px;
+    margin-right: 25px;
+    //flex-basis: 25%;
+    flex: 0 1 auto;
+  }
+}
 
 
 
+.checklist.is-green {
+  background-image: url('../images/icons/checklist-green.svg');
+}
 
 
+.checklist.is-blue {
+  background-image: url('../images/icons/checklist-green.svg');
+}
 
 
 
