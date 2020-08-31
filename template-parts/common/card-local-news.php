@@ -6,6 +6,7 @@
    $category_link = get_category_link($firstCategory->term_id);
    //echo category name
    // echo $firstCategory->name;
+   
 
 ?>
 

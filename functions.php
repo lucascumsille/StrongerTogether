@@ -6,6 +6,7 @@
     add_theme_support('title-tag');
     add_theme_support('custom-logo');
     add_theme_support('post-thumbnails');
+    set_post_thumbnail_size( 370, 190, true ); // default Post Thumbnail dimensions (cropped)
  }
 add_action('after_setup_theme', 'strongertogether_theme_support');
 //

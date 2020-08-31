@@ -50,7 +50,7 @@
 
 
 
-<div id='thingsathome' class="container flex-wrapper pb-6">
+<div id='thingsathome' class="container pb-6">
 
     <div class="flex-wrapper">
         <?php 

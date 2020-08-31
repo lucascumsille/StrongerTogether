@@ -19,18 +19,15 @@ $post_type = get_post_type( get_the_ID() );
 
 <?php 
  $category = get_the_terms( $id, 'thingsathome_category' );
- //get First Category
  $firstCategory = $category[0];
- //get category link
-   $category_link = get_category_link($firstCategory->term_id);
-   //echo category name
-   // echo $firstCategory->name;
+$category_link = get_category_link($firstCategory->term_id);
+$post_type = get_post_type( get_the_ID() );
 
 ?>
 
 <div class="hero-wrapper is--single">
 	<div class="container mb-3 mb-lg-5">
-		<a class="breadcrumb-button mr-auto" href="<?php the_field('get_help_check_list_button_link');?>">
+		<a class="breadcrumb-button mr-auto" href="<?php echo get_post_type_archive_link( $post_type ); ?>">
 			<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/arrow-back.svg" alt="">
 			<span class="button-text"><?php echo the_field('page_title', $post_type ); ?></span>
 		</a>
