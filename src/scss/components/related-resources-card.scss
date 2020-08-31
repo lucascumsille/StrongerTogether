@@ -1,0 +1,48 @@
+@import '../abstracts/variables';
+
+.related-resource-card {
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 10px 10px;
+    background: #FFFFFF;
+
+    flex-basis: 345px;
+    box-shadow: 0px 6px 8px 1px rgba(0, 0, 0, 0.06);
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+
+    .related-resource-image {
+        height: 130px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+
+    }
+
+    .related-resource-title-wrapper {
+        padding: 20px 15px;
+        min-height: 64px;
+
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 135%;
+        /* or 24px */
+
+
+        color: #181818;
+    }
+
+    &:hover {
+        box-shadow: 0px 6px 10px 1px rgba(0, 0, 0, 0.12);
+        -webkit-transition: $transition;
+        -moz-transition: $transition;
+        -o-transition: $transition;
+        transition: $transition;
+
+    }
+
+
+}
