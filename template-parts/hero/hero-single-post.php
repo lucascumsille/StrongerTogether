@@ -39,7 +39,7 @@ $post_type = get_post_type( get_the_ID() );
 
 
 
-		<h1 class="heading text-center">
+		<h1 class="heading text-center text-black">
 			<?php echo the_title(); ?>
 		</h1>
 

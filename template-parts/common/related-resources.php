@@ -6,7 +6,7 @@
         <h3 class="section-title text-center"><?php the_field('related_resources_title'); ?></h3>
     </div>
 
-    <div class="flex-wrapper">
+    <div class="flex-wrapper justify-content-center">
 
     <?php
         $featured_posts = get_field('related_resources');
