@@ -24,7 +24,7 @@
                 $custom_field = get_field( 'field_name', $featured_post->ID );
                 ?>
             
-                <a class="related-resource-card" href="<?php $permalink; ?>">
+                <a class="related-resource-card" href="<?php echo $permalink; ?>">
                     <div class="related-resource-image" style="background-image:url('<?php echo $thumbnail ?>');">
                     </div>
                     <div class="related-resource-title-wrapper">
