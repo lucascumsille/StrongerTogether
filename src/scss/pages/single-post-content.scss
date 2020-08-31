@@ -1,0 +1,25 @@
+@import '../abstracts/variables';
+
+.single-post-container {
+
+    p {
+        text-align: left;
+        iframe {
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+            
+
+            @media (max-width: $min-md) {
+                width: 100%;
+            }
+        }
+    }
+
+    @media (min-width: $min-md) {
+        p {
+            text-align: center;
+        }
+    }
+ 
+}

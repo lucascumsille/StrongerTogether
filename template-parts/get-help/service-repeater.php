@@ -1,5 +1,5 @@
-<div class="container-fluid py-4 py-lg-6 bg-lightest-green">
-
+<div class="container-fluid py-4 py-lg-6 bg-green-gradient-local-support">
+<!-- bg-lightest-green -->
     <div class="small-container mb-3 mx-auto">
         <?php
         // Check rows exists.
@@ -17,9 +17,10 @@
 
                 <h3 clas="text-black pt-6"><?php echo $service_title; ?></h3>
                 <p class=""><?php echo $service_subtitle ?></p>
-                <a class="button button-green mb-3" href="<?php the_field('service_url');?>">
+                <a class="button right-icon services mb-3" href="<?php the_field('service_url');?>">
+                <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/phone-green.svg" alt="">
                 <span class="button-text"><?php echo $service_button_text ?></span>
-                <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/arrow-green.svg" alt="">
+                
                 </a> 
                 <p class="hours-text"><?php echo $service_opening_hours ?></p>
             <?php // End loop.

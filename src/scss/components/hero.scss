@@ -18,6 +18,18 @@
     }
   }
 
+  .hero-wrapper.is--single {
+    padding-top: 15px;
+    padding-bottom: 25px;
+
+    @media (min-width: $min-md)  {
+      padding-top: 20px;
+      padding-bottom: 75px;
+  
+    }
+
+  }
+
   .hero-subtitle {
     font-family: Open Sans;
     font-style: normal;
