@@ -37,12 +37,15 @@
     font-size: 15px;
     line-height: 24px;
     text-transform: none;
+    margin-right: auto;
+    margin-left: auto;
   
     margin-bottom: 0px;
   
     @media (min-width: $min-md)  {
       font-size: 20px;
       line-height: 24px;
+      max-width: 640px;
   
     }
   }

@@ -13,11 +13,12 @@
                 $service_subtitle = get_sub_field('service_description');    
                 $service_opening_hours = get_sub_field('service_opening_hours');
                 $service_button_text = get_sub_field('service_button_text');
+                $service_url= get_sub_field('service_url');
                 ?>
 
                 <h3 clas="text-black pt-6"><?php echo $service_title; ?></h3>
                 <p class=""><?php echo $service_subtitle ?></p>
-                <a class="button right-icon services mb-3" href="<?php the_field('service_url');?>">
+                <a class="button right-icon services mb-3" href="<?php echo $service_url ?>">
                 <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/phone-green.svg" alt="">
                 <span class="button-text"><?php echo $service_button_text ?></span>
                 

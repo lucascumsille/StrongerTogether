@@ -56,9 +56,11 @@
 	<div id='thingsathome' class="container pb-6">
 
 		<div class="flex-wrapper">
-			
+		
 
 			<?php 
+			//do_action("search_filter_query_posts", 445);
+			//echo do_shortcode('[searchandfilter id="445" action="filter_next_query"]');
 			if ( have_posts() ) {
 				while ( have_posts() ) {
 					the_post(); ?>

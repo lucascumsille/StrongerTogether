@@ -2,6 +2,7 @@
 <?php 
 // Variable to get the post type name
 $post_type = get_post_type( get_the_ID() );
+
  ?>
 
 <style>
