@@ -7,6 +7,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+  margin-right: -7.5px;
+  margin-left: -7.5px;
 
   column-gap: 10px;
   row-gap: 15px;
@@ -54,7 +56,7 @@ $card-border-radius: $border-radius;
 
 
 .anchor-card-wrapper {
-  flex-basis: 165px;
+  flex-basis: 45%;
   width: 165px;
   //max-width: 220px;
   margin:10px 7.5px;
@@ -87,6 +89,8 @@ $card-border-radius: $border-radius;
 
 .menu-card {
   overflow: hidden;
+  //padding: 10px 7.5px;
+    
 
 }
 

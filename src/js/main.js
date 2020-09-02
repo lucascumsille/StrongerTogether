@@ -111,3 +111,30 @@ $(function() {
     //$('#placestovisit_category-taxonomy-2').addClass('selectpicker');
    //$('select').selectpicker();
   });
+
+// * Places to Visit
+
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+};
+
+var categoryPlaces = getUrlParameter('category');
+
+window.addEventListener('DOMContentLoaded', function() {
+    window.setTimeout(function(){
+        if (categoryPlaces !== null)  {
+            $('#placestovisit_category-taxonomy-2').val(categoryPlaces).change();
+        }
+    }, 300)
+})

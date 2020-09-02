@@ -12,12 +12,13 @@
     text-align: center;
     border-radius: $border-radius;
     border: 1.5px solid rgba(255, 255, 255, 0.7);
-    margin: 16px;
+    margin: 0px 8px 10px 8px;
     padding-top: 10px;
     padding-bottom: 10px;
+
   
     background: rgba(255, 255, 255, 0.2);
-    max-width: 175px;
+    max-width: 165px;
   
     -webkit-transition: $transition;
     -moz-transition: $transition;
@@ -47,6 +48,11 @@
   
     &:hover {
       background: rgba(255, 255, 255, 0.45);
+    }
+
+    @media (min-width: $min-md) {
+      max-width: 175px;
+      margin: 0px 10px 10px 10px;
     }
   
   }
