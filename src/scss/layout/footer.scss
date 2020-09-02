@@ -54,13 +54,19 @@
   
   // Second Row 
   
-  .footer-second-row {
-   padding-bottom: 50px;
+
+  .container.footer-second-row {
+   padding-bottom: 23px;
+   margin-right:0px;
+   margin-left:0px;
    .col-12 {
      margin-bottom: 25px;
    }
   
-  
+   @media (min-width: $min-md) {
+    width: 100%;
+    padding-bottom: 50px;
+  }
   
   }
   
@@ -92,7 +98,12 @@
   
   .footer-page-wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @media (min-width: $min-md) {
+      flex-direction: column;
+    }
   
   }
   
@@ -104,13 +115,14 @@
     line-height: 22px;
     text-decoration-line: underline;
     color: $navy-blue;
+    margin-right: 20px;
+    margin-bottom: 25px;
   
     -webkit-transition: $transition;
     -moz-transition: $transition;
     -o-transition: $transition;
     transition: $transition;
   
-    margin-bottom: 20px;
     &:hover {
       color: #222258;
       text-decoration-line: underline;
@@ -157,15 +169,33 @@
     line-height: 21px;
   }
   
-  .icon-round-wrapper.bg-navy-blue {
-    -webkit-transition: $transition;
-    -moz-transition: $transition;
-    -o-transition: $transition;
-    transition: $transition;
-    &:hover {
-      background: #222258;
+
+
+  .nav-mobile-social.is--footer {
+    padding-left: 0;
+    margin-top: 0;
+     
+    
+
+    a:nth-child(2) {
+      margin-right: 0;
+    }
+    
+    a {
+      margin-bottom: 0px;
+    }
+
+    .icon-round-wrapper.bg-navy-blue {
+      -webkit-transition: $transition;
+      -moz-transition: $transition;
+      -o-transition: $transition;
+      transition: $transition;
+      &:hover {
+        background: #222258;
+      }
     }
   }
+
   
   //Third Row
   
@@ -175,7 +205,7 @@
     padding-bottom: 16px;
   
     .footer-page-link {
-      margin-right: 35px;
+      //margin-right: 35px;
     }
   }
   

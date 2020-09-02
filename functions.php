@@ -32,7 +32,7 @@ function strongertogether_register_styles() {
     //wp_enqueue_style('strongertogether-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' , array(), '1.0', 'all');
     //wp_enqueue_style('strongertogether-bootstrap-selectpicker', 'https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css' , array(), '1.0', 'all');
     wp_enqueue_style('strongertogether-font1', "https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" , array(), '1.0', 'all');
-    wp_enqueue_style('strongertogether-font2', "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" , array(), '1.0', 'all');
+    wp_enqueue_style('strongertogether-font2', "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" , array(), '1.0', 'all');
     wp_enqueue_style('strongertogether-owl-carousel1', get_template_directory_uri() . "/assets/css/owl.carousel.css", array(), $version , 'all');
     wp_enqueue_style('strongertogether-owl-carousel2', get_template_directory_uri() . "/assets/css/owl.theme.default.css", array(), $version , 'all');
     wp_enqueue_style('strongertogether-style', get_template_directory_uri() . "/assets/css/main.css", array(), $version , 'all');

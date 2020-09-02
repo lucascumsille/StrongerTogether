@@ -1,4 +1,4 @@
-<div class="container p-xl event-home-page">
+<div class="container py-5 pt-lg-6 pb-lg-9 event-home-page">
 
 	<div class="title-container mb-4 mb-lg-5">
         <h3 class="section-title text-center"><?php the_field('upcoming_events_title'); ?></h3>

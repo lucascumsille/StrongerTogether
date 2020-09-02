@@ -58,9 +58,12 @@ $button-line: 20px;
 .button-cta-green {
   background-color: $lightest-green;
   padding: 0;
+  width: max-content;
 
   span {
     color: #208610;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
   }
 
   &:hover {
@@ -309,3 +312,57 @@ $button-line: 20px;
     flex-direction: row;
   }
 }
+
+input.tribe-button {
+
+  display: flex !important;
+  border: 1.5px solid transparent !important;
+  border-radius: 50px !important;
+  padding: 15px 20px !important;
+  padding-top: 14px !important;
+  padding-bottom: 10px !important;
+  padding-right: 20px !important;
+  width: fit-content !important;
+  align-items: center !important;
+  margin-right: 7.5px !important;
+  margin-left: 7.5px !important;
+  margin-bottom: 15px !important;
+
+  background-color: $button-orange;
+
+  font-family: Rubik !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  line-height: 26px !important;
+  outline-style: none !important;
+
+  img {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+
+    
+    
+  }
+
+  span {
+    display: inline-block !important;
+
+
+
+    @media (min-width: $min-md) {
+      font-size: 16px;
+    }
+
+  }
+
+  &:hover {
+
+    border: 1.5px solid #FFBC6C !important;
+
+  }
+
+}
+

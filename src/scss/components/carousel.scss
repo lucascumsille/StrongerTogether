@@ -1,5 +1,8 @@
 //* Carousel Post
 
+.owl-carousel .owl-stage {    
+  display: flex;
+ }
 
 .drop-shadow-wrapper {
     height: 100%;
@@ -25,11 +28,22 @@
        height: 135px;
        width: 100%;
        border-radius: $card-border-radius $card-border-radius 0px 0px;
-   
+       background-size: cover;
+       background-position: center;
        border-bottom: 0px;
      }
 
      .post-carousel-image.is--big {height: 190px;}
+     
+
+
+     .owl-item {
+       height: auto;
+       
+       @media (min-width:$min-md) {
+        height: 100%;
+       }
+     } 
    
      .owl-item .active {
        width: 370px;
@@ -39,8 +53,8 @@
        max-height: 130px;
      }
    
-     .is--news-content {
-       height: 290px;
+     .post-carousel-content.is--news-content {
+      padding: 20px 15px 30px 15px;
      }
    
      .post-carousel-content {
@@ -89,19 +103,31 @@
          }
        }
    
-       .suitable-for-tag {
-         font-size: 14px;
-       
-         @media (min-width: $min-md) {
-           font-size: 16px;
-         }
-       }
-
-
-   
-   
      }
    }
+
+   .suitable-for-tag {
+    font-size: 14px;
+    color: #444444;
+  
+    @media (min-width: $min-md) {
+      font-size: 16px;
+    }
+  }
+
+  .suitable-for-tag.is--date {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #161004;    
+    opacity: 0.5;
+
+    @media (min-width: $min-md) {
+      font-size: 16px;
+    }
+  }
    
    .owl-dot {
      width:25px;
@@ -125,10 +151,6 @@
    
    .owl-nav {
      display: none;
-   }
-   
-   .owl-news {
-     height: 450px;
    }
    
    .box-shadow-carousel {

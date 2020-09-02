@@ -1,4 +1,4 @@
-<div class="places-to-visit-wrapper py-5 py-lg-6">
+<div class="places-to-visit-wrapper pt-5 pb-6 py-lg-6">
 
     <div class="container medium-container">
         <div class="title-container mb-4 mb-lg-5">

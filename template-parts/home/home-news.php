@@ -1,5 +1,5 @@
 
-<div class="p-xl">
+<div class="pt-8 pb-7 py-lg-6">
     <div class="container-xl">
 
         <div class="title-container mb-4 mb-lg-5">
@@ -15,7 +15,7 @@
             // the query
             $the_query = new WP_Query($args);
         ?>
-        <div class="owl-carousel owl-post owl-theme owl-news mb-4">
+        <div class="owl-carousel owl-post owl-theme owl-news mb-4 mb-lg-4">
 
         <?php if ( $the_query->have_posts() ) : ?>
         <?php
@@ -42,7 +42,7 @@
                                 <div class="tag-wrapper"> 
                                     <span class="category-tag" style="color:<?php the_field('color_for_category', $category[0]); ?>"><?php  echo $firstCategory->name;  ?></span>
                                  </div>
-                                <span class="suitable-for-tag ml-auto"><?php echo get_the_date(); ?>  </span>
+                                <span class="suitable-for-tag ml-3 is--date"><?php echo get_the_date(); ?>  </span>
                             </div>
                             <span><?php echo get_the_excerpt() ?><span>
                         </div>

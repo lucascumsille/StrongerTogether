@@ -22,10 +22,10 @@
         </div>
     </div>
 
-    <div class="container footer-second-row">
+    <div class="container footer-second-row mx-lg-auto">
         <div class="row">
 
-            <div class="col-12 col-sm-6 col-lg-3 text-center text-sm-left">
+            <div class="col-12 col-sm-6 col-lg-3 text-left">
                 <p class="footer-title">For Families</p>
                 <div class="footer-page-wrapper">
                     <a class="footer-page-link" href="<?php echo get_post_type_archive_link( 'placestovisit' ); ?>"><?php the_field( 'page_title', 'placestovisit' ); ?></a>
@@ -36,7 +36,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-sm-6 col-lg-3 text-center text-sm-left">
+            <div class="col-12 col-sm-6 col-lg-3 text-left">
                 <p class="footer-title">For Parents</p>
                 <div class="footer-page-wrapper">
                     <a class="footer-page-link" href="<?php echo get_post_type_archive_link( 'lookingafteryourself' ); ?>"><?php the_field( 'page_title', 'lookingafteryourself' ); ?></a>
@@ -49,7 +49,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-sm-6 col-lg-3 text-center text-sm-left">
+            <div class="col-12 col-sm-6 col-lg-3 text-left">
                 <p class="footer-title">Stronger Together Logan</p>
                 <div class="footer-page-wrapper">
                     <a class="footer-page-link" href="<?php echo get_page_link( 371 ); ?>"><?php echo get_the_title( 371 ); ?></a>
@@ -58,7 +58,7 @@
             </div>
 
             <div class="col-12 col-sm-6 col-lg-3 mx-auto media-footer-column">
-				<div class="nav-mobile-social justify-content-center justify-content-sm-end">
+				<div class="nav-mobile-social is--footer justify-content-start justify-content-sm-end">
 
                     <a href="<?php echo the_field('facebook_stl', 'option'); ?>" class="icon-round-wrapper bg-navy-blue"><img class="social-media-mobile" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/facebook footer.svg" alt=""></a>
     
@@ -72,25 +72,25 @@
 
     </div>
 
-    <div class="container-fluid traditional-wrapper mb-5">
+    <div class="traditional-wrapper mb-5">
         <div class="container mt-5">
-            <div class="traditionals-title-wrapper">
+            <div class="traditionals-title-wrapper text-left">
                 <span class="traditionals-title"><?php echo the_field('traditional_custodians_footer_title', 'option'); ?> </span>
                 <img class="traditional-flag" src="<?php echo get_field('traditional_custodians_flag', 'option')['url']; ?>" alt="">
                 <img class="traditional-flag" src="<?php echo get_field('traditional_custodians_flag_second', 'option')['url']; ?>" alt="">
             </div>
-            <p class="traditional-info text-center text-lg-left"><?php echo the_field('traditional_custodians_footer_text', 'option'); ?></p>
+            <p class="traditional-info text-left"><?php echo the_field('traditional_custodians_footer_text', 'option'); ?></p>
         </div>
     </div>
 
-    <div class="container-fluid footer-third-row">
+    <div class="footer-third-row">
         <div class="container">
-            <div class="row justify-content-between">
+            <div class="row justify-content-between text-lg-right">
                 <div class="col-12 col-lg-6 mb-4 mb-md-0 text-center text-lg-left">
                     <img class="footer-logan-logo" src="<?php echo get_field('lt_footer_icon', 'option')['url']; ?>" alt="">
                 </div>
 
-                <div class="col-12 col-lg-6 text-right align-self-center">
+                <div class="col-12 col-lg-6 align-self-center">
                     <a class="footer-page-link" href="">Privacy Policy</a>
                     <span class="copyright">©Copyright Logan Together 2020</span>
                 </div>

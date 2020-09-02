@@ -1,4 +1,4 @@
-<div class="bg-light-yellow p-xl">
+<div class="bg-light-yellow pt-6 pb-7 pb-lg-6">
     <div class="container-xl">
 
         <div class="title-container mb-3 mb-lg-5">
