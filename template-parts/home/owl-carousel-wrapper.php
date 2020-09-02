@@ -1,9 +1,9 @@
 <div class="bg-light-yellow p-xl">
     <div class="container-xl">
 
-        <div class="title-container mb-5">
+        <div class="title-container mb-3 mb-lg-5">
             <h3 class="section-title text-center"><?php the_field('slider_post_title'); ?></h3>
-            <p><?php the_field('subtitle_slider'); ?></p>
+            <p class="mb-0"><?php the_field('subtitle_slider'); ?></p>
         </div>
 
 <!-- * OWL CAROUSEL -->

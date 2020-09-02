@@ -45,7 +45,13 @@
   .tribe-events-pro-photo {
     margin-bottom: 10px !important;
   }
- 
+ // Tile wrapper
+
+ .tribe-events .tribe-events-l-container {
+  padding-bottom: 0px !important;
+  padding-top: 0px !important;
+  min-height: 600px;
+ }
 
   // Tile
   
@@ -53,8 +59,21 @@
     overflow: hidden;
     border-radius: $border-radius;
   }
+
+  //Tile Paddding
+
+  .tribe-common--breakpoint-medium.tribe-common .tribe-common-g-row--gutters>.tribe-common-g-col {
+    padding-left: 10px;
+    padding-right: 10px;
   
-  
+  }
+
+  // Tile Padding Max Width Large
+
+  .tribe-common .tribe-common-g-row--gutters>.tribe-common-g-col {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   // Photo 
   
   .tribe-events-pro-photo__event-featured-image {
@@ -75,6 +94,15 @@
   }
   
   
+
+  // Date Wrapper 
+
+  .tribe-events-pro .tribe-events-pro-photo__event-date-tag {
+
+    margin-top: -2px;
+  }
+
+
   // Day Number 
   
   .tribe-common--breakpoint-medium.tribe-common .tribe-common-h4--min-medium {

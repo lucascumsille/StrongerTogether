@@ -36,7 +36,7 @@
 
                                     // Option Baby, 2-3 and 4-5 are selected
                                     if( $suitable && in_array('Baby', $suitable) and $suitable && in_array('2-3 years old', $suitable) and $suitable && in_array('4-5 years old', $suitable) ) {
-                                        echo '< 5 years old';
+                                        echo '0-5 years old';
                                     } 
                                     // Option  2-3, 4-5 and 6-8 are selected
                                     else if ( $suitable && in_array('6-8 years old', $suitable) and $suitable && in_array('2-3 years old', $suitable) and $suitable && in_array('4-5 years old', $suitable) ) {
@@ -44,7 +44,7 @@
                                     } 
                                     // Option Baby and 2-3 are selected
                                     else if  ( $suitable && in_array('Baby', $suitable) and $suitable && in_array('2-3 years old', $suitable) ){
-                                        echo '< 3 years old';
+                                        echo '0-3 years old';
                                     } 
                                     // Option 2-3 and 4-5 are selected
                                     else if ( $suitable && in_array('4-5 years old', $suitable) and $suitable && in_array('2-3 years old', $suitable) ) {

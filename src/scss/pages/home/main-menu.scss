@@ -54,16 +54,17 @@ $card-border-radius: $border-radius;
 
 
 .anchor-card-wrapper {
-  flex-basis: 100%;
-  min-width: 165px;
-  max-width: 200px;
-  margin: 20px 10px;
+  flex-basis: 165px;
+  width: 165px;
+  //max-width: 220px;
+  margin:10px 7.5px;
   text-align: center;
   overflow: hidden;
   border-radius: 15px;
 
   @media (min-width: $xs) {
-    flex-basis: 50%;
+    flex-basis: 220px;
+    width: 220px;
   }
 
   @media (min-width: $md) {
@@ -122,6 +123,8 @@ $card-border-radius: $border-radius;
 
 .lower-menu-card {
   padding-top: 13px;
+  padding-right: 7px;
+  padding-left: 7px;
   background-color: white;
   border: 2px solid $yellow;
   border-radius: 0 0 $card-border-radius $card-border-radius;

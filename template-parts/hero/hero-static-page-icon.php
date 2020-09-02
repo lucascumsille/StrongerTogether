@@ -16,7 +16,7 @@ $post_type = get_post_type( get_the_ID() );
 	}
 </style>
 
-<div class="container-fluid hero-wrapper">
+<div class="hero-wrapper">
 	
 	<div class="page-title text-center gradient">
 		<img class="hero-icon" src="<?php echo esc_url(get_field('icon_page')['url']); ?>" alt="">

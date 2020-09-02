@@ -1,6 +1,6 @@
 <div class="container p-xl event-home-page">
 
-	<div class="title-container mb-5">
+	<div class="title-container mb-4 mb-lg-5">
         <h3 class="section-title text-center"><?php the_field('upcoming_events_title'); ?></h3>
     </div>
 	<?php echo do_shortcode('[tribe_events view="photo" limit="3"]'); ?>

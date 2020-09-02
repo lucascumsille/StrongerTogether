@@ -13,10 +13,10 @@
 	}
 </style>
 
-<div class="container-fluid hero-wrapper">
-	    <div class="container page-title  text-center gradient py-5">
-			<h2 class="text-light mt-5"> <?php the_field('h2_title'); ?> </h2>
-			<h1 class="heading"><?php the_field('h1_title'); ?></h1>
+<div class="hero-wrapper py-6 pt-lg-8 pb-lg-9">
+	    <div class="container page-title  text-center gradient">
+			<h2 class="text-light"> <?php the_field('h2_title'); ?> </h2>
+			<h1 class="heading mb-0"><?php the_field('h1_title'); ?></h1>
 		</div>
 </div>
 

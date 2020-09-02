@@ -1,5 +1,4 @@
 
-?>
     <div class="container p-xl">
         <div class="menu-grid">
             <div class="right-column-menu">
@@ -7,7 +6,7 @@
                         <h5 class="section-title text-center text-dark-yellow"> <?php the_field('h3_for_families_title'); ?> </h5>
                     </div>
 
-                    <div class="d-flex flex-columnn flex-wrap flex-lg-row justify-content-center align-items-center">
+                    <div class="d-flex flex-row flex-wrap flex-lg-row justify-content-center align-items-center">
 
                         <a class="anchor-card-wrapper"  href="<?php echo get_post_type_archive_link( 'placestovisit' ); ?>">
                             <div class="menu-card">
@@ -54,7 +53,7 @@
                 </div>
             </div>
 
-            <div class="left-column-menu">
+            <div class="left-column-menu pt-6 pt-lg-0">
                 <div class="title-container">
                     <h5 class="section-title text-center text-dark-green"> <?php the_field('h3_for_Parents'); ?> </h5>
                   </div>
@@ -115,7 +114,7 @@
                                         <img class="menu-icon-homepage mx-auto" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                                 <?php endif; ?>
                             </div>
-                            <div class="lower-menu-card"><p> <?php the_field( 'page_title', 30 ); ?> </p></div>
+                            <div class="lower-menu-card"><p> <?php echo get_the_title( 30 ); ?> </p></div>
                         </div>
                     </a>
 

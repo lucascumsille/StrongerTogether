@@ -2,7 +2,7 @@
 <div class="p-xl">
     <div class="container-xl">
 
-        <div class="title-container mb-5">
+        <div class="title-container mb-4 mb-lg-5">
             <h3 class="section-title text-center"><?php the_field('latest_news_title'); ?></h3>
         </div>
         <?php

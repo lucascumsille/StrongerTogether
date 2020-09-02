@@ -32,7 +32,7 @@ if ( ! empty( $event->featured ) ) {
 			<div class="tribe-events-pro-photo__event-details">
 				<?php $this->template( 'photo/event/date-time', [ 'event' => $event ] ); ?>
 				<?php $this->template( 'photo/event/title', [ 'event' => $event ] ); ?>
-				<?php $this->template( 'photo/event/cost', [ 'event' => $event ] ); ?>
+				<?php //$this->template( 'photo/event/cost', [ 'event' => $event ] ); ?>
 				<div class="photo-view-location">
 					<img class="location-pin-icon" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/pin-orange.svg" alt="">
 					<span class="location-name"> <?php echo tribe_get_venue() ?> </span>

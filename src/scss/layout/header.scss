@@ -348,4 +348,12 @@
     }
   }
   
-  
+  .logo {
+    max-width: 190px;
+    height: 32px;
+
+    @media (min-width: $min-md) {
+      max-width: 220px;
+      height: 37px;
+    }
+  }

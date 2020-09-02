@@ -1,7 +1,7 @@
 <div class="p-xl places-to-visit-wrapper">
 
     <div class="container medium-container">
-        <div class="title-container mb-5">
+        <div class="title-container mb-4 mb-lg-5">
             <h3 class="section-title text-center text-black"> <?php the_field('places_to_visit_title') ?></h3>
             <p><?php the_field('places_to_visit_subtitle') ?></p>
         </div>
