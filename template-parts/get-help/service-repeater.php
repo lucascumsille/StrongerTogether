@@ -1,4 +1,4 @@
-<div class="container-fluid py-4 py-lg-6 bg-green-gradient-local-support">
+<div class="container-fluid py-4 py-lg-6">
 <!-- bg-lightest-green -->
     <div class="small-container mb-3 mx-auto">
         <?php

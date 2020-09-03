@@ -19,7 +19,7 @@
 
             <!-- VideoPlay Conditional -->
             <?php if ( get_field('does_it_have_a_video') == true) { ?> 
-                <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/video-play.svg" alt="">
+                <img class="video-play-icon" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/video-play.svg" alt="">
             <?php } ?> 
             <!-- -->
             </div>
@@ -31,10 +31,8 @@
                         <p class="category-tag" style="color:<?php the_field('color_for_category', $category[0]); ?>"><?php  echo $firstCategory->name;  ?></p>
                         <p class="card-date"> <?php echo get_the_date(); ?>  </p> 
                     </div>
-                    <span><?php the_excerpt( );?></span>
-
-
                 </div>
+                <span><?php the_excerpt( );?></span>
             </div>
         </div>
     </a>

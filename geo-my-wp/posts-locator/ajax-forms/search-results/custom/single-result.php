@@ -31,13 +31,13 @@
 				<h4 class="text-black"><?php the_title(); ?></h4>
 				<?php echo do_shortcode( '[gmw_single_location object="post" elements="title,distance,map,address,directions_link"]' ) ?>
 				<div class="post-meta-carousel-info">
-					<div class="tag-wrapper justify-content-between"> 
+					<div class="tag-wrapper is--flex justify-content-between"> 
 
 						<!-- Category -->
 
 						<span class="category-tag" style="color:<?php the_field('color_for_category', $category[0]); ?>"><?php  echo $firstCategory->name;  ?></span>
 
-						<span><?php echo gmw_search_results_distance( $post, $gmw ); ?></span>
+						<span class="distance-location"><?php echo gmw_search_results_distance( $post, $gmw ); ?></span>
 
 					</div> <!-- tag-wrapper -->
 				</div> <!-- post-meta-carousel-info -->

@@ -62,6 +62,7 @@ $classes = [ 'tribe-events-filters-' . $layout, 'tribe-clearfix' ];
 				<?php if ( 'horizontal' === $layout ) : ?>
 					<button class="tribe_events_filters_show_filters tribe-js-filters-toggle"><?php esc_html_e( 'Show Filters', 'tribe-events-filter-view' ); ?></button>
 				<?php endif; ?>
+				
 				<button class="tribe_events_filters_reset tribe-js-filters-reset"><span class="dashicons dashicons-image-rotate tribe-reset-icon"></span><?php esc_html_e( 'Reset Filters', 'tribe-events-filter-view' ); ?></button>
 			</div>
 		</div>

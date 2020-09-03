@@ -48,11 +48,12 @@ add_action('wp_enqueue_scripts', 'strongertogether_register_styles' );
 
  // * add Javascript
 function strongertogether_register_scripts() {
-    wp_enqueue_script( 'strongertogether-jquery', "https://code.jquery.com/jquery-3.5.1.min.js", array(), '3.4.1', true );
+    wp_deregister_script('jquery');
+    wp_enqueue_script( 'jquery', "https://code.jquery.com/jquery-3.5.1.min.js", array(), '3.5.1', true );
     wp_enqueue_script( 'strongertogether-popper', "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js", array(), '1.16.0', true );
-    wp_enqueue_script( 'strongertogether-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js", array(), '4.41.1', true );
+    wp_enqueue_script( 'bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js", array(), '4.41.1', true );
     wp_enqueue_script( 'strongertogether-bootstrap-selectpicker', "https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js", array(), '4.41.1', true );
-    wp_enqueue_script( 'strongertogether-owlcarousel', get_template_directory_uri() . "/assets/js/owl.carousel.min.js", array(), '1.0', true );
+    wp_enqueue_script( 'owlcarousel', get_template_directory_uri() . "/assets/js/owl.carousel.min.js", array(), '1.0', true );
     wp_enqueue_script( 'strongertogether-owlcarouselnav', get_template_directory_uri() . "/assets/js/owl.navigation.js", array(), '1.0', true );
     wp_enqueue_script( 'strongertogether-customjs', get_template_directory_uri() . "/assets/js/main.js", array(), '1.0', true );
 }
@@ -457,3 +458,23 @@ if( function_exists('acf_add_options_page') ) {
 add_filter( 'gmw_search_within_boundaries', '__return_false' );
 
 
+// * 03 09 2020
+
+// smart jquery inclusion
+if (!is_admin()) {
+	wp_deregister_script('jquery');
+	wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"), false);
+	wp_enqueue_script('jquery');
+}
+
+// add google analytics to footer
+/*
+function add_google_analytics() {
+	echo '<script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>';
+	echo '<script type="text/javascript">';
+	echo 'var pageTracker = _gat._getTracker("UA-XXXXX-X");';
+	echo 'pageTracker._trackPageview();';
+	echo '</script>';
+}
+add_action('wp_footer', 'add_google_analytics');
+*/

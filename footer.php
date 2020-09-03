@@ -15,12 +15,12 @@
                             <span class="button-text">Share your experience</span>
                             <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/arrow-green.svg" alt="">
                         </a>
-                    </div>
-                </div>
-            </div>
+                    </div><!-- share-content-wrapper -->
+                </div> <!-- share-wrapper -->
+            </div> <!-- col-12 col-md-6 flex -->
 
-        </div>
-    </div>
+        </div> <!-- row -->
+    </div> <!-- container footer-first-row -->
 
     <div class="container footer-second-row mx-lg-auto">
         <div class="row">
@@ -102,7 +102,7 @@
 
 </footer>
     
-   </div>
+   <!-- </div> -->
 
 <?php
     wp_footer();

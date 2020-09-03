@@ -20,7 +20,7 @@
 
                         <!-- VideoPlay Conditional -->
                         <?php if ( get_field('does_it_have_a_video') == true) { ?> 
-                            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/video-play.svg" alt="">
+                            <img class="video-play-icon" class="video-play-icon" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/video-play.svg" alt="">
                         <?php } ?> 
                         <!-- -->
                         </div>
@@ -30,7 +30,7 @@
                             <div class="post-meta-carousel-info">
                                 <div class="tag-wrapper"> 
                                     <img class="tag-icon" src="<?php echo esc_url(get_field('category_icon', $category[0])['url']); ?>" > 
-                                    <span class="category-tag" style="color:<?php the_field('color_for_category', $category[0]); ?>"><?php  echo $firstCategory->name;  ?></span> 
+                                    <span class="category-tag mr-2" style="color:<?php the_field('color_for_category', $category[0]); ?>"><?php  echo $firstCategory->name;  ?></span> 
 
                                     <span class="suitable-for-tag"> <?php $suitable = get_field('suitable_for');
 
@@ -63,10 +63,10 @@
                                     ?>  </span>
                                 
                                 </div>
-                                <p><?php  the_excerpt( )?></p>
                                 
-
                             </div>
+                            <p><?php  the_excerpt( )?></p>
+                            
                         </div>
                     </div>
                 </a>

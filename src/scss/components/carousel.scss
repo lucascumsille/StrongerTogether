@@ -31,6 +31,16 @@
        background-size: cover;
        background-position: center;
        border-bottom: 0px;
+       position: relative;
+
+       .video-play-icon {
+        width: 48px;
+        position: relative;
+        top: 65%;
+        left: 20px;
+        
+      }
+      
      }
 
      .post-carousel-image.is--big {height: 190px;}
@@ -103,6 +113,11 @@
          }
        }
    
+     }
+
+     .tag-wrapper.is--flex {
+       display: flex;
+       width: 100%;
      }
    }
 

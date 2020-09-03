@@ -20,7 +20,7 @@
 
             <!-- VideoPlay Conditional -->
             <?php if ( get_field('does_it_have_a_video') == true) { ?> 
-                <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/video-play.svg" alt="">
+                <img class="video-play-icon" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/video-play.svg" alt="">
             <?php } ?> 
             <!-- -->
             </div>

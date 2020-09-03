@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Blog Site Template">
-    <meta name="author" content="https://youtube.com/FollowAndrew">    
+    <meta name="author" content="">    
     <link rel="shortcut icon" href="images/logo.png"> 
      
     <?php
@@ -15,7 +15,7 @@
 
 </head>  
 
-<body>
+<body <?php body_class(); ?>>
     
     <header class="header text-center">	    
 
