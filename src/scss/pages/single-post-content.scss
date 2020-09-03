@@ -40,3 +40,120 @@
     }
  
 }
+
+// * Places to Visit Single
+
+.single-post-image-wrapper {
+
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    img {
+        max-width: 754px;
+        height: auto;
+        border-radius: 5px;
+    }
+
+}
+
+$padding-left-icon: 30px;
+
+.single-info-item {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 30px;
+    color: #30240B;
+    opacity: 0.9;
+    padding-left: $padding-left-icon;
+
+    @media (min-width: $min-md) {
+        font-size: 16px;
+    }
+}
+
+
+.location-pin {
+    background-image: url('../images/icons/location-pin-blue.svg');
+    background-repeat: no-repeat;
+    background-position: left top 50%;
+    //background-size: 20px;
+    
+}
+
+
+.clock-icon {
+    background-image: url('../images/icons/clock-blue.svg');
+    background-repeat: no-repeat;
+    background-position: left top 50%;
+    //background-size: 20px;
+}
+
+.parking-icon {
+    background-image: url('../images/icons/parking-icon-blue.svg');
+    background-repeat: no-repeat;
+    background-position: left top 50%;
+}
+
+
+.wheelchair-icon {
+    background-image: url('../images/icons/Wheelchair-blue.svg');
+    background-repeat: no-repeat;
+    background-position: left top 50%;
+}
+
+
+
+
+.tick-icon {
+    background-image: url('../images/icons/checklist-blue.svg');
+    background-repeat: no-repeat;
+    background-position: left top 50%;
+    padding-left: 25px;
+
+}
+
+// Anchor
+
+.stl-anchor {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration-line: underline;
+    display: block;
+
+
+    color: #212152;
+
+    @media (min-width: $min-md) {
+        font-size: 15px;
+    }
+}
+
+
+.phone-icon {
+    background-image: url('../images/icons/phone-blue.svg');
+    background-repeat: no-repeat;
+    background-position: left top 50%;
+    //background-size: 30px;
+    padding-left: $padding-left-icon;
+
+}
+
+.link-icon {
+    background-image: url('../images/icons/link-blue.svg');
+    background-repeat: no-repeat;
+    background-position: left top 50%;
+    padding-left: $padding-left-icon;
+}
+
+.facebook-icon-for-singles {
+    background-image: url('../images/icons/Facebook-for-singles.svg');
+    background-repeat: no-repeat;
+    background-position: left top 50%;
+    padding-left: $padding-left-icon;
+}

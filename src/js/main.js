@@ -54,7 +54,6 @@ $(document).ready(function() {
 
 $('.owl-post').owlCarousel({
     loop:true,
-    
 	margin:10,
 	dots:true,
 	navigation: false,
