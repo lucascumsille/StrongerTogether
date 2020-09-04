@@ -7,10 +7,17 @@
     add_theme_support('custom-logo');
     add_theme_support('post-thumbnails');
     set_post_thumbnail_size( 370, 190, true ); // default Post Thumbnail dimensions (cropped)
+    add_image_size('single-post', 754, 454, true);
  }
 add_action('after_setup_theme', 'strongertogether_theme_support');
 //
  
+add_action( 'after_setup_theme', 'wpdocs_theme_setup' );
+function wpdocs_theme_setup() {
+    add_image_size('single-post', 754, 454, true);
+
+}
+
 function strongertogether_menus() {
     $locations = array(
         'primary' => "Desktop Primary Left Sidebar",
@@ -107,9 +114,9 @@ function thingsathome_init() {
             'title',
             'editor',
             'excerpt',
-            'trackbacks',
+            //'trackbacks',
             'custom-fields',
-            'comments',
+            // 'comments',
             'revisions',
             'thumbnail',
             'author',
@@ -117,32 +124,6 @@ function thingsathome_init() {
         )
     );
     register_post_type( 'thingsathome', $args );
-    
-    // register taxonomy
-
-    /*
-    register_taxonomy('thingsathome_category', 'thingsathome', array('hierarchical' => true,
-    'public' =>  true,
-    'hierarchical' =>  true,
-    'has_archive' =>  true, 
-    'label' => 'Categories of Things to do at Home', 
-    'query_var' => true, 
-    'rewrite' => array('slug' => 'things-to-do-at-home', 'with_front' => false) 
-    ));
-*/
-/*
-
-    register_taxonomy('thingsathome_category', 'thingsathome', array('hierarchical' => true,
-    'public' =>  true,
-    'hierarchical' =>  true,
-    'has_archive' =>  true, 
-    'label' => 'Categories of Things to do at Home', 
-    'query_var' => true, 
-    'rewrite' => array('slug' => 'things-to-do-at-home', 'with_front' => true) 
-    ));
-
-
-*/
 
 
     register_taxonomy('thingsathome_category', 'thingsathome',         
@@ -158,7 +139,7 @@ function thingsathome_init() {
 }
 add_action( 'init', 'thingsathome_init' );
 
-// flush_rewrite_rules();
+
 
 // * Post Type: Places to Visit
 
@@ -261,9 +242,9 @@ function lookingafteryourself_init() {
             'title',
             'editor',
             'excerpt',
-            'trackbacks',
+            // 'trackbacks',
             'custom-fields',
-            'comments',
+            // 'comments',
             'revisions',
             'thumbnail',
             'author',
@@ -321,9 +302,9 @@ function supportingyourkid_init() {
             'title',
             'editor',
             'excerpt',
-            'trackbacks',
+            // 'trackbacks',
             'custom-fields',
-            'comments',
+            // 'comments',
             'revisions',
             'thumbnail',
             'author',
@@ -381,9 +362,9 @@ function localnews_init() {
             'title',
             'editor',
             'excerpt',
-            'trackbacks',
+            //'trackbacks',
             'custom-fields',
-            'comments',
+            //'comments',
             'revisions',
             'thumbnail',
             'author',
@@ -457,24 +438,5 @@ if( function_exists('acf_add_options_page') ) {
 
 add_filter( 'gmw_search_within_boundaries', '__return_false' );
 
+// * 
 
-// * 03 09 2020
-
-// smart jquery inclusion
-if (!is_admin()) {
-	wp_deregister_script('jquery');
-	wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"), false);
-	wp_enqueue_script('jquery');
-}
-
-// add google analytics to footer
-/*
-function add_google_analytics() {
-	echo '<script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>';
-	echo '<script type="text/javascript">';
-	echo 'var pageTracker = _gat._getTracker("UA-XXXXX-X");';
-	echo 'pageTracker._trackPageview();';
-	echo '</script>';
-}
-add_action('wp_footer', 'add_google_analytics');
-*/
