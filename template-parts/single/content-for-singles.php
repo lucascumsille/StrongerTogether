@@ -1,5 +1,12 @@
 <div class="container single-post-container py-lg-6 py-4">
-    <?php the_content(); ?>
+    <div class="single-post-image-wrapper">
+        <?php the_post_thumbnail( 'single-post'); ?>
+    </div>
+    <div class="single-post-container mx-auto">
+        <?php the_content(); ?>
+    </div>
+    
+    
     <div class="button-wrapper-single">
 
         <?php $file = get_field('attachment');

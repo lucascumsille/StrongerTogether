@@ -41,7 +41,7 @@ $post_type = get_post_type( get_the_ID() );
 		</h1>
 
 		<div class="d-inline-flex mx-auto">
-			<span class="hero-category mr-5"><?php  echo $firstCategory->name;  ?></span> 
+			<span class="hero-category text-left mr-5"><?php  echo $firstCategory->name;  ?></span> 
 			<div class="suitable-wrapper">
 				<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/suitable-for.svg" alt="" class="mr-1">
 				<span class="suitable-for-tag-hero">Suitable for </span>
