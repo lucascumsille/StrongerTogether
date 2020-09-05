@@ -3,7 +3,7 @@
 
 .event-home-page {
     .tribe-events .tribe-events-header, .tribe-events .tribe-events-calendar-list__event-date-tag, .tribe-events .tribe-events-calendar-list__month-separator, .tribe-events .tribe-events-c-nav, .tribe-events .tribe-events-c-ical  {
-     display: none;
+    display: none;
    }
   
    .tribe-common--breakpoint-xsmall.tribe-events-pro .tribe-events-pro-photo__event  {
@@ -18,27 +18,34 @@
     width: 33% !important;
   }
   
-  }
+}
   
+.is--event-page .tribe-events-view {
+  //display: inline-block; 
+  // Prevent the footer collapsing with events on the events page
+}
   
-  
-  .is--event-page .tribe-events-view {
-    display: inline-block; // Prevent the footer collapsing with events on the events page
-  }
-  
-  // To display the first three items Desktop
-  
-  .tribe-common--breakpoint-xsmall.tribe-common .tribe-common-g-row--gutters>.tribe-common-g-col {
-    display: none;
-  }
-  
-  .tribe-common--breakpoint-xsmall.tribe-common .tribe-common-g-row--gutters>.tribe-common-g-col:nth-child(-n+3) {
-    display: block;
-  }
+.event-home-page {
 
-  // To display the first three items Mobile
-  .tribe-common .tribe-common-g-row--gutters>.tribe-common-g-col {display:none;}
-  .tribe-common .tribe-common-g-row--gutters>.tribe-common-g-col:nth-child(-n+3) {display:block;}
+    // To display the first three items Desktop
+    
+    .tribe-common--breakpoint-xsmall.tribe-common .tribe-common-g-row--gutters>.tribe-common-g-col {
+     display: none;
+    }
+    
+    .tribe-common--breakpoint-xsmall.tribe-common .tribe-common-g-row--gutters>.tribe-common-g-col:nth-child(-n+3) {
+     display: block;
+    }
+  
+    // To display the first three items Mobile
+    .tribe-common .tribe-common-g-row--gutters>.tribe-common-g-col {
+      display:none;
+    }
+    .tribe-common .tribe-common-g-row--gutters>.tribe-common-g-col:nth-child(-n+3) {
+      display:block;
+    }
+
+}
 
   
   .tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
@@ -224,4 +231,16 @@
     border-radius: $border-radius;
     padding: 40px 20px 20px !important;
   }
+}
+
+// * Events Page 
+
+.is--event-page .tribe-events-header {
+  //display: none;
+
+} 
+
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-l-container {
+  padding-right: 0px;
+  padding-left: 0px;
 }

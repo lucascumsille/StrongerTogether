@@ -27,7 +27,7 @@
                         
                         <div class="post-carousel-content">
                             <h4 class="text-black"><?php the_title(); ?></h4>
-                            <div class="post-meta-carousel-info justify-content-between">
+                            <div class="post-meta-carousel-info justify-content-between mb-1">
                                 <div class="tag-wrapper"> 
                                     <img class="tag-icon" src="<?php echo esc_url(get_field('category_icon', $category[0])['url']); ?>" > 
                                     <span class="category-tag" style="color:<?php the_field('color_for_category', $category[0]); ?>"><?php  echo $firstCategory->name;  ?></span> 
