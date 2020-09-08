@@ -65,3 +65,12 @@
 .sf-field-taxonomy-supportingyourkid_category>ul:not(.children) {
   //  justify-content: start;
 }
+
+.sf-field-taxonomy-supportingyourkid_category, .sf-field-taxonomy-supportingyourkid_category, .sf-field-taxonomy-localnews_category, .sf-field-taxonomy-lookingafteryourself_category  {
+
+    .sf-option-active {
+      background-color: #cdcdfa;
+  
+    }
+  
+}

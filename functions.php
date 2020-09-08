@@ -438,5 +438,16 @@ if( function_exists('acf_add_options_page') ) {
 
 add_filter( 'gmw_search_within_boundaries', '__return_false' );
 
-// * 
+// * REMOVE CSS on EVENT 
+
+add_action('wp_enqueue_scripts', 'remove_sf_scripts', 100);
+function remove_sf_scripts(){
+    if (tribe_is_event_query()) {
+        wp_deregister_script( 'jquery-ui-datepicker' );
+        wp_deregister_script( 'search-filter-plugin-build' );
+        wp_deregister_script( 'search-filter-chosen-script' );
+
+        wp_dequeue_style( 'search-filter-plugin-styles' );
+    }
+}
 

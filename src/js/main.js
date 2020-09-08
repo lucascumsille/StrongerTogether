@@ -128,6 +128,8 @@ var getUrlParameter = function getUrlParameter(sParam) {
     }
 };
 
+// Palces to visit component on homePage: Links leads you to an url and activate filter
+
 var categoryPlaces = getUrlParameter('category');
 
 window.addEventListener('DOMContentLoaded', function() {
@@ -137,3 +139,35 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     }, 300)
 })
+
+// Move the search button inside another div
+
+function moveEventsSearchBar() {
+    if (parseInt($(window).width()) < 768) {
+        $('.tribe-events-c-search.tribe-events-c-events-bar__search-form').prependTo($("#tribe_events_filters_wrapper"));
+    }
+
+}
+
+
+$(document).ready(function() {
+	moveEventsSearchBar();
+});
+
+$("body").on('DOMSubtreeModified', ".tribe-events-c-events-bar__search-button", function() {
+    window.setTimeout(moveEventsSearchBar, 50);
+});
+
+// Hide and show filter on desktop
+
+$(document).ready(function() {
+    $('#event-filter-controller').click(function(e){    
+        $('#tribe_events_filters_wrapper').slideToggle('slow', function(){
+
+        });
+    });
+    // $('#event-filter-controller').click(function(e){
+    //     $('.tribe-js-filters-toggle').trigger('click');
+    // });
+});
+

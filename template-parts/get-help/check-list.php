@@ -1,4 +1,4 @@
-<div class="container-fluid py-4 py-lg-6 text-left text-lg-center bg-lightest-green">
+<div class="container-fluid py-4 py-lg-6 text-left text-lg-center">
 
     <h3 class="text-black"> <?php echo the_field('get_help_check_list_title'); ?></h3>
 

@@ -1,11 +1,18 @@
 <div class="container single-post-container py-lg-6 py-4">
-    <div class="single-post-image-wrapper">
-        <?php the_post_thumbnail( 'single-post'); ?>
-    </div>
-    <div class="single-post-container mx-auto">
-        <?php the_content(); ?>
-    </div>
-    
+    <?php $video = get_field('does_it_have_a_video');
+    if( $video ): ?>
+        <div class="single-post-container mx-auto">
+             <?php the_content(); ?>
+        </div>
+    <?php else: ?>
+        <div class="single-post-image-wrapper"> 
+            <?php the_post_thumbnail( 'single-post'); ?>
+        </div>
+        <div class="single-post-container mx-auto">
+             <?php the_content(); ?>
+        </div>
+    <?php endif; ?>
+
     
     <div class="button-wrapper-single">
 

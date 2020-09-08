@@ -19,9 +19,11 @@
                     $contact_icon = get_sub_field('contact_icon');
                     $contact_url= get_sub_field('contact_url');
                     $contact_url_display= get_sub_field('contact_url_display');
+                    $contact_link= get_sub_field('contact_link');
                     ?>
 
-                    <a class="contact-repeater-item" href="<?php echo $contact_url ?>">
+                    <a class="contact-repeater-item" href="<?php echo $contact_link ?>">
+                 
                         <img src="<?php echo esc_url($contact_icon['url']); ?>" alt="" class="contact-icon">
                         <span><?php echo $contact_title; ?>:</span>
                         <span><?php echo $contact_url_display; ?></span>

@@ -91,7 +91,7 @@
                 </div>
 
                 <div class="col-12 col-lg-6 align-self-center">
-                    <a class="footer-page-link" href="">Privacy Policy</a>
+                    <a class="footer-page-link" href="<?php echo get_permalink( get_page_by_path( 'privacy-policy' ) ); ?>">Privacy Policy</a>
                     <span class="copyright">©Copyright Logan Together 2020</span>
                 </div>
             </div>
