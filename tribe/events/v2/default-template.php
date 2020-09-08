@@ -19,7 +19,7 @@ get_template_part('template-parts/hero/hero', 'custom-post-type' );
 ?>
 
 <div class="container is--event-page">
-    <button id="event-filter-controller">Show filters</button>
+    
     <?php  echo tribe( Template_Bootstrap::class )->get_view_html(); ?>
 </div>
 

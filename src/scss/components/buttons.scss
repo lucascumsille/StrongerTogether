@@ -366,3 +366,69 @@ input.tribe-button {
 
 }
 
+
+// * Seach Button
+
+.search-button, #event-filter-controller {
+  background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
+  border: 2px solid #A4A4FF;
+  box-sizing: border-box;
+  border-radius: 30px;
+  padding: 15px 20px 15px 48px;
+
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 22px;
+  /* identical to box height, or 157% */
+  text-align: right;
+  color: #222258;
+
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+
+  background-image: url('../images/icons/search-navy-blue.svg');
+  background-position: left 20px center;
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  outline-style: none;
+
+  &:hover {
+    background-color: #f0f0fa !important;
+  }
+
+}
+
+.tribe-events .tribe-events-c-top-bar__datepicker-button {
+  background: #FFFFFF;
+  border: 2px solid #E2E2FF;
+  border-radius: 30px;
+  padding: 15px 20px 15px 48px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: right;
+  color: #222258;
+  
+
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+
+  background-image: url('../images/icons/date-picker.svg');
+  background-position: left 20px center;
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  outline-style: none;
+
+  &:hover {
+    background-color: #f0f0fa !important;
+  }
+}

@@ -22,6 +22,7 @@ use Tribe\Events\Filterbar\Views\V2\Filters;
 $layout  = tribe( Filters::class )->get_layout_setting();
 $classes = [ 'tribe-events-filters-' . $layout, 'tribe-clearfix' ];
 ?>
+
 <?php do_action( 'tribe_events_filter_view_before_template' ); ?>
 	<div id="tribe_events_filters_wrapper" <?php tribe_classes( $classes ); ?>>
 		<?php do_action( 'tribe_events_filter_view_before_filters' ); ?>
