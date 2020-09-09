@@ -14,7 +14,8 @@
  */
 ?>
 <button class="search-button" id="event-filter-controller">Search</button>
-<a href="" class="add-event-button" id="add-event-button">Add an event</a>
+
+<a href="<?php get_home_url()?>/events/community/add/" class="add-event-button" id="add-event-button">Add an event</a>
 
 
 <div class="tribe-events-c-top-bar__actions tribe-common-a11y-hidden">
