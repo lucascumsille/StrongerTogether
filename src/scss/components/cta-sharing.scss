@@ -1,8 +1,35 @@
 @import '../abstracts/variables';
 
 
-.cta-wrapper {
-    max-width: 345px;
-    h4 {font-size: 18px}
+.cta-wrapper.is--events {
+    max-width: 559px;
+    background: linear-gradient(123.83deg, #484175 7.02%, #2B2B5A 56.33%), #2B2B5A;
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    //min-height: 200px;
+
+
+    img {
+        margin-bottom: 15px;
+    }
+
+    h4 {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 135%;
+        /* or 24px */
+
+        text-align: center;
+
+        color: #FFFFFF;
+    }
+
+    a {
+        display: inline-block;
+    }
 
 }

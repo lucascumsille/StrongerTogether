@@ -432,3 +432,67 @@ input.tribe-button {
     background-color: #f0f0fa !important;
   }
 }
+
+#add-event-button.add-event-button {
+  background: #FFFFFF;
+  border: 2px solid #E2E2FF;
+  border-radius: 30px;
+  padding: 15px 48px 15px 20px;
+
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: right;
+  color: #222258;
+  
+
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+
+  background-image: url('../images/icons/add-event.svg');
+  background-position: right 20px center;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  outline-style: none;
+
+  &:hover {
+    background-color: #f0f0fa !important;
+  }
+}
+
+.event-cta-button {
+
+    background: #FFFFFF;
+    border-radius: 30px;
+    padding: 15px 48px 15px 20px;
+  
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: right;
+    color: #161004;
+  
+  
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+  
+    background-image: url('../images/icons/add-event.svg');
+    background-position: right 20px center;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    outline-style: none;
+  
+    &:hover {
+      background-color: #f0f0fa !important;
+    }
+  
+
+}

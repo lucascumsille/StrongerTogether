@@ -36,7 +36,7 @@
 
 
   .tribe-events .tribe-events-header__top-bar {
-    width: auto !important;
+    //width: auto !important;
     flex: 0 1 auto;
   }
 
@@ -393,6 +393,9 @@
 
 @media only screen and (max-width: 768px) {
 
+  .tribe-events .tribe-events-c-top-bar__datepicker {
+    margin-bottom: 15px;
+  }
 
   .tribe-events .tribe-events-c-view-selector {
     display: none;
@@ -794,4 +797,18 @@
 .tribe-common--breakpoint-medium.tribe-common .tribe-common-g-row--gutters {
   margin-left: -10px;
   margin-right: -10px;
+}
+
+.tribe-events-header__top-bar {
+  #event-filter-controller.search-button {
+    margin-right: 30px;
+  }
+
+  .add-event-button {
+    float:right;
+  }
+}
+
+.tribe-events-c-ical {
+  display: none !important;
 }

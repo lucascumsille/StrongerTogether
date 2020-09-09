@@ -14,6 +14,8 @@
  */
 ?>
 <button class="search-button" id="event-filter-controller">Search</button>
+<a href="" class="add-event-button" id="add-event-button">Add an event</a>
+
 
 <div class="tribe-events-c-top-bar__actions tribe-common-a11y-hidden">
 	<?php $this->template( 'components/top-bar/actions/content' ); ?>

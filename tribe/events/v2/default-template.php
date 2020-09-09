@@ -23,4 +23,7 @@ get_template_part('template-parts/hero/hero', 'custom-post-type' );
     <?php  echo tribe( Template_Bootstrap::class )->get_view_html(); ?>
 </div>
 
+<?php get_template_part('template-parts/common/add-event' ); ?>
+<?php get_template_part('template-parts/common/follow-us' ); ?>
+
 <?php get_footer(); ?>
