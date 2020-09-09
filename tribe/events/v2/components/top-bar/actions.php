@@ -13,9 +13,10 @@
  *
  */
 ?>
+<button class="search-button" id="event-filter-controller">Search</button>
 
 <div class="tribe-events-c-top-bar__actions tribe-common-a11y-hidden">
 	<?php $this->template( 'components/top-bar/actions/content' ); ?>
 
-	<button class="search-button" id="event-filter-controller">Search</button>
+	
 </div>

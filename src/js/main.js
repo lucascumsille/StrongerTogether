@@ -191,9 +191,7 @@ $(document).ready(function() {
 // Hide and show filter on desktop
 
 function moveEventsSearchBar() {
-    if (parseInt($(window).width()) > 767) {
-        $('.tribe-events-c-search.tribe-events-c-events-bar__search-form').prependTo($("#tribe_events_filters_wrapper"));
-    }
+    $('.tribe-events-c-search.tribe-events-c-events-bar__search-form').prependTo($("#tribe_events_filters_wrapper"));
 }
 
 $(document).ready(function() {

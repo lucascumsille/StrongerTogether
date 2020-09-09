@@ -110,10 +110,6 @@
 
   }
 
-  #Suitablefor {
-    width: 330px;
-  }
-
   #Location, #Price {
     width: auto;
   }
@@ -323,19 +319,17 @@
         width: 100%;
         display: flex !important;
         flex-wrap: wrap;
+        justify-content: space-between;
       }
     }
 
     .tribe-events-filters-horizontal .tribe_events_filter_item {
-      flex-basis: auto;
-      flex-grow: 0;
-      flex-shrink: 0;
-      margin-right: 60px;
+      flex: 0 1 330px;
+      margin-right: 0;
     }
 
     #tribe_events_filter_item__ecp_custom_3, #tribe_events_filter_item__ecp_custom_4,#tribe_events_filter_item_filterbar_geofence_distance {
-      flex-basis: 220px;
-      margin-right: 60px;
+      flex: 0 1 220px;
     }
     
     #tribe_events_filter_item__ecp_custom_4 {
@@ -399,6 +393,7 @@
 
 @media only screen and (max-width: 768px) {
 
+
   .tribe-events .tribe-events-c-view-selector {
     display: none;
   }
@@ -433,6 +428,7 @@
     border-radius: 20px;
     position: static !important;
     padding: 15px 10px;
+    display: none;
   }
 
   .tribe-events-filters-horizontal .tribe-events-filters-content {
@@ -770,7 +766,16 @@
 
 @media only screen and (max-width: 768px) {
   .tribe-filters-closed .tribe-events .tribe-events-c-events-bar__search-form {
+    display: block;
+  }
+
+  .tribe-events-filter-view.tribe-filters-closed #tribe_events_filters_form { 
+    display: block;
+  }
+
+  .tribe-events-filters-horizontal .tribe_events_filter_control button {
     display: none;
+    
   }
 }
 
@@ -784,4 +789,9 @@
   .is--event-page .tribe-events-filters-horizontal .tribe-events-filters-content {
     margin-top: 0;
   }
+}
+
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-g-row--gutters {
+  margin-left: -10px;
+  margin-right: -10px;
 }
