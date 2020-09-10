@@ -56,7 +56,7 @@ $button-line: 20px;
 }
 
 .button-cta-green {
-  background-color: $lightest-green;
+  background-color: $lightest-green !important;
   padding: 0;
   width: max-content;
 
@@ -494,5 +494,23 @@ input.tribe-button {
       background-color: #f0f0fa !important;
     }
   
+
+}
+
+#tribe-add-recurrence, #EventImage.EventImage, .tribe-add-post.tribe-button.tribe-button-secondary, #post.tribe-button.submit.events-community-submit, .choose-file.tribe-button.tribe-button-secondary {
+  padding: 15px;
+  background: #3D3C76;
+  border-radius: 30px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF !important;
+  min-width: none;
+  span {
+    color: inherit !important;
+  }
 
 }
