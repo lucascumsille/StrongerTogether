@@ -206,13 +206,34 @@ $(document).ready(function() {
 });
 
 
-// Move he Export button in single calendars
+// Move the Export button in single calendars and Move Suitable For in events to the bottom
 
 function moveEventsExport() {
     $('.tribe-events-cal-links').appendTo($(".tribe-events-content"));
 }
 
 $(document).ready(function() {
+
+    if (parseInt($(window).width()) < 768) {
+        $('.tribe-events-meta-group.tribe-events-meta-group-other').appendTo($(".tribe-events-single-event-description.tribe-events-content"));
+    }
 	moveEventsExport();
 
+});
+
+
+
+// Facebook event to div with the rest of the meta
+
+$(document).ready(function() {
+	$('#facebook-event').appendTo($(".tribe-events-meta-group-venue"));
+});
+
+
+
+
+ $(document).ready(function() {
+	$('.tribe-meta-value').html(function(_, oldHTML) {
+        return '<p class="single-info-item tick-icon">' + oldHTML.split(',').join('</p><p class="single-info-item tick-icon">') + '</p>';
+     });
 });

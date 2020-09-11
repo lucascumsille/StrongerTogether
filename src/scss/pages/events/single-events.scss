@@ -23,8 +23,7 @@
 // Google Calendar Wrapper
 
 .tribe-events-cal-links {
-    padding-right: 15px;
-    padding-left: 15px;
+
 }
 
 // Single Section Title 
@@ -47,6 +46,23 @@
     padding-left: $padding-left-icon;
 }
 
+.tribe-events-meta-group-venue {
+
+    width: 60% !important;
+
+}
+
+
+// Venue 
+
+.tribe-venue-location {
+    margin-bottom: 25px !important;
+}
+// Address 
+.tribe-events-address {
+    margin-top: -13px !important;
+}
+
 // "Get Directions"
 
 .tribe-events-gmap {
@@ -61,7 +77,8 @@
 
     color: #212152;
 
-    margin-top: 5px
+    margin-top: 5px;
+    margin-bottom: 25px !important;
 }
 
 // Phone
@@ -72,4 +89,87 @@
 
 .tribe-venue-tel {
     text-decoration-line: none !important ;
+    margin-bottom: 25px !important;
 }
+
+// Website
+
+.tribe-venue-url-label {
+    display: none;
+    
+}
+
+.tribe-venue-url {
+
+    margin-bottom: 25px !important;
+}
+
+
+.tribe-events-meta-group dt {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: #161004;
+    margin-bottom: 17px;
+}
+
+// Content 
+
+.tribe-events-single-event-description.tribe-events-content.container {
+    p {
+        text-align: left;
+    }
+
+    .content-title {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        /* identical to box height */
+
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+
+        color: #161004;
+        margin-bottom: 20px;
+    }
+    
+}
+
+// Navigation
+
+.tribe-events-nav-pagination {
+    display: none;
+}
+
+// Event Footer 
+
+#tribe-events-footer {
+     display: none;
+}
+
+.single-tribe_events .tribe-events-event-meta  {
+    margin-bottom: 0 !important;
+}
+
+// Responsive
+
+@media only screen and (max-width: 768px) {
+    .tribe-events-meta-group.tribe-events-meta-group-other {
+        margin-top: 25px;
+    }
+
+    .tribe-meta-value .single-info-item.tick-icon {
+        margin-right: 25px;
+    }
+}
+
+

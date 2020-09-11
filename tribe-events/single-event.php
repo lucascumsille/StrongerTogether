@@ -68,10 +68,17 @@ $event_id = get_the_ID();
 					<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
 					<?php tribe_get_template_part( 'modules/meta' ); ?>
 					<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
+					<?php 
+						$link = get_field('facebook_event');
+						if( $link ): ?>
+							<a id="facebook-event" class="stl-anchor facebook-icon-for-singles" href="<?php echo esc_url( $link ); ?>">View Facebook event</a>
+					<?php endif; ?>
+
 
 					<!-- Event content -->
 					<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
-					<div class="tribe-events-single-event-description tribe-events-content">
+					<div class="tribe-events-single-event-description tribe-events-content container">
+						<p class="content-title">Description</p>
 						<?php  the_content(); ?>
 					</div>
 

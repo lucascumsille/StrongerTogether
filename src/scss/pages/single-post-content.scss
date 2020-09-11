@@ -76,6 +76,7 @@ $padding-left-icon: 30px;
     color: #30240B;
     opacity: 0.9;
     padding-left: $padding-left-icon;
+    display: inline-block;
 
     @media (min-width: $min-md) {
         font-size: 16px;
@@ -126,17 +127,17 @@ $padding-left-icon: 30px;
 
 // Anchor
 
-.stl-anchor, .tribe-venue-tel  {
+.stl-anchor, .tribe-venue-tel, .tribe-venue-url a  {
     font-family: Open Sans;
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
-    line-height: 24px;
-    text-decoration-line: underline;
-    display: block;
+    font-size: 14px !important;
+    line-height: 24px !important;
+    text-decoration-line: underline !important;
+    display: inline-block;
 
 
-    color: #212152;
+    color: #212152 !important;
 
     @media (min-width: $min-md) {
         font-size: 15px;
@@ -153,18 +154,18 @@ $padding-left-icon: 30px;
 
 }
 
-.link-icon {
+.link-icon, .tribe-venue-url a {
     background-image: url('../images/icons/link-blue.svg');
     background-repeat: no-repeat;
     background-position: left top 50%;
-    padding-left: $padding-left-icon;
+    padding-left: $padding-left-icon !important;
 }
 
 .facebook-icon-for-singles {
     background-image: url('../images/icons/Facebook-for-singles.svg');
     background-repeat: no-repeat;
     background-position: left top 50%;
-    padding-left: $padding-left-icon;
+    padding-left: $padding-left-icon !important;
 }
 
 
