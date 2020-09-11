@@ -16,12 +16,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header();
-get_template_part('template-parts/hero/hero-community');
+
+global $wp_query;
+if (tribe_is_event($wp_query->post->ID)) {
+	get_template_part('template-parts/hero/hero-single-post-events');
+} else {
+	get_template_part('template-parts/hero/hero-community'); 
+} 
+
 ?>
+
 <main id="tribe-events-pg-template" class="tribe-events-pg-template py-5 py-lg-6">
 	<?php tribe_events_before_html(); ?>
 	<?php tribe_get_view(); ?>
 	<?php tribe_events_after_html(); ?>
 </main> <!-- #tribe-events-pg-template -->
+
 <?php
 get_footer();
+?>

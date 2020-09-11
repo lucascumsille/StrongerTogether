@@ -497,18 +497,19 @@ input.tribe-button {
 
 }
 
-#tribe-add-recurrence, #EventImage.EventImage, .tribe-add-post.tribe-button.tribe-button-secondary, #post.tribe-button.submit.events-community-submit, .choose-file.tribe-button.tribe-button-secondary {
+#tribe-add-recurrence, #EventImage.EventImage, .tribe-add-post.tribe-button.tribe-button-secondary, #post.tribe-button.submit.events-community-submit, .choose-file.tribe-button.tribe-button-secondary, a.tribe-button.tribe-button-secondary {
+  display: inline-block;
   padding: 15px;
   background: #3D3C76;
   border-radius: 30px;
   font-family: Rubik;
   font-style: normal;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 22px;
   text-align: center;
   color: #FFFFFF !important;
-  min-width: none;
+  min-width: 100px;
   span {
     color: inherit !important;
   }

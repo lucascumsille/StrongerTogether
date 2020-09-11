@@ -1,0 +1,75 @@
+@import '../../abstracts/variables';
+@import '../../pages/single-post-content.scss';
+
+
+//Img Container
+.single-tribe_events .tribe-events-event-image {
+    text-align: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    
+}
+
+// Img
+.tribe-events-event-image img {
+    border-radius: 5px;
+}
+
+.single-tribe_events .tribe-events-event-meta {
+    background: inherit;
+    border: none;
+}
+
+// Google Calendar Wrapper
+
+.tribe-events-cal-links {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+// Single Section Title 
+
+.tribe-events-single-section-title {
+    display: none;
+
+}
+
+// Event Meta Date 
+
+.tribe-events-meta-group.tribe-events-meta-group-details {
+ display: none;
+}
+
+
+// Event Venue Name
+
+.tribe-events-address {
+    padding-left: $padding-left-icon;
+}
+
+// "Get Directions"
+
+.tribe-events-gmap {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-decoration-line: underline !important;
+
+    color: #212152;
+
+    margin-top: 5px
+}
+
+// Phone
+
+.tribe-venue-tel-label {
+    display: none;
+}
+
+.tribe-venue-tel {
+    text-decoration-line: none !important ;
+}

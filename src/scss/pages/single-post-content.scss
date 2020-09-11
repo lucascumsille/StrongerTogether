@@ -2,6 +2,7 @@
 
 .single-post-container {
     max-width: 600px;
+    
     h3 {margin-bottom:35px}
 
     figure {
@@ -49,7 +50,7 @@
 
 // * Places to Visit Single
 
-.single-post-image-wrapper {
+.single-post-image-wrapper  {
 
     display: flex;
     justify-content: center;
@@ -66,7 +67,7 @@
 
 $padding-left-icon: 30px;
 
-.single-info-item {
+.single-info-item, .tribe-events-start-datetime, .tribe-venue a  {
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
@@ -82,7 +83,7 @@ $padding-left-icon: 30px;
 }
 
 
-.location-pin {
+.location-pin, .tribe-venue a {
     background-image: url('../images/icons/location-pin-blue.svg');
     background-repeat: no-repeat;
     background-position: left top 50%;
@@ -91,11 +92,12 @@ $padding-left-icon: 30px;
 }
 
 
-.clock-icon {
+.clock-icon, .tribe-events-start-datetime  {
     background-image: url('../images/icons/clock-blue.svg');
     background-repeat: no-repeat;
     background-position: left top 50%;
     //background-size: 20px;
+    text-decoration: none;
 }
 
 .parking-icon {
@@ -124,7 +126,7 @@ $padding-left-icon: 30px;
 
 // Anchor
 
-.stl-anchor {
+.stl-anchor, .tribe-venue-tel  {
     font-family: Open Sans;
     font-style: normal;
     font-weight: 600;
@@ -142,12 +144,12 @@ $padding-left-icon: 30px;
 }
 
 
-.phone-icon {
+.phone-icon, .tribe-venue-tel  {
     background-image: url('../images/icons/phone-blue.svg');
     background-repeat: no-repeat;
     background-position: left top 50%;
     //background-size: 30px;
-    padding-left: $padding-left-icon;
+    padding-left: $padding-left-icon !important;
 
 }
 

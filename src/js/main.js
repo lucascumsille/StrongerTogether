@@ -205,3 +205,14 @@ $(document).ready(function() {
     // });
 });
 
+
+// Move he Export button in single calendars
+
+function moveEventsExport() {
+    $('.tribe-events-cal-links').appendTo($(".tribe-events-content"));
+}
+
+$(document).ready(function() {
+	moveEventsExport();
+
+});

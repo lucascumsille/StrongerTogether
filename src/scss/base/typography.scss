@@ -189,3 +189,22 @@ html {
     line-height: 32px; 
   }
 }
+
+.event-subtitle {
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  color: #161004;
+
+  @media (min-width: $min-md) {
+    font-size: 22px;
+    line-height: 30px;
+  
+  }
+
+
+
+}
