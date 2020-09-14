@@ -74,6 +74,16 @@ $event_id = get_the_ID();
 							<a id="facebook-event" class="stl-anchor facebook-icon-for-singles" href="<?php echo esc_url( $link ); ?>">View Facebook event</a>
 					<?php endif; ?>
 
+					<?php 
+						$bookSpot = get_field('buy_ticket_link');
+						if( $bookSpot ): ?>
+							<a id="book-spot-button" class="book-button mb-3" href="<?php echo esc_url( $bookSpot ); ?>"> 
+
+							Book your spot 
+							<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/arrow-right-blue.svg" alt="">
+							</a>
+					<?php endif; ?>
+
 
 					<!-- Event content -->
 					<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>

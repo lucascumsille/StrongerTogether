@@ -55,15 +55,21 @@ $button-line: 20px;
 
 }
 
-.button-cta-green {
+.button.button-cta-green {
   background-color: $lightest-green !important;
   padding: 0;
   width: max-content;
 
   span {
-    color: #208610;
-    text-transform: uppercase;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
     letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #208610;
+    
   }
 
   &:hover {
@@ -104,6 +110,7 @@ $button-line: 20px;
 .filter-button {
   padding: 15px 20px;
   border: 2px solid #A4A4FF;
+  background-color: inherit !important;
   border-radius: 30px;
 
   -webkit-transition: $transition;
@@ -142,7 +149,7 @@ $button-line: 20px;
 
 .button.right-icon {
 
-  min-width: 160px;
+  //min-width: 160px;
   font-family: $rubik;
   font-style: normal;
   font-weight: bold;
@@ -512,6 +519,58 @@ input.tribe-button {
   min-width: 100px;
   span {
     color: inherit !important;
+  }
+
+}
+
+.book-button {
+
+  display: flex;
+  border: 2px solid #CDCDFA;
+  border-radius: 50px;
+  padding: 15px 20px;
+  padding-right: 25px;
+  width: fit-content;
+
+  background-color: white;
+
+  img {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+    //height: $button-line;
+    margin-left: 12px;
+    
+    
+  }
+
+  span {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    
+    
+    color: #3D3C76;
+
+    @media (min-width: $min-md) {
+      font-size: 15px;
+      line-height: 28px;
+    }
+
+  }
+
+  &:hover {
+
+    background-color: #CDCDFA;
+
+    img {
+      transform: translate(5px);
+      
+    }
   }
 
 }

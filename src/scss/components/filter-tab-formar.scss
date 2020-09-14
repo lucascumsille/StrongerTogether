@@ -74,3 +74,54 @@
     }
   
 }
+
+
+// Supporting your kids
+
+.supporting-your-kids-filter-wrapper {
+
+
+
+
+    .sf-field-post-meta-suitable_for {
+        margin-top: 25px;
+    }
+
+    @media (min-width: $min-md ) {
+
+        .sf-field-post-meta-suitable_for {
+            flex-basis: 50%;
+            margin-top: 0;
+    
+            li {
+                padding-top: 0 !important;
+            }
+        }
+        
+        .sf-field-taxonomy-supportingyourkid_category {
+    
+            flex-basis: 50%;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .searchandfilter ul>li>ul:not(.children) {
+            justify-content: start;
+        }
+    }
+
+
+    .searchandfilter ul {
+        @media (min-width: $min-md ) {  
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+    
+    }
+
+
+
+
+}
+

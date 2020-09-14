@@ -65,9 +65,9 @@
 }
 
 
-$padding-left-icon: 30px;
+$padding-left-icon: 35px;
 
-.single-info-item, .tribe-events-start-datetime, .tribe-venue a  {
+.single-info-item, .tribe-events-start-datetime, .tribe-venue a, .tribe-events-event-cost  {
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
@@ -75,7 +75,7 @@ $padding-left-icon: 30px;
     line-height: 30px;
     color: #30240B;
     opacity: 0.9;
-    padding-left: $padding-left-icon;
+    padding-left: $padding-left-icon !important;
     display: inline-block;
 
     @media (min-width: $min-md) {
@@ -90,6 +90,14 @@ $padding-left-icon: 30px;
     background-position: left top 50%;
     //background-size: 20px;
     
+}
+
+.ticket, .tribe-events-event-cost {
+    background-image: url('../images/icons/money-blue.svg');
+    background-repeat: no-repeat;
+    background-position: left top 50%;
+    //background-size: 20px;
+    text-decoration: none;
 }
 
 
@@ -122,6 +130,7 @@ $padding-left-icon: 30px;
     background-repeat: no-repeat;
     background-position: left top 50%;
     padding-left: 25px;
+    margin-bottom: 12px;
 
 }
 
@@ -134,8 +143,8 @@ $padding-left-icon: 30px;
     font-size: 14px !important;
     line-height: 24px !important;
     text-decoration-line: underline !important;
-    display: inline-block;
-
+    //display: inline-block;
+    display: block;
 
     color: #212152 !important;
 
@@ -230,9 +239,15 @@ $padding-left-icon: 30px;
         
         p {
             flex-basis: 50%;
+
         }
+
         @media (min-width: $min-md) {
-            display: block;
+            //display: block;
+            
+            p {
+                flex-basis: 100%;
+            }
         }
 
     }
@@ -266,11 +281,11 @@ $padding-left-icon: 30px;
 
         font-family: Open Sans;
         font-style: normal;
-        font-weight: normal;
+        font-weight: 600;
         font-size: 16px;
-        line-height: 24px;
+        line-height: 22px;
+        text-decoration-line: underline;
         color: $navy-blue !important;
-        opacity: 0.9;
 
     }
   }

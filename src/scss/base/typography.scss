@@ -70,7 +70,7 @@ html {
     font-weight: normal;
     font-size: 17px;
     line-height: 20px;
-    letter-spacing: 0.07em;
+    //letter-spacing: 0.07em;
     text-transform: uppercase;
     
     color: white;
@@ -198,6 +198,8 @@ html {
   font-size: 16px;
   line-height: 22px;
   color: #161004;
+  text-transform: none;
+  //letter-spacing: 0.07em;
 
   @media (min-width: $min-md) {
     font-size: 22px;
@@ -207,4 +209,44 @@ html {
 
 
 
+}
+
+.hero-date {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #161004;
+  opacity: 0.9;
+
+  @media (min-width: $min-md) {
+    font-size: 16px;
+    line-height: 22px;
+  
+  }
+}
+
+.tribe-community-events input {
+    box-sizing: border-box;
+    font-size: 16px !important;
+} 
+
+.get-help > div > p > a {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 24px;
+  /* or 160% */
+
+  text-decoration-line: underline;
+
+  color: #30240B;
+
+  @media (min-width: $min-md) {
+    font-size: 16px;
+    line-height: 24px;
+  
+  }
 }

@@ -40,41 +40,9 @@ $post_type = get_post_type( get_the_ID() );
 			<?php echo the_title(); ?>
 		</h1>
 
-		<div class="d-inline-flex mx-auto">
+		<div class="hero-meta d-inline-flex mx-auto">
 			<span class="hero-category text-left mr-4"><?php  echo $firstCategory->name;  ?></span> 
-			<div class="suitable-wrapper">
-				<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/suitable-for.svg" alt="" class="mr-1">
-				<span class="suitable-for-tag-hero">Suitable for </span>
-				<span class="suitable-for-tag-hero ml-auto"> <?php $suitable = get_field('suitable_for');
-
-				// Option Baby, 2-3 and 4-5 are selected
-				if( $suitable && in_array('Baby', $suitable) and $suitable && in_array('2-3 years old', $suitable) and $suitable && in_array('4-5 years old', $suitable) ) {
-					echo '0-5 years old';
-				} 
-				// Option  2-3, 4-5 and 6-8 are selected
-				else if ( $suitable && in_array('6-8 years old', $suitable) and $suitable && in_array('2-3 years old', $suitable) and $suitable && in_array('4-5 years old', $suitable) ) {
-					echo '2-8 years old';
-				} 
-				// Option Baby and 2-3 are selected
-				else if  ( $suitable && in_array('Baby', $suitable) and $suitable && in_array('2-3 years old', $suitable) ){
-					echo '0-3 years old';
-				} 
-				// Option 2-3 and 4-5 are selected
-				else if ( $suitable && in_array('4-5 years old', $suitable) and $suitable && in_array('2-3 years old', $suitable) ) {
-					echo '2-5 years old';
-				} 
-				// Option 4-5 and 6-8 are selected
-				else if ( $suitable && in_array('4-5 years old', $suitable) and $suitable && in_array('6-8 years old', $suitable) ) {
-					echo '4-8 years old';
-				} 
-				// Only one option is selected
-				else if ( $suitable && in_array('4-5 years old', $suitable) or $suitable && in_array('6-8 years old', $suitable) or $suitable && in_array('Baby', $suitable) or $suitable && in_array('2-3 years old', $suitable)) {
-					the_field('suitable_for');
-				} else  {
-					echo 'Everyone';
-				}
-				?>  </span>
-			</div>
+			<span class="hero-date"> <?php the_date(); ?></span>
 
 		</div>
 	</div>

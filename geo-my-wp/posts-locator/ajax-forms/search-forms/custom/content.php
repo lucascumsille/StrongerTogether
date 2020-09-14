@@ -17,7 +17,7 @@
 <?php do_action( 'gmw_before_search_form', $gmw ); ?>
 
 <?php // do not remove the $action_data variable. ?>
-<form class="gmw-form" <?php echo $action_data; // WPCS: XSS ok. ?>>
+<form class="gmw-form text-center" <?php echo $action_data; // WPCS: XSS ok. ?>>
 
 	<?php do_action( 'gmw_search_form_start', $gmw ); ?>
 
@@ -30,7 +30,7 @@
 	<?php gmw_search_form_post_types( $gmw ); ?>
 
 	<!-- Categories-->
-	<div class="inline-flex mb-5">
+	<div class="inline-flex mb-4 mx-auto">
 
 		<?php gmw_search_form_address_field( $gmw ); ?>
 

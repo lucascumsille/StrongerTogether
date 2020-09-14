@@ -18,6 +18,13 @@ function wpdocs_theme_setup() {
 
 }
 
+// Favicon
+
+function myfavicon() {
+    echo '<link rel="Shortcut Icon" type="image/x-icon" href="'.get_bloginfo('wpurl').'/favicon.ico" />';
+}
+add_action('wp_head', 'myfavicon');
+
 function strongertogether_menus() {
     $locations = array(
         'primary' => "Desktop Primary Left Sidebar",

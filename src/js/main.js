@@ -237,3 +237,19 @@ $(document).ready(function() {
         return '<p class="single-info-item tick-icon">' + oldHTML.split(',').join('</p><p class="single-info-item tick-icon">') + '</p>';
      });
 });
+
+
+
+$(document).ready(function() {
+    $('.tribe-events-event-cost').appendTo($(".tribe-events-meta-group-venue"));
+    $('#book-spot-button').appendTo($(".tribe-events-meta-group-venue"));
+});
+
+
+
+$(document).ready(function() {
+    if (parseInt($(window).width()) < 768) {
+        $('.tribe-events-meta-group.tribe-events-meta-group-other').appendTo($("tribe-events-single-event-description.tribe-events-content"));
+    }
+});
+

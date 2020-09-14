@@ -40,8 +40,9 @@ $post_type = get_post_type( get_the_ID() );
 			<?php echo the_title(); ?>
 		</h1>
 
-		<div class="d-inline-flex mx-auto">
+		<div class="hero-meta d-inline-flex mx-auto">
 			<span class="hero-category text-left mr-4"><?php  echo $firstCategory->name;  ?></span> 
+			
 			<div class="suitable-wrapper">
 				<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/suitable-for.svg" alt="" class="mr-1">
 				<span class="suitable-for-tag-hero">Suitable for </span>
@@ -75,6 +76,7 @@ $post_type = get_post_type( get_the_ID() );
 				}
 				?>  </span>
 			</div>
+			<span class="hero-date"> <?php the_date(); ?></span>
 
 		</div>
 	</div>

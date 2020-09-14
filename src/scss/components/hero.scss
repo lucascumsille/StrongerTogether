@@ -52,6 +52,21 @@
   
   .hero-icon {
     margin-bottom: 10px;
-    width: 65px;
+    height: 48px;
+
+    @media (min-width: $min-md) {
+      height: 65px;
+    }
+
   }
   
+
+  .hero-meta {
+    align-items: baseline;
+
+    @media (min-width: $min-md) {
+      .suitable-wrapper {
+        margin-right: 45px;
+      }
+    }
+  }

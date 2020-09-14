@@ -14,8 +14,13 @@
         if( $link_facebook ): ?>
             <a class="stl-anchor facebook-icon-for-singles" href="<?php echo esc_url( $link_facebook ); ?>" target="_blank">View Facebook page</a>
         <?php endif; ?>
-        
+
+		<h4 class="text-black mt-8">What local parents say</h4>
+        <span>Share photos, opinions and advice from your trip and see comments from other parents who have been here.</span>
         <?php comments_template() ?>
+	    </div>
+        
+        
 
     </div>
 </div>

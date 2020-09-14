@@ -71,6 +71,7 @@
     overflow: hidden;
     border-radius: $border-radius;
     background-color: white;
+    height: 100%;
   }
 
   //Tile Paddding
@@ -84,8 +85,8 @@
   // Tile Padding Max Width Large
 
   .tribe-common .tribe-common-g-row--gutters>.tribe-common-g-col {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
   // Photo 
   
