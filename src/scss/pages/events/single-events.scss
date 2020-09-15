@@ -7,6 +7,7 @@
     text-align: center;
     padding-right: 15px;
     padding-left: 15px;
+    margin-top: 15px;
     
 }
 
@@ -48,7 +49,11 @@
 
 .tribe-events-meta-group-venue {
 
-    width: 60% !important;
+    width: 100% !important;
+
+    @media (min-width: 767px) {
+        width: 60% !important;
+    }
 
 }
 
@@ -63,22 +68,47 @@
     margin-top: -13px !important;
 }
 
+
+.tribe-address {
+    margin-bottom: 5px !important;
+    display: block;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+
+    color: #30240B;
+    opacity: 0.9;
+    font-size: 15px;
+    line-height: 24px;
+
+    @media (min-width: $min-md) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+abbr[title]  {
+    text-decoration: none !important;
+}
+
 // "Get Directions"
 
 .tribe-events-gmap {
     font-family: Open Sans;
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 22px;
-    /* identical to box height */
-
     text-decoration-line: underline !important;
-
     color: #212152;
 
     margin-top: 5px;
     margin-bottom: 25px !important;
+
+    @media (min-width: $min-md) {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 
 // Phone
@@ -180,3 +210,10 @@
 }
 
 
+// VENUE PAGE
+
+.tribe-events-pro .tribe-events-pro-venue__meta {
+    background-color: #E5E5FE;
+    border-radius: 5px;
+    border:none;
+}

@@ -615,7 +615,7 @@
     font-family: Open Sans;
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 22px;
     /* identical to box height */
 
@@ -811,4 +811,34 @@
 
 .tribe-events-c-ical {
   display: none !important;
+}
+
+@media only screen and (max-width: 565px) {
+  .tribe-events-header__top-bar {
+    #event-filter-controller.search-button {
+      position: absolute;
+      top: 0px;
+      right: -25px;
+    }
+  }
+
+  .tribe-events .datepicker .day {
+    font-size: 12px !important;
+  }
+  
+  .tribe-events .datepicker {
+    padding: 0 10px 10px;
+  }
+
+  .datepicker.dropdown-menu {
+    left:-15px !important;
+  }
+
+  .tribe-events .tribe-events-c-top-bar__datepicker-container {
+    width: calc(100%);
+    left: 7.5px;
+  }
+
+
+
 }

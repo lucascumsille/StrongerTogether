@@ -253,3 +253,11 @@ $(document).ready(function() {
     }
 });
 
+
+// Erase the Price META in single event pages
+
+$(document).ready(function() {
+    $( "dt:contains('Price')" ).remove();
+    $( "dd:contains('Free')" ).remove();
+    $( "dd:contains('Paid')" ).remove();
+});

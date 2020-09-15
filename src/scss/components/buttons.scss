@@ -445,6 +445,7 @@ input.tribe-button {
   border: 2px solid #E2E2FF;
   border-radius: 30px;
   padding: 15px 48px 15px 20px;
+  display: none;
 
   font-family: Rubik;
   font-style: normal;
@@ -468,6 +469,10 @@ input.tribe-button {
 
   &:hover {
     background-color: #f0f0fa !important;
+  }
+
+  @media(min-width: $min-md) {
+    display: inline-block;
   }
 }
 
@@ -574,3 +579,25 @@ input.tribe-button {
   }
 
 }
+
+// Discuzz button
+
+#wpdcom .wpd-prim-button {
+  background: #FFD19B !important;
+  border-radius: 50px !important;
+  padding: 15px 20px;
+}
+
+
+#wpdcom .wpd-prim-button {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  /* identical to box height, or 147% */
+
+
+  color: #161004;
+}
+

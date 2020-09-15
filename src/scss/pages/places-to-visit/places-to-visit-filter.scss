@@ -106,3 +106,45 @@ div.gmw-ajax-results-wrapper .gmw-ajax-filters { border-top:none;}
   color: #444444;
 
 }
+
+
+// WP Discuzz 
+
+#wpdcom .wpd-social-login i {
+  width: 30px;
+  height: 30px;
+  padding-top: 4px;
+  padding-left: 1px;
+
+
+}
+
+.fa-facebook:before, .fa-instagram:before, .fa-google:before {
+  font-size: 20px !important;
+}
+
+.ql-container.ql-snow  {
+  background: #FFFFFF !important;
+  border: 2px solid #F3EADD !important;
+  box-sizing: border-box !important;
+  border-radius: 15px !important;
+}
+
+.ql-toolbar.ql-snow {
+
+  background: #FFE8BC !important;
+  box-sizing: border-box !important;
+  border-radius: 15px !important;
+}
+
+#wpdcom .wpd-form-head {
+  border-bottom: 1px solid #FFE8BC;
+}
+
+.tribe-events .datepicker .day {
+  font-size: 12px !important;
+}
+
+.tribe-events .datepicker {
+  padding: 0 10px 10px;
+}

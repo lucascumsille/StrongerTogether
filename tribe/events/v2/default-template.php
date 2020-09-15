@@ -16,6 +16,7 @@ use Tribe\Events\Views\V2\Template_Bootstrap;
 
 get_header();
 get_template_part('template-parts/hero/hero', 'custom-post-type' );
+
 ?>
 
 <div class="container is--event-page">
