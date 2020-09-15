@@ -71,6 +71,12 @@
    
        border-radius: 0px 0px $card-border-radius $card-border-radius;
        padding: 20px 15px 10px 15px;
+       min-height: 132px;
+       display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      /* width: 132px; */
+
      
      }
    

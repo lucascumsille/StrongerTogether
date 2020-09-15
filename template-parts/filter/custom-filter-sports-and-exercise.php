@@ -86,19 +86,20 @@
 
         <?php wp_reset_postdata(); ?>
 
-
-        <?php 
-            // Pagination 
-            $big = 999999999; 
-            echo paginate_links( array(
-                'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
-                'format' => '?paged=%#%',
-                'current' => max( 1, get_query_var('paged') ),
-                'total' => $loop->max_num_pages
-            ) );
-        ?>
-
     </div>
+
+    <div class="pagination-nav mt-5">
+		<?php 
+			// Pagination 
+			$big = 999999999; 
+			echo paginate_links( array(
+				'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+				'format' => '?paged=%#%',
+				'current' => max( 1, get_query_var('paged') ),
+				'total' => $loop->max_num_pages
+			) );
+		?>
+	</div>
 
 
 

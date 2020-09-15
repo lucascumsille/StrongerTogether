@@ -36,8 +36,10 @@
 				<?php endwhile; ?>
 
 			<?php wp_reset_postdata(); ?>
+		</div>
+	</div>
 
-
+		<div class="pagination-nav mt-5">
 			<?php 
 				// Pagination 
 				$big = 999999999; 
@@ -48,10 +50,8 @@
 					'total' => $loop->max_num_pages
 				) );
 			?>
-
 		</div>
-	</div>
 
 	</div>
 
-</div>
+</div> <!-- bg-for-parents -->

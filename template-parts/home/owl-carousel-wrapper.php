@@ -40,7 +40,7 @@
 
         </div> <!-- owl-carousel -->
 
-        <a class="button mx-auto" href="">
+        <a class="button mx-auto" href="<?php echo get_post_type_archive_link( 'thingsathome' ); ?>">
             <span class="button-text"><?php the_field ('post_slider_button_text'); ?></span>
             <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/arrow-yellow.svg" alt="">
         </a>

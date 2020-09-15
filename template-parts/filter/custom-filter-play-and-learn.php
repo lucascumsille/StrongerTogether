@@ -56,20 +56,21 @@
 			$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
 			$args = array(  
-				'post_type' => 'thingsathome',
-				'paged' => $paged,
+				// 'post_type' => 'thingsathome',
+				// 'paged' => $paged,
 				//'post_status' => 'publish', 
 				//'orderby' => 'date', 
 				//'order' => 'ASC', 
-				'tax_query' => array(
-					array(
-						'taxonomy' => 'thingsathome_category',
-						'field' => 'term_id',
-						'terms' => 20,
-					)
-				)
+				// 'tax_query' => array(
+				// 	array(
+				// 		'taxonomy' => 'thingsathome_category',
+				// 		'field' => 'term_id',
+				// 		'terms' => 20,
+				// 	)
+				// )
+				'search_filter_id' => 445
 			);
-			$args['search_filter_id'] = 445;
+			// $args['search_filter_id'] = 445;
 
 			$loop = new WP_Query( $args ); 
 		?>
@@ -86,6 +87,10 @@
 		<?php wp_reset_postdata(); ?>
 
 
+
+
+	</div>
+	<div class="pagination-nav">
 		<?php 
 			// Pagination 
 			$big = 999999999; 
@@ -96,6 +101,5 @@
 				'total' => $loop->max_num_pages
 			) );
 		?>
-
 	</div>
 </div>

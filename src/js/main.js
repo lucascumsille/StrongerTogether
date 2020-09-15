@@ -261,3 +261,10 @@ $(document).ready(function() {
     $( "dd:contains('Free')" ).remove();
     $( "dd:contains('Paid')" ).remove();
 });
+
+// Change text on previus and nex button
+
+$(document).ready(function() {
+    $('.next.page-numbers').text('Next');
+    $('.prev.page-numbers').text('Previous');
+});

@@ -20,6 +20,8 @@ function wpdocs_theme_setup() {
 
 // Favicon
 
+
+
 function myfavicon() {
     echo '<link rel="Shortcut Icon" type="image/x-icon" href="'.get_bloginfo('wpurl').'/favicon.ico" />';
 }
@@ -45,7 +47,7 @@ function strongertogether_register_styles() {
     wp_enqueue_style('strongertogether-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" , array(), '1.0', 'all');
     //wp_enqueue_style('strongertogether-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' , array(), '1.0', 'all');
     //wp_enqueue_style('strongertogether-bootstrap-selectpicker', 'https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css' , array(), '1.0', 'all');
-    wp_enqueue_style('strongertogether-font1', "https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" , array(), '1.0', 'all');
+    wp_enqueue_style('strongertogether-font1', "https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" , array(), '1.0', 'all');
     wp_enqueue_style('strongertogether-font2', "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" , array(), '1.0', 'all');
     wp_enqueue_style('strongertogether-owl-carousel1', get_template_directory_uri() . "/assets/css/owl.carousel.css", array(), $version , 'all');
     wp_enqueue_style('strongertogether-owl-carousel2', get_template_directory_uri() . "/assets/css/owl.theme.default.css", array(), $version , 'all');
