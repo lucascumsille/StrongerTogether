@@ -25,7 +25,16 @@
 	
 		<div class="post-item-carousel box-shadow-carousel mx-auto">
 
-			<div class="post-carousel-image mx-auto" style="background-image:url('<?php echo get_the_post_thumbnail_url(); ?>');"></div>
+			<?php
+			$places_to_visit_thumbnail = get_the_post_thumbnail_url();
+			if (!empty($places_to_visit_thumbnail)) { ?>
+				<div class="post-carousel-image mx-auto" style="background-image:url('<?php echo $places_to_visit_thumbnail ?>');"></div> 
+			<?php }  else {
+				echo '';
+			}
+			?>
+
+
 			
 			<div class="post-carousel-content">
 				<h4 class="text-black"><?php the_title(); ?></h4>
