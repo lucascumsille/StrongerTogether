@@ -7,16 +7,21 @@
             </div>
 
             <div class="col-12 col-md-6 flex justify-content-center justify-content-md-end">
-                <div class="share-wrapper bg-lightest-green">
-                    <img class="share-icon" src="<?php echo get_field('cta_sharing_icon', 'option')['url']; ?>" alt="">
-                    <div class="share-content-wrapper">
-                        <p class="share-title">What was it like enrolling at Kindy?</p>
-                        <a class="button button-cta-green" href="">
-                            <span class="button-text">Share your experience</span>
-                            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/arrow-green.svg" alt="">
-                        </a>
-                    </div><!-- share-content-wrapper -->
-                </div> <!-- share-wrapper -->
+                    <?php 
+                        $cta_sharing = get_field('cta_sharing_link', 'option');
+                        if( !empty( $cta_sharing ) ): ?>
+
+                    <div class="share-wrapper bg-lightest-green">
+                        <img class="share-icon" src="<?php echo get_field('cta_sharing_icon', 'option')['url']; ?>" alt="">
+                        <div class="share-content-wrapper">
+                            <p class="share-title">What was it like enrolling at Kindy?</p>
+                            <a class="button button-cta-green" href="<?php echo esc_url( $cta_sharing ); ?>">
+                                <span class="button-text">Share your experience</span>
+                                <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/icons/arrow-green.svg" alt="">
+                            </a>
+                        </div><!-- share-content-wrapper -->
+                    </div> <!-- share-wrapper -->
+                    <?php endif; ?>
             </div> <!-- col-12 col-md-6 flex -->
 
         </div> <!-- row -->

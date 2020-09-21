@@ -254,3 +254,19 @@ html {
 #tribe_events_filters_wrapper input {
   font-size: 16px !important; 
 }
+
+p a {
+  font-weight: 600;
+  text-decoration: underline;
+
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+
+  }
+}

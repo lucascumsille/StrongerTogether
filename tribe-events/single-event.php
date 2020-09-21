@@ -55,7 +55,11 @@ $event_id = get_the_ID();
 	</div>
 	<!-- #tribe-events-header -->
 
-<?php while ( have_posts() ) :  the_post(); ?>
+<?php while ( have_posts() ) :  the_post();
+
+
+
+?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<!-- Event featured image, but exclude link -->
 			<?php echo tribe_event_featured_image( $event_id, 'single-post', false ); ?>
@@ -69,13 +73,15 @@ $event_id = get_the_ID();
 					<?php tribe_get_template_part( 'modules/meta' ); ?>
 					<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
 					<?php 
-						$link = get_field('facebook_event');
+					$additional_fields = tribe_get_custom_fields();
+					$link = $additional_fields['View Facebook Event'];
 						if( $link ): ?>
-							<a id="facebook-event" class="stl-anchor facebook-icon-for-singles" href="<?php echo esc_url( $link ); ?>">View Facebook event</a>
+							<a id="facebook-event" class="stl-anchor facebook-icon-for-singles" href="<?php echo esc_url( $link ); ?>" target="_blank">View Facebook event</a>
 					<?php endif; ?>
 
 					<?php 
-						$bookSpot = get_field('buy_ticket_link');
+
+						$bookSpot = $additional_fields['Book Your Spot'];
 						if( $bookSpot ): ?>
 							<a id="book-spot-button" class="book-button mb-3" href="<?php echo esc_url( $bookSpot ); ?>"> 
 

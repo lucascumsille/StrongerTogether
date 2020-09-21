@@ -259,7 +259,10 @@ $(document).ready(function() {
 $(document).ready(function() {
     $( "dt:contains('Price')" ).remove();
     $( "dd:contains('Free')" ).remove();
-    $( "dd:contains('Paid')" ).remove();
+    $( "dt:contains('View Facebook Event')" ).remove();
+    $( "dd:contains('https')" ).remove();
+    $( "dt:contains('Book Your Spot')" ).remove();
+    $( "dd:contains('https')" ).remove();
 });
 
 // Change text on previus and nex button
