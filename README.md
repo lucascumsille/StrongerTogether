@@ -79,7 +79,11 @@ This theme uses the following plugins:
 
 ### 1.Install and initialize npm
 
+<<<<<<< HEAD
 `<npm init>`
+=======
+`<[npm init]>`
+>>>>>>> ebdd51c85f90a49f2bdea4341445a75148fc594b
 
 ### 2.Install gulp
 
