@@ -45,9 +45,9 @@ This theme uses the following plugins:
 * Yoast SEO Version 14.8.1
 
 ## Folder Structure
-
-+-- assets                  
-|    +--css                     # Compiled files (alternatively `dist`)
+```
++-- assets
+|    +--css
 |        +-- main.css
 |        +-- owl.carousel.css
 |        +--owl.theme.default.css
@@ -73,17 +73,13 @@ This theme uses the following plugins:
 +-- template-parts
 +-- tribe
 +-- tribe-events
-
+```
 
 ## Using Gulp to compile css and js
 
 ### 1.Install and initialize npm
 
-<<<<<<< HEAD
-`<npm init>`
-=======
-`<[npm init]>`
->>>>>>> ebdd51c85f90a49f2bdea4341445a75148fc594b
+`npm init`
 
 ### 2.Install gulp
 
@@ -93,4 +89,4 @@ This theme uses the following plugins:
 
 `npm install gulp-newer gulp-imagemin gulp-htmlclean gulp-noop gulp-deporder gulp-concat gulp-strip-debug gulp-terser gulp-sourcemaps gulp-sass gulp-postcss postcss-assets autoprefixer css-mqpacker cssnano --save-dev`
 
-### Once installed type "gulp" in VCode or Atom. Gulp will compile every time there is a change on any js or scss files inside the src folder.
+### Once all the dependecies are installed just type "gulp" in terminal with VCode or Atom. Gulp will compile every time there is a change on any js or scss files inside the src folder.

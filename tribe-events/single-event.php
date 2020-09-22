@@ -74,14 +74,15 @@ $event_id = get_the_ID();
 					<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
 					<?php 
 					$additional_fields = tribe_get_custom_fields();
-					$link = $additional_fields['View Facebook Event'];
+					// Same as the Label in aditional fields on the Events Settings
+					$link = $additional_fields['Link to Facebook event'];
 						if( $link ): ?>
 							<a id="facebook-event" class="stl-anchor facebook-icon-for-singles" href="<?php echo esc_url( $link ); ?>" target="_blank">View Facebook event</a>
 					<?php endif; ?>
 
 					<?php 
-
-						$bookSpot = $additional_fields['Book Your Spot'];
+						// Same as the Label in aditional fields on the Events Settings
+						$bookSpot = $additional_fields['Link to buy tickets'];
 						if( $bookSpot ): ?>
 							<a id="book-spot-button" class="book-button mb-3" href="<?php echo esc_url( $bookSpot ); ?>"> 
 

@@ -259,9 +259,9 @@ $(document).ready(function() {
 $(document).ready(function() {
     $( "dt:contains('Price')" ).remove();
     $( "dd:contains('Free')" ).remove();
-    $( "dt:contains('View Facebook Event')" ).remove();
+    $( "dt:contains('Link to Facebook event')" ).remove();
     $( "dd:contains('https')" ).remove();
-    $( "dt:contains('Book Your Spot')" ).remove();
+    $( "dt:contains('Link to buy tickets')" ).remove();
     $( "dd:contains('https')" ).remove();
 });
 
