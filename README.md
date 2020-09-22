@@ -80,7 +80,7 @@ This theme uses the following plugins:
 
 ### 1.Install and initialize npm
 
-[npm init]
+`<[npm init]>`
 
 ### 2.Install gulp
 
