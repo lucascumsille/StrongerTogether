@@ -46,48 +46,47 @@ This theme uses the following plugins:
 
 ## Folder Structure
 
-
-├── assets                  
-    ├── css                     # Compiled files (alternatively `dist`)
-        ├── main.css
-        ├── owl.carousel.css
-        └── owl.theme.default.css
-    ├── images
-        └── icons
-    ├── js
-        ├── main.js
-        ├── owl.carousel.min.js
-        └── owl.navigation.js               
-├── geo-my-wp              # Custom templates for the Geo My WP Plugin
-├── src 
-    ├── html
-    ├── images
-    ├── js
-        └── main.js  
-    └── scss  # here you have all the scss files to edit styles.
-        ├── abstracts
-        ├── base
-        ├── components
-        ├── layout
-        ├── vendors
-        └── main.scss   
-├── template-parts
-├── tribe
-├── tribe-events
++-- assets                  
+|    +--css                     # Compiled files (alternatively `dist`)
+|        +-- main.css
+|        +-- owl.carousel.css
+|        +--owl.theme.default.css
+|   +--images
+|       +-- icons
+|   +-- js
+|       +-- main.js
+|       +-- owl.carousel.min.js
+|        +-- owl.navigation.js               
++-- geo-my-wp              # Custom templates for the Geo My WP Plugin
++-- src 
+|    +-- html
+|    +-- images
+|    +-- js
+|        +-- main.js  
+|    +-- scss  # here you have all the scss files to edit styles.
+|        +-- abstracts
+|        +-- base
+|        +-- components
+|        +-- layout
+|        +-- vendors
+|        +-- main.scss   
++-- template-parts
++-- tribe
++-- tribe-events
 
 
 ## Using Gulp to compile css and js
 
 ### 1.Install and initialize npm
 
-[npm init]
+`<npm init>`
 
 ### 2.Install gulp
 
-[npm install gulp --save-dev]
+`npm install gulp --save-dev`
 
 ### 3.Install dependecies
 
-[npm install gulp-newer gulp-imagemin gulp-htmlclean gulp-noop gulp-deporder gulp-concat gulp-strip-debug gulp-terser gulp-sourcemaps gulp-sass gulp-postcss postcss-assets autoprefixer css-mqpacker cssnano --save-dev]
+`npm install gulp-newer gulp-imagemin gulp-htmlclean gulp-noop gulp-deporder gulp-concat gulp-strip-debug gulp-terser gulp-sourcemaps gulp-sass gulp-postcss postcss-assets autoprefixer css-mqpacker cssnano --save-dev`
 
 ### Once installed type "gulp" in VCode or Atom. Gulp will compile every time there is a change on any js or scss files inside the src folder.
