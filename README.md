@@ -46,8 +46,8 @@ This theme uses the following plugins:
 
 ## Folder Structure
 
-+-- assets                  
-|    +--css                     # Compiled files (alternatively `dist`)
++-- assets
+|    +--css
 |        +-- main.css
 |        +-- owl.carousel.css
 |        +--owl.theme.default.css
@@ -79,11 +79,7 @@ This theme uses the following plugins:
 
 ### 1.Install and initialize npm
 
-<<<<<<< HEAD
-`<npm init>`
-=======
-`<[npm init]>`
->>>>>>> ebdd51c85f90a49f2bdea4341445a75148fc594b
+`npm init`
 
 ### 2.Install gulp
 
