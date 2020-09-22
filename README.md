@@ -45,7 +45,7 @@ This theme uses the following plugins:
 * Yoast SEO Version 14.8.1
 
 ## Folder Structure
-
+```
 +-- assets
 |    +--css
 |        +-- main.css
@@ -73,7 +73,7 @@ This theme uses the following plugins:
 +-- template-parts
 +-- tribe
 +-- tribe-events
-
+```
 
 ## Using Gulp to compile css and js
 
