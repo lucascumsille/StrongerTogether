@@ -89,4 +89,4 @@ This theme uses the following plugins:
 
 `npm install gulp-newer gulp-imagemin gulp-htmlclean gulp-noop gulp-deporder gulp-concat gulp-strip-debug gulp-terser gulp-sourcemaps gulp-sass gulp-postcss postcss-assets autoprefixer css-mqpacker cssnano --save-dev`
 
-### Once installed type "gulp" in VCode or Atom. Gulp will compile every time there is a change on any js or scss files inside the src folder.
+### Once all the dependecies are installed just type "gulp" in terminal with VCode or Atom. Gulp will compile every time there is a change on any js or scss files inside the src folder.
